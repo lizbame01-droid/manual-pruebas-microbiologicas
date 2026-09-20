@@ -15,13 +15,18 @@
    se usan con la función var(--nombre).
    ------------------------------------------------------------- */
 :root {
-  /* Paleta de color del proyecto */
-  --color-verde-oscuro: #415d46;   /* títulos, menú activo */
-  --color-verde-oliva: #7e8f5b;    /* botones, círculo activo */
-  --color-verde-claro: #d7ebc8;    /* fondo de cajas de contenido */
-  --color-azul-grisaceo: #98acc4;  /* acentos, enlaces */
-  --color-gris-verdoso: #626b6a;   /* texto secundario, bordes */
+  /* Paleta de color del proyecto.
+     Los dos verdes claros se conservan de la paleta anterior;
+     el resto viene de la nueva paleta azul-grisácea. */
+  --color-oscuro: #547071;    /* títulos, menú activo, encabezado de tabla */
+  --color-medio: #688391;     /* botones, borde del menú */
+  --color-gris: #87a1ab;      /* texto secundario, bordes de tabla */
+  --color-acento: #a7bfc7;    /* enlaces, insignia de alimento activo */
+  --color-azul-claro: #c8dfe2; /* resalte suave (hover del menú) */
+  --color-azul-mas-claro: #e6f2f3; /* fondo de las cajas de contenido */
+  --color-gris-claro: #f5f6f7; /* fondo de las celdas de tabla */
 
+  --color-verde-claro: #d7ebc8;    /* fondo de cajas de contenido, insignia inactiva */
   --color-fondo: #f7faf2;          /* fondo general de la página */
   --color-texto: #2b2f28;          /* texto principal, casi negro */
   --color-blanco: #ffffff;
@@ -30,8 +35,8 @@
   --font-serif: "Lora", Georgia, serif;       /* todo el texto general */
   --font-table: "Public Sans", Arial, sans-serif; /* solo dentro de tablas */
 
-  /* Espaciado: valores reutilizables en vez de números distintos
-     en cada regla */
+  /* Espaciado: reutilizamos estos valores en vez de inventar
+     números distintos en cada regla */
   --espacio-xs: 0.5rem;
   --espacio-sm: 1rem;
   --espacio-md: 1.5rem;
@@ -66,18 +71,19 @@ body {
   line-height: 1.6; /* más espacio entre líneas: se lee mejor en serif */
 }
 
-/* Line-length: en párrafos largos, que no crucen toda la pantalla */
+/* Line-length: en párrafos largos, que no crucen toda la pantalla.
+   Se aplica a cualquier párrafo dentro de un contenedor de texto. */
 p {
   max-width: 70ch; /* aprox. 70 caracteres por línea */
   margin-bottom: var(--espacio-sm);
 }
 
 a {
-  color: var(--color-azul-grisaceo);
+  color: var(--color-acento);
 }
 
 a:hover {
-  color: var(--color-verde-oscuro);
+  color: var(--color-oscuro);
 }
 
 /* -------------------------------------------------------------
@@ -88,7 +94,7 @@ a:hover {
    ------------------------------------------------------------- */
 h1, h2, h3, h4 {
   font-family: var(--font-serif);
-  color: var(--color-verde-oscuro);
+  color: var(--color-oscuro);
   font-weight: 700;
   line-height: 1.25;
   margin-bottom: var(--espacio-sm);
@@ -111,30 +117,60 @@ h3 {
 /* -------------------------------------------------------------
    5. MENÚ LATERAL
    -------------------------------------------------------------
-   Por ahora solo el estilo de cada elemento del menú, uno debajo
-   de otro. El acomodo en columnas junto al contenido se hace con
-   flexbox más adelante.
+   El acomodo en columnas junto al contenido está en la sección
+   10, en .pagina.
    ------------------------------------------------------------- */
 .menu-lateral {
   background-color: var(--color-verde-claro);
   width: 280px;
+  flex-shrink: 0; /* evita que flexbox achique el menú para hacerle
+                     espacio al contenido; mantiene su ancho fijo */
 }
 
-/* <details> y <summary> son los elementos usados para las
-   flechitas desplegables del menú (no requieren JavaScript) */
+/* <details> y <summary> son los elementos que usamos para las
+   flechitas desplegables del menú (no necesitan JavaScript) */
 .menu-lateral summary {
   font-family: var(--font-serif);
   font-weight: 600;
   font-size: 0.95rem;
-  color: var(--color-verde-oscuro);
+  color: var(--color-oscuro);
   padding: var(--espacio-sm) var(--espacio-md);
   cursor: pointer;
-  border-bottom: 1px solid var(--color-verde-oliva);
+  border-bottom: 1px solid var(--color-medio);
   list-style: none; /* quita la flecha por defecto del navegador */
 }
 
 .menu-lateral summary::-webkit-details-marker {
   display: none; /* quita la flecha por defecto en Chrome */
+}
+
+.menu-lateral summary:hover {
+  background-color: var(--color-azul-claro);
+}
+
+/* Submenú: la lista que aparece al desplegar cada <details>.
+   list-style: none quita las viñetas; el padding de aquí es el
+   que da la sangría (el reset del inicio del archivo la había
+   quitado junto con todo el padding por defecto). */
+.menu-lateral ul {
+  list-style: none;
+  background-color: var(--color-fondo);
+  padding: var(--espacio-sm) var(--espacio-md) var(--espacio-sm) calc(var(--espacio-md) * 1.5);
+}
+
+.menu-lateral li + li {
+  margin-top: var(--espacio-xs); /* separación entre enlaces, excepto antes del primero */
+}
+
+.menu-lateral li a {
+  color: var(--color-texto);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.menu-lateral li a:hover {
+  color: var(--color-oscuro);
+  text-decoration: underline;
 }
 
 /* -------------------------------------------------------------
@@ -145,7 +181,7 @@ h3 {
   font-weight: 600;
   font-size: 0.95rem;
   color: var(--color-blanco);
-  background-color: var(--color-verde-oliva);
+  background-color: var(--color-medio);
   border: none;
   border-radius: var(--radio-sm);
   padding: var(--espacio-xs) var(--espacio-md);
@@ -153,7 +189,7 @@ h3 {
 }
 
 .btn:hover {
-  background-color: var(--color-verde-oscuro);
+  background-color: var(--color-oscuro);
 }
 
 /* -------------------------------------------------------------
@@ -176,21 +212,22 @@ h3 {
 /* Clase de modificador: se agrega junto a .insignia cuando ese
    alimento está seleccionado */
 .insignia--activa {
-  background-color: var(--color-azul-grisaceo);
+  background-color: var(--color-acento);
 }
 
 .icono-alimento {
   width: 34px;
   height: 34px;
 }
+
 /* -------------------------------------------------------------
    8. CAJAS DE CONTENIDO
    -------------------------------------------------------------
-   Fondo verde claro usado para agrupar texto (por ejemplo, debajo
+   Fondo azul claro usado para agrupar texto (por ejemplo, debajo
    de un subtítulo como "Microflora" o "Fundamentos").
    ------------------------------------------------------------- */
 .caja {
-  background-color: var(--color-verde-claro);
+  background-color: var(--color-azul-mas-claro);
   border-radius: var(--radio-sm);
   padding: var(--espacio-md);
   margin-top: var(--espacio-sm);
@@ -215,23 +252,92 @@ caption {
   font-style: italic;
   text-align: left;
   margin-bottom: var(--espacio-xs);
-  color: var(--color-gris-verdoso);
+  color: rgba(84, 112, 113, 0.85); /* azul oscuro semitransparente, a partir de --color-oscuro */
 }
 
 th, td {
-  border: 1px solid var(--color-gris-verdoso);
+  border: 1px solid var(--color-gris);
   padding: var(--espacio-xs);
   text-align: left;
 }
 
 th {
-  background-color: var(--color-verde-oscuro);
+  background-color: var(--color-oscuro);
   color: var(--color-blanco);
   font-weight: 600;
 }
 
-/* Filas alternadas más claras, para facilitar seguir una línea
-   con la vista en tablas largas */
-tbody tr:nth-child(even) {
-  background-color: var(--color-verde-claro);
+td {
+  background-color: var(--color-gris-claro);
+}
+
+/* -------------------------------------------------------------
+   10. DISEÑO EN COLUMNAS Y FILAS (FLEXBOX)
+   -------------------------------------------------------------
+   display: flex convierte a un elemento en un CONTENEDOR flex:
+   sus hijos directos (los ITEMS) se acomodan en fila por defecto.
+   flex-direction cambia esa fila por una columna.
+   gap separa los items sin usar margin en cada uno.
+   ------------------------------------------------------------- */
+
+/* .pagina es el contenedor que agrupa el menú (.menu-lateral) y
+   el contenido (main): los pone uno junto al otro, en fila. */
+.pagina {
+  display: flex;
+}
+
+main {
+  flex: 1;    /* ocupa todo el espacio restante después del menú */
+  padding: var(--espacio-lg);
+}
+
+/* Barra superior: los 3 íconos en fila, alineados a la derecha */
+.barra-herramientas {
+  display: flex;
+  justify-content: flex-end; /* alinea los items al final del eje principal (derecha) */
+  gap: var(--espacio-lg);
+  margin-bottom: var(--espacio-lg);
+}
+
+.barra-herramientas a {
+  display: flex;
+  flex-direction: column; /* ícono arriba, texto abajo */
+  align-items: center;    /* centra ambos en el eje cruzado */
+  text-decoration: none;
+  color: var(--color-gris);
+  font-size: 0.85rem;
+  gap: var(--espacio-xs);
+}
+
+/* Selección de alimento: 5 tarjetas en fila, que pueden pasar a
+   una segunda línea si no caben (flex-wrap) */
+.seccion-alimentos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-lg);
+  margin-top: var(--espacio-lg);
+}
+
+.tarjeta-alimento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espacio-xs);
+  text-decoration: none;
+  color: var(--color-texto);
+  width: 120px;
+  text-align: center;
+}
+/* Requerimientos de un método (equipo, materiales, medios de cultivo):
+   3 columnas en pantallas anchas; flex-wrap permite que bajen a una
+   columna si no caben (por ejemplo, en pantallas angostas). */
+.requerimientos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-lg);
+}
+
+.requerimientos > div {
+  flex: 1;
+  min-width: 180px; /* evita que las columnas queden demasiado angostas */
 }

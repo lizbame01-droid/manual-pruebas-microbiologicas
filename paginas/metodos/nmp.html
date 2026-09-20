@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coliformes y E. coli por NMP · Manual de Pruebas Microbiológicas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Esta página está dos niveles adentro (paginas/metodos/), por eso "../../" -->
+  <link rel="stylesheet" href="../../css/styles.css" />
+</head>
+<body>
+
+  <div class="pagina">
+
+    <!-- Rutas del menú ajustadas: un nivel arriba ("../") para llegar
+         a paginas/, ningún prefijo para quedarse dentro de metodos/ -->
+    <nav class="menu-lateral">
+
+      <details>
+        <summary>Microbiología en México</summary>
+        <ul>
+          <li><a href="../microbiologia-mexico.html">Antecedentes y control microbiológico</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Microbiología de los alimentos</summary>
+        <ul>
+          <li><a href="../crecimiento-microorganismos.html">Crecimiento de microorganismos</a></li>
+          <li><a href="../tipos-microorganismos.html">Tipos de microorganismos</a></li>
+          <li><a href="../microorganismos-indicadores.html">Microorganismos indicadores</a></li>
+          <li><a href="../patogenos.html">Patógenos</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Fundamentos del análisis</summary>
+        <ul>
+          <li><a href="../muestreo.html">Muestreo</a></li>
+          <li><a href="../tecnicas-microbiologicas.html">Técnicas microbiológicas</a></li>
+          <li><a href="../metodos-analisis.html">Métodos de análisis</a></li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Pruebas microbiológicas</summary>
+        <ul>
+          <li><a href="recepcion-muestras.html">Recepción de muestras</a></li>
+          <li><a href="diluciones.html">Diluciones</a></li>
+          <li><a href="mesofilos-aerobios.html">Mesófilos aerobios</a></li>
+          <li><a href="mohos-levaduras.html">Mohos y levaduras</a></li>
+          <li><a href="coliformes-placa.html">Coliformes totales en placa</a></li>
+          <li><a href="salmonella.html">Salmonella</a></li>
+          <li><a href="s-aureus.html">S. aureus</a></li>
+          <li><a href="nmp.html">Coliformes y E. coli por NMP</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Normatividad</summary>
+        <ul>
+          <li><a href="../normatividad.html">Normas Oficiales Mexicanas y Normas Mexicanas</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Buenas prácticas de laboratorio</summary>
+        <ul>
+          <li><a href="../buenas-practicas.html">Bioseguridad e instalaciones</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Medios de cultivo</summary>
+        <ul>
+          <li><a href="../medios-cultivo.html">Clasificación, agares, caldos y reactivos</a></li>
+        </ul>
+      </details>
+
+    </nav>
+
+    <main>
+
+      <p><a href="../../index.html">← Volver al inicio</a></p>
+
+      <h2>Coliformes y E. coli por NMP</h2>
+      <h3>Método para estimación de coliformes totales, fecales y <em>E. coli</em> por la técnica del Número Más Probable (NMP)</h3>
+
+      <p>
+        La técnica del número más probable (NMP) es una estimación indirecta
+        de células viables a partir del número de tubos en el que se
+        presenta crecimiento después de inocular la muestra diluida en
+        tubos con medio selectivo.
+      </p>
+      <br />
+      <h2>Fundamentos</h2>
+      <div class="caja">
+        <p>
+          Primero se realiza una prueba presuntiva con caldo lauril triptosa
+          y después una prueba confirmativa con caldo EC (ambos son medios
+          selectivos y diferenciales). Mediante la observación de
+          crecimiento en los tubos de la prueba confirmativa se registra el
+          patrón de tubos positivos, y ese patrón se consulta en tablas de
+          referencia de NMP para obtener el resultado.
+        </p>
+        <p>
+          Los tubos con crecimiento en caldo EC funcionan como punto de
+          partida para la identificación de <em>Escherichia coli</em>. La
+          prueba presuntiva de <em>E. coli</em> consiste en sembrar un
+          inóculo de los tubos confirmativos de caldo EC en agar EMB-L,
+          medio selectivo que inhibe el crecimiento de bacterias
+          grampositivas y permite identificar gramnegativas fermentadoras de
+          lactosa y/o sacarosa.
+        </p>
+        <p>
+          Posterior a la prueba presuntiva se ejecuta el panel IMViC (Indol,
+          Rojo de metilo, Voges-Proskauer, Citrato), utilizado para la
+          identificación y diferenciación de bacterias de la familia
+          <em>Enterobacteriaceae</em>. <em>E. coli</em> es indol positiva,
+          rojo de metilo positiva, Voges-Proskauer negativa y citrato
+          negativa.
+        </p>
+      </div>
+
+      <!-- ============================================
+           Fichas de fundamento: en el orden en que se
+           usan durante el método (presuntiva → confirma-
+           tiva → aislamiento de E. coli → panel IMViC).
+           Cards con <details>, no necesitan JavaScript.
+           ============================================ -->
+
+      <details>
+        <summary>Fundamento del medio de cultivo: Caldo Lauril Triptosa (prueba presuntiva)</summary>
+        <div class="caja">
+          <p>
+            <strong>Componentes generales:</strong> lactosa, cloruro de
+            sodio, triptosa, lauril sulfato de sodio (SDS), fosfato
+            dipotásico y fosfato monopotásico.
+          </p>
+          <p>
+            Es un medio selectivo y diferencial. Permite el desarrollo de
+            microorganismos fermentadores de lactosa, y se puede observar la
+            producción de gas y ácido en la campana de Durham; el SDS inhibe
+            el crecimiento de bacterias grampositivas. Los fosfatos actúan
+            como sistema buffer y el cloruro de sodio mantiene el balance
+            osmótico.
+          </p>
+          <p>
+            El SDS es un detergente aniónico que actúa como tensioactivo,
+            penetrando las bicapas lipídicas de la membrana celular y
+            formando poros, lo que eventualmente conduce a la lisis celular;
+            además desnaturaliza proteínas, destruyendo su estructura y
+            función (Piret et al., 2002).
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Presuntivo: turbidez del medio y formación de gas en el tubo de Durham → bacterias coliformes capaces de fermentar lactosa con producción de gas.</li>
+            <li>No presuntivo: no hay formación de gas en el tubo de Durham → microorganismos que no fermentan lactosa.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento del medio de cultivo: Caldo EC (prueba confirmativa)</summary>
+        <div class="caja">
+          <p>
+            <strong>Componentes generales:</strong> tripteína, lactosa,
+            sales biliares, fosfato dipotásico, fosfato monopotásico y
+            cloruro de sodio.
+          </p>
+          <p>
+            Es un medio selectivo y diferencial. La tripteína es la fuente
+            de péptidos, aminoácidos y nitrógeno; la lactosa es el
+            carbohidrato fermentable; las sales biliares inhiben el
+            crecimiento de bacterias grampositivas. La adición de fosfatos
+            mantiene el pH y el cloruro de sodio el balance osmótico. La
+            diferencia entre la identificación de coliformes fecales y
+            totales es la temperatura de incubación.
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): turbidez en el medio y formación de gas en el tubo Durham → bacterias coliformes capaces de fermentar la lactosa y producir gas.</li>
+            <li>Negativa (-): no hay formación de gas → ausencia de coliformes.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento del medio de cultivo: Agar EMB-L (Eosina-Azul de metileno)</summary>
+        <div class="caja">
+          <p>
+            <strong>Componentes generales:</strong> peptona, lactosa,
+            eosina y azul de metileno.
+          </p>
+          <p>
+            Es un medio selectivo y diferencial utilizado para el
+            aislamiento de bacterias gramnegativas fermentadoras de lactosa
+            y/o sacarosa. El azul de metileno inhibe el crecimiento de
+            bacterias grampositivas. La eosina es un colorante que responde
+            a los cambios de pH, pasando de incoloro a negro. Las bacterias
+            gramnegativas que fermentan lactosa acidifican el medio y,
+            gracias al colorante, se produce un complejo púrpura oscuro
+            asociado con un brillo metálico verde (Lal, 2007).
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): colonias oscuras con brillo metálico → fermentación vigorosa de lactosa y/o sacarosa, con elevada producción de ácido; presuntiva a <em>E. coli</em>.</li>
+            <li>Negativa (-): colonias negras sin halo → bacterias fermentadoras de lactosa, no característico de <em>E. coli</em>; colonias incoloras o traslúcidas → bacterias no fermentadoras de lactosa, se descarta la búsqueda de <em>E. coli</em>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento de la prueba: Indol (panel IMViC)</summary>
+        <div class="caja">
+          <p>
+            Se basa en la capacidad del microorganismo de producir
+            triptofanasa, una enzima dependiente del piridoxal 5'-fosfato
+            (PLP) que cataliza la eliminación hidrolítica de L-triptófano
+            (L-Trp) a indol y piruvato de amonio (Kohlerschmidt et al.,
+            2021; Shimada et al., 2004). El aldehído del reactivo de Kovac
+            reacciona con el indol formando un compuesto rojo-violeta.
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): anillo rojo en segundos, en la interfase del medio con la fase alcohólica → producción de indol a partir de triptófano; característico de <em>E. coli</em>.</li>
+            <li>Negativa (-): sin desarrollo de color en la capa de alcohol, o anillo turbio/amarillo → incapacidad de producir indol; se descarta la búsqueda de <em>E. coli</em>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento de la prueba: Rojo de metilo (panel IMViC)</summary>
+        <div class="caja">
+          <p>
+            Determina la capacidad de un microorganismo de producir ácidos
+            fuertes a partir de glucosa y mantener un pH bajo durante un
+            tiempo prolongado (48 a 72 horas de incubación) (Kohlerschmidt
+            et al., 2021). Los miembros de la familia
+            <em>Enterobacteriaceae</em> son fermentadores de glucosa, por lo
+            que al inicio todos los microorganismos entéricos serían
+            positivos a la prueba. Sin embargo, tras 2 días los grupos se
+            diferencian: algunas especies continúan produciendo ácidos,
+            disminuyendo el pH hasta vencer el sistema buffer de fosfatos y
+            manteniendo la coloración roja del medio, mientras que las
+            negativas metabolizan los ácidos para producir acetilmetil-
+            carbinol neutro.
+          </p>
+          <p>
+            Uno de los puntos más importantes para interpretar el resultado
+            es el tiempo de incubación, que debe ser lo suficientemente
+            prolongado para observar la diferenciación del metabolismo de
+            la glucosa. <em>E. coli</em> y <em>Salmonella</em> son positivas
+            a esta prueba.
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): el medio permanece con color rojo brillante → pH menor a 4.4, indica producción de ácidos estables; característico de <em>E. coli</em>.</li>
+            <li>Negativa (-): color amarillo o anaranjado → ausencia de ácidos estables; no corresponde a <em>E. coli</em>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento de la prueba: Voges-Proskauer (panel IMViC)</summary>
+        <div class="caja">
+          <p>
+            Identifica bacterias que presentan fermentación butanodiólica.
+            La producción de 2,3-butanodiol eleva la producción de dióxido
+            de carbono, lo que da por resultado la formación de menos
+            ácidos y la acumulación de acetoína; el balance entre acetoína y
+            2,3-butanodiol está determinado por la actividad de hidrógeno
+            disponible y por las diferencias en los potenciales redox
+            (MacFaddin, 2003). La prueba detecta la acetoína cuando esta
+            reacciona con α-naftol al 5% en etanol y KOH al 40%.
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): color rosado-rojo en la superficie del medio → producción de acetoína; no corresponde a <em>E. coli</em>.</li>
+            <li>Negativa (-): color amarillo o cobrizo en la superficie del medio → característico de <em>E. coli</em>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento de la prueba: Citrato (panel IMViC)</summary>
+        <div class="caja">
+          <p>
+            Comprueba si el microorganismo puede utilizar el citrato como
+            única fuente de carbono, mediante un medio diferencial y
+            selectivo. Los microorganismos que poseen un mecanismo de
+            transporte o permeasa permiten que el citrato penetre a la
+            célula; su desdoblamiento involucra un sistema enzimático sin
+            participación de la coenzima A: la citratasa o citrato
+            desmolasa (MacFaddin, 2003).
+          </p>
+          <p>
+            Uno de los medios más utilizados es el citrato de Simmons, cuya
+            formulación incluye citrato de sodio como única fuente de
+            carbono, fosfato de amonio como única fuente de nitrógeno y el
+            indicador de pH azul de bromotimol (Kohlerschmidt et al., 2021).
+            Si el microorganismo crece utilizando el citrato, el fosfato de
+            amonio del medio se descompone para formar amoníaco, lo que
+            genera un pH alcalino que cambia el color del indicador de
+            verde a azul.
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): crecimiento y cambio de coloración de verde a azul → utilización de citrato y alcalinización del medio; no corresponde a <em>E. coli</em>.</li>
+            <li>Negativa (-): ausencia de crecimiento y sin cambio de color → incapacidad de utilizar citrato; característico de <em>E. coli</em>.</li>
+          </ul>
+        </div>
+      </details>
+            <h2>Requerimientos del método</h2>
+      <div class="caja requerimientos">
+        <div>
+          <h3>Equipo</h3>
+          <ul>
+            <li>Baño de agua</li>
+            <li>Lámpara de luz UV</li>
+            <li>Incubadora</li>
+            <li>Balanza</li>
+            <li>Motor de licuadora</li>
+            <li>Potenciómetro</li>
+            <li>Mechero Bunsen</li>
+            <li>Autoclave</li>
+          </ul>
+        </div>
+        <br />
+        <div>
+          <h3>Materiales</h3>
+          <ul>
+            <li>Tubos de cultivo</li>
+            <li>Tubos de fermentación</li>
+            <li>Gradillas de plástico</li>
+            <li>Asas bacteriológicas</li>
+            <li>Lentes protectores</li>
+            <li>Termómetro de máximas</li>
+            <li>Termómetro de inmersión</li>
+            <li>Cinta testigo</li>
+            <li>Vasos de licuadora</li>
+            <li>Pipetas</li>
+            <li>Probetas</li>
+            <li>Frascos de dilución</li>
+            <li>Frascos de 500 mL con tapa de rosca</li>
+            <li>Espátulas, cucharas, cuchillos, pinzas</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Reactivos</h3>
+          <ul>
+            <li>Regulador de fosfatos, solución concentrada</li>
+            <li>Diluyente de peptona</li>
+            <li>Reactivo de Kovac</li>
+            <li>Reactivo de VP</li>
+            <li>Indicador rojo de metilo</li>
+            <li>Reactivos de la coloración de Gram</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Medios de cultivo</h3>
+          <ul>
+            <li>Caldo A-1</li>
+            <li>Caldo Lauril Triptosa</li>
+            <li>Caldo EC</li>
+            <li>Agar EMB-L</li>
+            <li>Caldo Triptona al 1%</li>
+            <li>Caldo MR-VP</li>
+            <li>Caldo Citrato de Koser</li>
+            <li>Citrato de Simmons</li>
+            <li>Caldo Lauril Triptosa con MUG</li>
+            <li>Caldo Verde Brillante Lactosa Bilis</li>
+            <li>Agar McConkey</li>
+            <li>Agar Nutritivo</li>
+            <li>Agar Cuenta Estándar</li>
+          </ul>
+        </div>
+      </div>
+
+       <br />
+            <h2>Proceso</h2>
+      <div class="caja">
+        <p>
+          <em>Contenido pendiente: aquí va el diagrama de flujo del método,
+          en cuanto esté disponible la imagen.</em>
+               </p>
+      </div>
+      <br />
+      <h2>Cálculo del método</h2>
+      <div class="caja">
+        <p>
+          El resultado no se calcula con una fórmula directa: el patrón de
+          tubos positivos y negativos obtenido en la prueba confirmativa
+          (caldo EC) se compara contra una tabla de referencia estándar de
+          NMP (de 3 o 5 tubos, según el número de diluciones usadas), que
+          da el índice de NMP por gramo o mililitro de muestra.
+        </p>
+        <table>
+          <caption>Patrón esperado del panel IMViC para biotipos de <em>E. coli</em></caption>
+          <thead>
+            <tr>
+              <th scope="col">Prueba</th>
+              <th scope="col">Biotipo 1*</th>
+              <th scope="col">Biotipo 2*</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Indol</td><td>+</td><td>-</td></tr>
+            <tr><td>Rojo de metilo</td><td>+</td><td>+</td></tr>
+            <tr><td>Voges-Proskauer</td><td>-</td><td>-</td></tr>
+            <tr><td>Citrato</td><td>-</td><td>-</td></tr>
+          </tbody>
+        </table>
+        <p>*Ambos biotipos se consideran <em>E. coli</em>.</p>
+        <p>
+          <em>Contenido pendiente: tabla de referencia estándar de NMP
+          (índice de NMP según el patrón de tubos positivos).</em>
+        </p>
+      </div>
+      <br />
+
+        <a href="../calculadora-nmp.html" class="btn">Calculadora NMP</a>
+
+
+    </main>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mesófilos aerobios · Manual de Pruebas Microbiológicas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Esta página está dos niveles adentro (paginas/metodos/), por eso "../../" -->
+  <link rel="stylesheet" href="../../css/styles.css" />
+</head>
+<body>
+
+  <div class="pagina">
+
+    <!-- Rutas del menú ajustadas: un nivel arriba ("../") para llegar
+         a paginas/, ningún prefijo para quedarse dentro de metodos/ -->
+    <nav class="menu-lateral">
+
+      <details>
+        <summary>Microbiología en México</summary>
+        <ul>
+          <li><a href="../microbiologia-mexico.html">Antecedentes y control microbiológico</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Microbiología de los alimentos</summary>
+        <ul>
+          <li><a href="../crecimiento-microorganismos.html">Crecimiento de microorganismos</a></li>
+          <li><a href="../tipos-microorganismos.html">Tipos de microorganismos</a></li>
+          <li><a href="../microorganismos-indicadores.html">Microorganismos indicadores</a></li>
+          <li><a href="../patogenos.html">Patógenos</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Fundamentos del análisis</summary>
+        <ul>
+          <li><a href="../muestreo.html">Muestreo</a></li>
+          <li><a href="../tecnicas-microbiologicas.html">Técnicas microbiológicas</a></li>
+          <li><a href="../metodos-analisis.html">Métodos de análisis</a></li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Pruebas microbiológicas</summary>
+        <ul>
+          <li><a href="recepcion-muestras.html">Recepción de muestras</a></li>
+          <li><a href="diluciones.html">Diluciones</a></li>
+          <li><a href="mesofilos-aerobios.html">Mesófilos aerobios</a></li>
+          <li><a href="mohos-levaduras.html">Mohos y levaduras</a></li>
+          <li><a href="coliformes-placa.html">Coliformes totales en placa</a></li>
+          <li><a href="salmonella.html">Salmonella</a></li>
+          <li><a href="s-aureus.html">S. aureus</a></li>
+          <li><a href="nmp.html">Coliformes y E. coli por NMP</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Normatividad</summary>
+        <ul>
+          <li><a href="../normatividad.html">Normas Oficiales Mexicanas y Normas Mexicanas</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Buenas prácticas de laboratorio</summary>
+        <ul>
+          <li><a href="../buenas-practicas.html">Bioseguridad e instalaciones</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Medios de cultivo</summary>
+        <ul>
+          <li><a href="../medios-cultivo.html">Clasificación, agares, caldos y reactivos</a></li>
+        </ul>
+      </details>
+
+    </nav>
+
+    <main>
+
+      <p><a href="../../index.html">← Volver al inicio</a></p>
+
+      <h2>Mesófilos aerobios</h2>
+      <h3>Método cuenta de bacterias aerobias mesófilas</h3>
+
+      <p>
+        Mesofílicos aerobios: microorganismos que crecen a tensiones normales
+        de O<sub>2</sub> y respiran O<sub>2</sub> en su metabolismo, y que se
+        desarrollan de manera óptima a temperaturas moderadas, generalmente
+        entre 20 y 45 °C.
+      </p>
+      <br />
+      <h2>Fundamentos</h2>
+      <div class="caja">
+        <p>
+          El objetivo del método es la estimación de la carga bacteriana
+          viable mediante el conteo de bacterias aerobias mesófilas, que son
+          aquellas que presentan crecimiento óptimo a temperaturas moderadas
+          (20-45 °C) y a tensiones normales de O<sub>2</sub>.
+        </p>
+        <p>
+          Por las condiciones de crecimiento, este tipo de bacterias pueden
+          constituir una parte importante de la microbiota de los alimentos,
+          por lo que una alta carga microbiana puede indicar posibles
+          deficiencias durante la producción, manipulación o almacenamiento
+          de los alimentos.
+        </p>
+        <p>
+          La cuantificación de mesófilas se realiza utilizando un medio de
+          cultivo no selectivo, que provee todos los nutrientes necesarios
+          para el crecimiento de una amplia variedad de microorganismos. Sin
+          embargo, por las condiciones de incubación no se favorece la
+          recuperación de anaerobios y microaerófilos, y también se
+          subestima a psicrótrofos y termófilos.
+        </p>
+        <p>
+          Se estima que cada célula viable, o agrupación de células, al
+          desarrollarse bajo condiciones favorables puede generar una colonia
+          visible. El recuento de estas colonias permite estimar la
+          concentración de microorganismos viables en la muestra, expresada
+          en unidades formadoras de colonias (UFC), cuyo resultado puede
+          compararse con las especificaciones microbiológicas establecidas
+          para el alimento analizado.
+        </p>
+      </div>
+      <!-- ============================================
+           Ficha de fundamento bioquímico del medio de
+           cultivo: card desplegable con <details>, no
+           necesita JavaScript.
+           ============================================ -->
+      <details>
+        <summary>Fundamento del medio de cultivo: Agar Triptona-Extracto de Levadura</summary>
+        <div class="caja">
+          <p><strong>Componentes generales:</strong> extracto de levadura, triptona, dextrosa.</p>
+          <p>
+            Es un medio de cultivo nutritivo, no selectivo ni diferencial. La
+            triptona actúa como fuente de nitrógeno orgánico, aportando
+            péptidos y aminoácidos. El extracto de levadura suministra
+            vitaminas, complejos de crecimiento y minerales. Ya que el medio
+            no contiene ningún inhibidor ni indicador, permite el crecimiento
+            indiscriminado de bacterias.
+          </p>
+        </div>
+      <br />        
+      </details>
+            <h2>Requerimientos del método</h2>
+      <div class="caja requerimientos">
+        <div>
+          <h3>Equipo</h3>
+          <ul>
+            <li>Horno</li>
+            <li>Autoclave</li>
+            <li>Baño de agua</li>
+            <li>Licuadora</li>
+            <li>Vasos para licuadora</li>
+            <li>Balanza</li>
+            <li>Incubadora</li>
+            <li>Contador de colonias</li>
+            <li>Registrador mecánico o electrónico</li>
+            <li>Microscopio</li>
+          </ul>
+        </div>
+        <br />
+        <div>
+          <h3>Materiales</h3>
+          <ul>
+            <li>Pipetas bacteriológicas</li>
+            <li>Frascos de vidrio</li>
+            <li>Tubos de 16x150</li>
+            <li>Utensilios esterilizables</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Medios de cultivo</h3>
+          <ul>
+            <li>Agar Triptona-Extracto de Levadura</li>
+          </ul>
+        </div>
+      </div>
+      
+
+       
+       <br />
+            <h2>Proceso</h2>
+      <div class="caja">
+        <p>
+          <em>Contenido pendiente: aquí va el diagrama de flujo del método
+          (Figura 4, "Diagrama de flujo para realizar cuenta de mesofílicos
+          aerobios"), en cuanto esté disponible la imagen.</em>
+               </p>
+      </div>
+      <br />
+      <h2>Cálculo del método</h2>
+      <div class="caja">
+        <table>
+          <caption>Tabla 11. Conteo de colonias de acuerdo al estado de la placa para bacterias aerobias</caption>
+          <thead>
+            <tr>
+              <th scope="col">Estado de la placa</th>
+              <th scope="col">Conteo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Una dilución está dentro del intervalo</td>
+              <td>Calcular cuenta promedio y reportar.</td>
+            </tr>
+            <tr>
+              <td>Dos diluciones están en el intervalo</td>
+              <td>Determinar la cuenta promedio por cada dilución antes de promediar la cuenta de las dos diluciones para obtener la cuenta en placa por gramo o mL.</td>
+            </tr>
+            <tr>
+              <td>Menos de 25 colonias</td>
+              <td>Contar el número en la dilución, promediar el número de colonias y multiplicar por el factor de dilución. Incluir la leyenda "valor estimado".</td>
+            </tr>
+            <tr>
+              <td>Más de 250 colonias</td>
+              <td>Contar las colonias en aquellas porciones de la placa que sean representativas de la distribución. Incluir la leyenda "valor estimado".</td>
+            </tr>
+            <tr>
+              <th colspan="2">Colonias extendidas</th>
+            </tr>
+            <tr>
+              <td>Cadenas de colonias no separadas claramente entre sí, causadas por la desintegración de un cúmulo de bacterias</td>
+              <td>Contar una cadena como una colonia individual.</td>
+            </tr>
+            <tr>
+              <td>Colonias que se desarrollan en película entre el agar y el fondo de la caja</td>
+              <td rowspan="2">Se observan como crecimiento diferenciable de otras colonias y se cuentan como tales.</td>
+            </tr>
+            <tr>
+              <td>Colonias que se desarrollan en película en la orilla de la caja sobre la superficie del agar</td>
+            </tr>
+            <tr>
+              <td>Colonias de crecimiento extendido acompañadas de inhibición de crecimiento que en conjunto exceden el 50% de la caja, o represión del crecimiento que por sí mismo excede el 25% de la superficie de la caja</td>
+              <td>Reportar como crecimiento extendido. En caso de que una dilución se encuentre dentro del rango y otra dilución presente colonias de crecimiento extendido, reportar la dilución en la que se pueden contar colonias.</td>
+            </tr>
+            <tr>
+              <td>Placas sin colonias</td>
+              <td>Cuando las placas de todas las diluciones no muestran colonias, reportar la cuenta como menor que una vez el valor de la dilución más baja usada.</td>
+            </tr>
+            <tr>
+              <td>Placas corridas por duplicado: una placa dentro del rango y una con más de 250 colonias</td>
+              <td>Contar ambas placas.</td>
+            </tr>
+            <tr>
+              <td>Placas corridas por duplicado: una placa de cada dilución dentro del intervalo de 25-250 colonias. Una placa dentro de las diferentes diluciones contiene el número de colonias especificadas en el intervalo</td>
+              <td>Contar el número de colonias de las cuatro placas.</td>
+            </tr>
+            <tr>
+              <td>Placas corridas por duplicado: ambas placas de una dilución dentro del intervalo 25-250 y solo una de la otra dilución dentro del mismo intervalo</td>
+              <td>Contar las cuatro cajas, incluyendo aquella con menos de 25 o más de 250 colonias.</td>
+            </tr>
+          </tbody>
+        </table>
+      
+      </div>
+      <br />
+        <a href="../calculadora-ufc.html" class="btn">Calculadora UFC/g</a>
+
+    </main>
+
+  </div>
+
+</body>
+</html>

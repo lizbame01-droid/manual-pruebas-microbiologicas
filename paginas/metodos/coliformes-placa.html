@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coliformes totales en placa · Manual de Pruebas Microbiológicas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Esta página está dos niveles adentro (paginas/metodos/), por eso "../../" -->
+  <link rel="stylesheet" href="../../css/styles.css" />
+</head>
+<body>
+
+  <div class="pagina">
+
+    <!-- Rutas del menú ajustadas: un nivel arriba ("../") para llegar
+         a paginas/, ningún prefijo para quedarse dentro de metodos/ -->
+    <nav class="menu-lateral">
+
+      <details>
+        <summary>Microbiología en México</summary>
+        <ul>
+          <li><a href="../microbiologia-mexico.html">Antecedentes y control microbiológico</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Microbiología de los alimentos</summary>
+        <ul>
+          <li><a href="../crecimiento-microorganismos.html">Crecimiento de microorganismos</a></li>
+          <li><a href="../tipos-microorganismos.html">Tipos de microorganismos</a></li>
+          <li><a href="../microorganismos-indicadores.html">Microorganismos indicadores</a></li>
+          <li><a href="../patogenos.html">Patógenos</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Fundamentos del análisis</summary>
+        <ul>
+          <li><a href="../muestreo.html">Muestreo</a></li>
+          <li><a href="../tecnicas-microbiologicas.html">Técnicas microbiológicas</a></li>
+          <li><a href="../metodos-analisis.html">Métodos de análisis</a></li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Pruebas microbiológicas</summary>
+        <ul>
+          <li><a href="recepcion-muestras.html">Recepción de muestras</a></li>
+          <li><a href="diluciones.html">Diluciones</a></li>
+          <li><a href="mesofilos-aerobios.html">Mesófilos aerobios</a></li>
+          <li><a href="mohos-levaduras.html">Mohos y levaduras</a></li>
+          <li><a href="coliformes-placa.html">Coliformes totales en placa</a></li>
+          <li><a href="salmonella.html">Salmonella</a></li>
+          <li><a href="s-aureus.html">S. aureus</a></li>
+          <li><a href="nmp.html">Coliformes y E. coli por NMP</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Normatividad</summary>
+        <ul>
+          <li><a href="../normatividad.html">Normas Oficiales Mexicanas y Normas Mexicanas</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Buenas prácticas de laboratorio</summary>
+        <ul>
+          <li><a href="../buenas-practicas.html">Bioseguridad e instalaciones</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Medios de cultivo</summary>
+        <ul>
+          <li><a href="../medios-cultivo.html">Clasificación, agares, caldos y reactivos</a></li>
+        </ul>
+      </details>
+
+    </nav>
+
+    <main>
+
+      <p><a href="../../index.html">← Volver al inicio</a></p>
+
+      <h2>Coliformes totales en placa</h2>
+      <h3>Método para la cuenta de microorganismos coliformes totales en placa</h3>
+
+      <p>
+        Coliformes: grupo de bacterias gramnegativas, anaerobias
+        facultativas, no productoras de esporas, que fermentan la lactosa
+        produciendo ácido y gas.
+      </p>
+      <br />
+      <h2>Fundamentos</h2>
+      <div class="caja">
+        <p>
+          El grupo de coliformes se sigue utilizando como microorganismos
+          indicadores. Sin embargo, es importante destacar que la
+          contabilización de coliformes totales no necesariamente implica
+          que el alimento esté contaminado con patógenos, ya que pueden ser
+          parte de la microbiota natural de la materia prima. Por lo tanto,
+          el resultado debe interpretarse considerando la matriz evaluada y
+          el proceso al que se somete.
+        </p>
+        <p>
+          El agar utilizado contiene lactosa en su formulación, lo que
+          permite identificar a aquellas bacterias capaces de fermentar el
+          carbohidrato; una vez que los coliformes han utilizado la lactosa,
+          las colonias desarrolladas adquieren tonalidades rojizas.
+        </p>
+      </div>
+
+      <!-- ============================================
+           Ficha de fundamento bioquímico del medio de
+           cultivo: card desplegable con <details>, no
+           necesita JavaScript.
+           ============================================ -->
+      <details>
+        <summary>Fundamento del medio de cultivo: Agar Rojo Violeta Bilis Lactosa (RVBA)</summary>
+        <div class="caja">
+          <p>
+            <strong>Componentes generales:</strong> extracto de levadura,
+            sales biliares, peptona, lactosa, cloruro de sodio, cristal
+            violeta, rojo neutro.
+          </p>
+          <p>
+            La peptona es fuente de nitrógeno, vitaminas, minerales y
+            aminoácidos esenciales para el crecimiento; el extracto de
+            levadura proporciona vitaminas, especialmente las del grupo B.
+            Las sales biliares y el cristal violeta inhiben el crecimiento
+            de bacterias grampositivas. La lactosa es el carbohidrato
+            fermentable que proporciona carbono y energía. Los coliformes
+            fermentadores de lactosa se diferencian gracias al indicador
+            rojo neutro.
+          </p>
+        </div>
+      <br />
+      </details>
+            <h2>Requerimientos del método</h2>
+      <div class="caja requerimientos">
+        <div>
+          <h3>Equipo</h3>
+          <ul>
+            <li>Horno</li>
+            <li>Baño de agua</li>
+            <li>Vasos</li>
+            <li>Incubadora</li>
+            <li>Contador de colonias</li>
+            <li>Registrador</li>
+            <li>Microscopio óptico</li>
+            <li>Potenciómetro</li>
+          </ul>
+        </div>
+        <br />
+        <div>
+          <h3>Materiales</h3>
+          <ul>
+            <li>Pipetas</li>
+            <li>Frascos de vidrio</li>
+            <li>Tubos 16x150</li>
+            <li>Utensilios esterilizables</li>
+            <li>Cajas Petri</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Reactivos</h3>
+          <ul>
+            <li>Solución reguladora de fosfatos</li>
+            <li>Agua peptonada</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Medios de cultivo</h3>
+          <ul>
+            <li>Agar Rojo Violeta Bilis Lactosa (RVBA)</li>
+          </ul>
+        </div>
+      </div>
+      
+       <br />
+            <h2>Proceso</h2>
+      <div class="caja">
+        <p>
+          <em>Contenido pendiente: aquí va el diagrama de flujo del método
+          (Figura 6, "Diagrama de flujo para realizar cuenta de coliformes
+          totales en placa"), en cuanto esté disponible la imagen.</em>
+               </p>
+      </div>
+      <br />
+      <h2>Cálculo del método</h2>
+      <div class="caja">
+        <table>
+          <caption>Tabla 14. Conteo de colonias para coliformes totales en placa</caption>
+          <thead>
+            <tr>
+              <th scope="col">Estado de la placa</th>
+              <th scope="col">Conteo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Placas que contienen entre 15-150 colonias</td>
+              <td>Separar las placas que contienen el número antes mencionado de colonias características en dos 
+                diluciones consecutivas y contar las colonias presentes. Calcular UFC tomando los criterios 
+                 <a href="mesofilos-aerobios.html">Tabla 11 de mesófilos aerobios</a></td>
+            </tr>
+            <tr>
+              <td>Placas que contienen menos de 15 colonias características</td>
+              <td>Reportar el número obtenido seguido de la dilución correspondiente.</td>
+            </tr>
+            <tr>
+              <td>Placas con colonias no características</td>
+              <td>Reportar el resultado como: menos de un coliforme por 1/F.D por gramo (F.D: factor de dilución).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br />
+
+        <a href="../calculadora-ufc.html" class="btn">Calculadora UFC/g</a>
+
+
+    </main>
+
+  </div>
+
+</body>
+</html>

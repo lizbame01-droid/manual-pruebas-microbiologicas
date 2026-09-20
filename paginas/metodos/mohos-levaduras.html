@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohos y levaduras · Manual de Pruebas Microbiológicas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Esta página está dos niveles adentro (paginas/metodos/), por eso "../../" -->
+  <link rel="stylesheet" href="../../css/styles.css" />
+</head>
+<body>
+
+  <div class="pagina">
+
+    <!-- Rutas del menú ajustadas: un nivel arriba ("../") para llegar
+         a paginas/, ningún prefijo para quedarse dentro de metodos/ -->
+    <nav class="menu-lateral">
+
+      <details>
+        <summary>Microbiología en México</summary>
+        <ul>
+          <li><a href="../microbiologia-mexico.html">Antecedentes y control microbiológico</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Microbiología de los alimentos</summary>
+        <ul>
+          <li><a href="../crecimiento-microorganismos.html">Crecimiento de microorganismos</a></li>
+          <li><a href="../tipos-microorganismos.html">Tipos de microorganismos</a></li>
+          <li><a href="../microorganismos-indicadores.html">Microorganismos indicadores</a></li>
+          <li><a href="../patogenos.html">Patógenos</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Fundamentos del análisis</summary>
+        <ul>
+          <li><a href="../muestreo.html">Muestreo</a></li>
+          <li><a href="../tecnicas-microbiologicas.html">Técnicas microbiológicas</a></li>
+          <li><a href="../metodos-analisis.html">Métodos de análisis</a></li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Pruebas microbiológicas</summary>
+        <ul>
+          <li><a href="recepcion-muestras.html">Recepción de muestras</a></li>
+          <li><a href="diluciones.html">Diluciones</a></li>
+          <li><a href="mesofilos-aerobios.html">Mesófilos aerobios</a></li>
+          <li><a href="mohos-levaduras.html">Mohos y levaduras</a></li>
+          <li><a href="coliformes-placa.html">Coliformes totales en placa</a></li>
+          <li><a href="salmonella.html">Salmonella</a></li>
+          <li><a href="s-aureus.html">S. aureus</a></li>
+          <li><a href="nmp.html">Coliformes y E. coli por NMP</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Normatividad</summary>
+        <ul>
+          <li><a href="../normatividad.html">Normas Oficiales Mexicanas y Normas Mexicanas</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Buenas prácticas de laboratorio</summary>
+        <ul>
+          <li><a href="../buenas-practicas.html">Bioseguridad e instalaciones</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Medios de cultivo</summary>
+        <ul>
+          <li><a href="../medios-cultivo.html">Clasificación, agares, caldos y reactivos</a></li>
+        </ul>
+      </details>
+
+    </nav>
+
+    <main>
+
+      <p><a href="../../index.html">← Volver al inicio</a></p>
+
+      <h2>Mohos y levaduras</h2>
+      <h3>Método para la cuenta de mohos y levaduras</h3>
+
+      <p>
+        Moho: nombra a ciertos hongos filamentosos multicelulares con
+        aspecto aterciopelado.
+      </p>
+      <p>
+        Levadura: Son hongos no filamentosos, unicelulares con formas esféricas,
+        ovoideas, elipsoideas o alargadas. 
+      </p>
+      <br />
+      <h2>Fundamentos</h2>
+      <div class="caja">
+        <p>
+          En general, muchos mohos y levaduras pueden desarrollarse a
+          temperaturas moderadas y tolerar condiciones ácidas. Uno de los
+          riesgos asociados a la contaminación por algunas especies de
+          hongos es la producción de micotoxinas bajo determinadas
+          condiciones.
+        </p>
+        <p>
+          Varias de las matrices alimentarias que se analizan en este manual
+          presentan baja actividad de agua; por ello, el recuento de mohos y
+          levaduras es relevante, debido a que algunas especies toleran
+          valores de a<sub>w</sub> menores que otros microorganismos.
+        </p>
+        <p>
+          La acidificación del medio limita el crecimiento de bacterias y
+          facilita el recuento de mohos y levaduras. El recuento de este
+          tipo de microorganismos se estima mediante el conteo de colonias
+          en placa, expresado en UFC/g.
+        </p>
+      </div>
+
+      <!-- ============================================
+           Ficha de fundamento bioquímico del medio de
+           cultivo: card desplegable con <details>, no
+           necesita JavaScript.
+           ============================================ -->
+      <details>
+        <summary>Fundamento del medio de cultivo: Agar Papa Dextrosa</summary>
+        <div class="caja">
+          <p><strong>Componentes generales:</strong> dextrosa y extracto de papa.</p>
+          <p>
+            Es un medio simple utilizado para el cultivo y cuenta de hongos y
+            levaduras provenientes de diferentes tipos de muestra; la
+            infusión de papa y la glucosa favorecen el desarrollo abundante
+            de mohos y levaduras. Este agar es ligeramente ácido, por lo que
+            inhibe el crecimiento de algunas bacterias.
+          </p>
+        </div>
+      <br />
+      </details>
+            <h2>Requerimientos del método</h2>
+      <div class="caja requerimientos">
+        <div>
+          <h3>Equipo</h3>
+          <ul>
+            <li>Horno</li>
+            <li>Incubadora</li>
+            <li>Autoclave</li>
+            <li>Baño de agua</li>
+            <li>Contador de colonias</li>
+            <li>Registrador mecánico</li>
+            <li>Microscopio</li>
+            <li>Potenciómetro</li>
+          </ul>
+        </div>
+        <br />
+        <div>
+          <h3>Materiales</h3>
+          <ul>
+            <li>Pipetas bacteriológicas</li>
+            <li>Cajas Petri</li>
+            <li>Frascos de vidrio de 250 mL</li>
+            <li>Tubos de 16x150 mm</li>
+            <li>Utensilios esterilizables</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Reactivos</h3>
+          <ul>
+            <li>Solución reguladora de fosfatos</li>
+            <li>Solución estéril de ácido tartárico al 10%</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Medios de cultivo</h3>
+          <ul>
+            <li>Agar papa dextrosa</li>
+          </ul>
+        </div>
+      </div>
+      
+       <br />
+            <h2>Proceso</h2>
+      <div class="caja">
+        <p>
+          <em>Contenido pendiente: aquí va el diagrama de flujo del método
+          (Figura 5, "Diagrama de flujo para realizar cuenta de mohos y
+          levaduras"), en cuanto esté disponible la imagen.</em>
+               </p>
+      </div>
+      <br />
+      <h2>Cálculo del método</h2>
+      <div class="caja">
+        <p>
+          Se consideran placas con un conteo de 10 a 150 colonias. Para el
+          resto de los casos (diluciones fuera de rango, colonias
+          extendidas, placas sin colonias, etc.) se toman en cuenta los
+          mismos criterios de la <a href="mesofilos-aerobios.html">Tabla 11
+          de mesófilos aerobios</a>.
+        </p>
+      </div>
+      <br />
+
+        <a href="../calculadora-ufc.html" class="btn">Calculadora UFC/g</a>
+
+
+    </main>
+
+  </div>
+
+</body>
+</html>

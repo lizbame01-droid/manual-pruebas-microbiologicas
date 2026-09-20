@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S. aureus · Manual de Pruebas Microbiológicas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Esta página está dos niveles adentro (paginas/metodos/), por eso "../../" -->
+  <link rel="stylesheet" href="../../css/styles.css" />
+</head>
+<body>
+
+  <div class="pagina">
+
+    <!-- Rutas del menú ajustadas: un nivel arriba ("../") para llegar
+         a paginas/, ningún prefijo para quedarse dentro de metodos/ -->
+    <nav class="menu-lateral">
+
+      <details>
+        <summary>Microbiología en México</summary>
+        <ul>
+          <li><a href="../microbiologia-mexico.html">Antecedentes y control microbiológico</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Microbiología de los alimentos</summary>
+        <ul>
+          <li><a href="../crecimiento-microorganismos.html">Crecimiento de microorganismos</a></li>
+          <li><a href="../tipos-microorganismos.html">Tipos de microorganismos</a></li>
+          <li><a href="../microorganismos-indicadores.html">Microorganismos indicadores</a></li>
+          <li><a href="../patogenos.html">Patógenos</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Fundamentos del análisis</summary>
+        <ul>
+          <li><a href="../muestreo.html">Muestreo</a></li>
+          <li><a href="../tecnicas-microbiologicas.html">Técnicas microbiológicas</a></li>
+          <li><a href="../metodos-analisis.html">Métodos de análisis</a></li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Pruebas microbiológicas</summary>
+        <ul>
+          <li><a href="recepcion-muestras.html">Recepción de muestras</a></li>
+          <li><a href="diluciones.html">Diluciones</a></li>
+          <li><a href="mesofilos-aerobios.html">Mesófilos aerobios</a></li>
+          <li><a href="mohos-levaduras.html">Mohos y levaduras</a></li>
+          <li><a href="coliformes-placa.html">Coliformes totales en placa</a></li>
+          <li><a href="salmonella.html">Salmonella</a></li>
+          <li><a href="s-aureus.html">S. aureus</a></li>
+          <li><a href="nmp.html">Coliformes y E. coli por NMP</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Normatividad</summary>
+        <ul>
+          <li><a href="../normatividad.html">Normas Oficiales Mexicanas y Normas Mexicanas</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Buenas prácticas de laboratorio</summary>
+        <ul>
+          <li><a href="../buenas-practicas.html">Bioseguridad e instalaciones</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Medios de cultivo</summary>
+        <ul>
+          <li><a href="../medios-cultivo.html">Clasificación, agares, caldos y reactivos</a></li>
+        </ul>
+      </details>
+
+    </nav>
+
+    <main>
+
+      <p><a href="../../index.html">← Volver al inicio</a></p>
+
+      <h2>S. aureus</h2>
+      <h3>Método de referencia para la estimación de la cuenta de <em>S. aureus</em></h3>
+
+      <p>
+        <em>S. aureus</em> es una bacteria capaz de producir toxinas. La
+        intoxicación por estas se considera una de las enfermedades de
+        transmisión alimentaria más frecuentes alrededor del mundo.
+      </p>
+      <br />
+      <h2>Fundamentos</h2>
+      <div class="caja">
+        <p>
+          La atención hacia este patógeno ha ido en aumento debido a su
+          asociación con la resistencia a múltiples antibióticos y su tasa
+          de transmisión. Los síntomas comunes son salivación, náuseas,
+          vómitos, arcadas, retortijones y diarrea.
+        </p>
+        <p>
+          La identificación de la especie consiste en tres etapas: prueba
+          presuntiva, prueba confirmativa y pruebas bioquímicas adicionales.
+          La prueba presuntiva se basa en la capacidad de los estafilococos
+          de reducir telurito a telurio; además se recomienda realizar una
+          tinción de Gram para descartar que se trate de una colonia
+          gramnegativa.
+        </p>
+        <p>
+          En las pruebas confirmativas se aprovecha la capacidad de
+          <em>S. aureus</em> de sintetizar dos enzimas: coagulasa y
+          termonucleasa. En caso de duda sobre la identificación, se pueden
+          realizar pruebas auxiliares fundamentadas en la fermentación de
+          carbohidratos, la síntesis de la enzima catalasa y la
+          composición de la pared celular (tinción de Gram).
+        </p>
+      </div>
+
+      <!-- ============================================
+           Fichas de fundamento: en el orden en que se
+           usan durante el método (presuntiva → confirma-
+           tivas → bioquímicas adicionales). Cards con
+           <details>, no necesitan JavaScript.
+           ============================================ -->
+
+      <details>
+        <summary>Fundamento del medio de cultivo: Agar Baird Parker (prueba presuntiva)</summary>
+        <div class="caja">
+          <p>
+            <strong>Componentes generales:</strong> triptona, extracto de
+            carne, extracto de levadura, piruvato de sodio, glicina y
+            cloruro de litio.
+          </p>
+          <p>
+            La glicina y el piruvato son agentes estimulantes del
+            crecimiento de estafilococos. El cloruro de litio y el telurito
+            de potasio inhiben el crecimiento de bacterias grampositivas y
+            algunas gramnegativas. El telurito de potasio ayuda a la
+            identificación presuntiva de estafilococos por su capacidad de
+            reducirse a telurio, originando colonias brillantes de color
+            negro grisáceo (Zendejas et al., 2014). <em>S. aureus</em>
+            reduce los iones tóxicos de telurito a telurio mediante un
+            mecanismo de desintoxicación que implica la captación del
+            telurito por sistemas de transporte de aniones y su reducción
+            intracelular bajo estrés oxidativo, mediada por reductasas
+            dependientes de NADPH, tioles y enzimas de la cadena de
+            transporte de electrones (Solis et al., 2025).
+          </p>
+          <p>
+            En esta prueba también se detecta la lecitinasa a partir de la
+            lecitina del huevo, que se observa como una zona de
+            aclaramiento alrededor de las colonias (Zendejas et al., 2014).
+            La lecitinasa degrada la lecitina de las membranas celulares
+            produciendo diglicérido y fosforilcolina, lo que causa
+            toxicidad (Sharaf et al., 2014).
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): colonias negras, brillantes, convexas, con halo claro (zona opaca o transparente alrededor) → reducción de telurito y actividad de lecitinasa; presuntivo a <em>S. aureus</em>.</li>
+            <li>Negativa (-): colonias negras sin halo → no característico de <em>S. aureus</em>; colonias grises, marrones o sin ennegrecimiento → se descarta la búsqueda de <em>S. aureus</em>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento de la prueba: Tinción de Gram</summary>
+        <div class="caja">
+          <p>
+            Se usa junto con el Agar Baird Parker en la etapa presuntiva,
+            para descartar que la colonia observada sea gramnegativa.
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): cocos grampositivos en racimos → compatible con <em>S. aureus</em>.</li>
+            <li>Negativa (-): bacilos o cocos gramnegativos → se descarta <em>S. aureus</em>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento de la prueba: Coagulasa</summary>
+        <div class="caja">
+          <p>
+            Se utiliza de manera específica para diferenciar especies del
+            género <em>Staphylococcus</em> según su capacidad de sintetizar
+            coagulasas. Las coagulasas estafilocócicas son polipéptidos que
+            se unen a la protrombina y la activan, convirtiendo el
+            fibrinógeno en fibrina y promoviendo la coagulación del plasma
+            o la sangre.
+          </p>
+          <p>
+            Dos coagulasas estafilocócicas producen este efecto: la
+            coagulasa canónica (Coa) y la proteína de unión al factor de von
+            Willebrand (vWbp) (McAdow et al., 2012). La Coa se une a la
+            protrombina y sus derivados formando un complejo llamado
+            estafiloprotrombina, que reconoce al fibrinógeno como sustrato
+            específico y lo convierte directamente en fibrina. La vWbp se
+            une débilmente a la protrombina formando un complejo inactivo,
+            que se activa mediante un cambio conformacional inducido por el
+            fibrinógeno (Bonar et al., 2018). La concentración de coagulasas
+            influye en la velocidad de coagulación: una concentración alta
+            produce una coagulación casi instantánea del plasma (MacFaddin,
+            2003).
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): formación de coágulo o filamentos de fibrina separados, coágulo completo o parcial → característico de <em>S. aureus</em>.</li>
+            <li>Negativa (-): ausencia de coágulo, la suspensión permanece homogénea → se descarta <em>S. aureus</em>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento de la prueba: Termonucleasa</summary>
+        <div class="caja">
+          <p>
+            La termonucleasa (TNasa) es una proteína extracelular que
+            participa en la evasión de las respuestas inmunitarias y en la
+            formación de biopelículas (Mlynarczyk &amp; Rudnicka, 2025). Es
+            una endonucleasa (DNAsa) que hidroliza las moléculas de DNA para
+            producir una mezcla de mono y polinucleótidos. A diferencia de
+            otras enzimas con la misma función, resiste 100 °C durante al
+            menos 1 hora, requiere calcio como cofactor y tiene un pH óptimo
+            de 8.9-9.0 (MacFaddin, 2003).
+          </p>
+          <p>
+            Todas las cepas coagulasa positiva son termonucleasa positiva,
+            aunque no a la inversa; de igual forma, todas las cepas
+            productoras de enterotoxina son coagulasa y termonucleasa
+            positivas, pero no a la inversa (Suárez et al., 2008). Las
+            ventajas de analizar esta enzima son su estabilidad al calor
+            (persiste aunque las células de <em>S. aureus</em> se destruyan),
+            su rapidez de determinación (3 horas frente a las pruebas de
+            enterotoxina) y que es detectable en cultivos no concentrados de
+            muestras de alimentos (Jay et al., 2005). La composición del
+            medio, la aireación, el pH, la temperatura y el periodo de
+            incubación son factores importantes en su actividad (MacFaddin,
+            2003).
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): formación de halo rosado o zona clara alrededor de la muestra → característico de <em>S. aureus</em>.</li>
+            <li>Negativa (-): ausencia de halo o cambio de color → se descarta <em>S. aureus</em>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento de la prueba: Utilización anaeróbica de glucosa y manitol</summary>
+        <div class="caja">
+          <p>
+            Se utiliza un medio selectivo y diferencial con una elevada
+            concentración de NaCl, el carbohidrato a evaluar (glucosa o
+            manitol) e indicador rojo de fenol, sellado con aceite de
+            parafina o mineral estéril para generar condiciones anaeróbicas.
+            Solamente crecen los microorganismos que toleran una alta
+            presión osmótica; si el microorganismo fermenta el carbohidrato
+            de forma anaeróbica, se producen ácidos orgánicos que viran el
+            indicador de rojo a amarillo.
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): cambio de color a amarillo en el medio → presencia presuntiva de <em>S. aureus</em>.</li>
+            <li>Negativa (-): sin cambio de color (colonias rosadas o rojas) → microorganismos que no fermentan el carbohidrato; se descarta <em>S. aureus</em>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento de la prueba: Catalasa</summary>
+        <div class="caja">
+          <p>
+            Se utiliza para diferenciar entre los géneros
+            <em>Streptococcus</em>, <em>Micrococcus</em> y
+            <em>Staphylococcus</em> (MacFaddin, 2003). Durante la
+            respiración, el oxígeno molecular reacciona con flavoproteínas
+            reducidas, proteínas ferrosulfuradas y citocromos, reduciéndose
+            a peróxido de hidrógeno (H<sub>2</sub>O<sub>2</sub>) o superóxido
+            (O<sub>2</sub><sup>-</sup>), ambos potentes oxidantes que dañan
+            polímeros celulares. Como defensa, los microorganismos aerobios
+            y anaerobios facultativos poseen las enzimas superóxido
+            dismutasa (SOD) y catalasa (Kim &amp; Gadd, 2008).
+          </p>
+          <p>
+            La catalasa posee una ferriprotoporfirina, usa hierro o
+            manganeso como cofactor, y cataliza la degradación del
+            H<sub>2</sub>O<sub>2</sub> a agua y oxígeno molecular en dos
+            pasos: primero, una molécula de peróxido de hidrógeno oxida el
+            grupo hemo a una especie oxiferrilo, generando un radical de
+            porfirina; después, una segunda molécula de peróxido de
+            hidrógeno actúa como agente reductor para regenerar la enzima en
+            su estado de reposo, produciendo una molécula de oxígeno y agua
+            (Ighodaro &amp; Akinloye, 2018).
+          </p>
+          <p>
+            La prueba consiste en agregar gotas de peróxido de hidrógeno a
+            un cultivo de 18 a 24 horas de crecimiento; si se forman
+            burbujas, el organismo está produciendo la enzima.
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): formación inmediata de burbujas → característico del género <em>Staphylococcus</em>.</li>
+            <li>Negativa (-): ausencia de burbujas → se descarta <em>Staphylococcus</em>.</li>
+          </ul>
+        </div>
+      </details>
+            <h2>Requerimientos del método</h2>
+      <div class="caja requerimientos">
+        <div>
+          <h3>Equipo</h3>
+          <ul>
+            <li>Horno para esterilizar que alcance 180 °C</li>
+            <li>Autoclave</li>
+            <li>Balanza granataria</li>
+            <li>Incubadora capaz de operar a 36 °C ± 1 °C</li>
+            <li>Homogeneizador</li>
+            <li>Baño de agua</li>
+          </ul>
+        </div>
+        <br />
+        <div>
+          <h3>Materiales</h3>
+          <ul>
+            <li>Cuchillos, pinzas, tijeras, cucharas, espátulas</li>
+            <li>Tubos de cultivo 16x150</li>
+            <li>Tubos de cultivo de 10 mm</li>
+            <li>Cajas Petri</li>
+            <li>Pipetas de 1 mL</li>
+            <li>Pipetas Pasteur</li>
+            <li>Probetas</li>
+            <li>Varillas</li>
+            <li>Matraz Erlenmeyer</li>
+            <li>Cámara húmeda</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Reactivos</h3>
+          <ul>
+            <li>Reactivos de la tinción de Gram</li>
+            <li>Caldo rojo de fenol</li>
+            <li>Aceite de parafina o mineral estéril</li>
+            <li>Solución trazable para verificación de potenciómetro</li>
+            <li>Peróxido de hidrógeno al 3%</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Medios de cultivo</h3>
+          <ul>
+            <li>Agar Baird Parker</li>
+            <li>Solución de telurito de potasio</li>
+            <li>Emulsión de yema de huevo</li>
+            <li>BHI</li>
+            <li>Solución reguladora de fosfatos</li>
+            <li>Agua peptonada</li>
+            <li>Solución salina 0.85%</li>
+            <li>Agar Azul de Toluidina-ADN</li>
+            <li>Plasma de conejo con EDTA</li>
+            <li>Agua peptonada amortiguada</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Cepas de referencia</h3>
+          <ul>
+            <li><em>S. aureus</em> ATCC 6538</li>
+            <li><em>S. aureus</em> ATCC 25923</li>
+            <li><em>S. epidermidis</em> ATCC 12228</li>
+          </ul>
+        </div>
+      </div>
+
+       <br />
+            <h2>Proceso</h2>
+      <div class="caja">
+        <p>
+          <em>Contenido pendiente: aquí va el diagrama de flujo del método,
+          en cuanto esté disponible la imagen.</em>
+               </p>
+      </div>
+      <br />
+      <h2>Cálculo del método</h2>
+      <div class="caja">
+        <p>
+          Las pruebas de termonucleasa o coagulasa positiva se consideran
+          resultados confirmatorios de <em>S. aureus</em>.
+        </p>
+        <p>
+          Si al menos el 80% de las colonias típicas seleccionadas fueron
+          coagulasa positiva y/o termonucleasa positiva, se toma el número
+          total de colonias contadas como presuntivas de <em>S. aureus</em>.
+          En otros casos, se calcula el número de colonias presuntivas a
+          partir del porcentaje obtenido de colonias confirmadas
+          (coagulasa y/o termonucleasa positivas). Los resultados de los
+          duplicados se promedian.
+        </p>
+        <p>
+          Cuando en dos diluciones consecutivas se obtienen cuentas entre 15
+          y 150 colonias (típicas o atípicas), se calcula el número de
+          <em>S. aureus</em> para cada dilución considerando el factor de
+          dilución, y se obtiene el logaritmo base 10 de cada una. Si la
+          diferencia entre ambos logaritmos es menor a 0.3, se reporta el
+          promedio de las dos diluciones; si la diferencia es mayor a 0.3,
+          se reporta el valor más bajo.
+        </p>
+      </div>
+      <br />
+
+        <a href="../calculadora-ufc.html" class="btn">Calculadora UFC/g</a>
+
+
+    </main>
+
+  </div>
+
+</body>
+</html>
+

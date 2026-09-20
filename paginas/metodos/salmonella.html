@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salmonella · Manual de Pruebas Microbiológicas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Esta página está dos niveles adentro (paginas/metodos/), por eso "../../" -->
+  <link rel="stylesheet" href="../../css/styles.css" />
+</head>
+<body>
+
+  <div class="pagina">
+
+    <!-- Rutas del menú ajustadas: un nivel arriba ("../") para llegar
+         a paginas/, ningún prefijo para quedarse dentro de metodos/ -->
+    <nav class="menu-lateral">
+
+      <details>
+        <summary>Microbiología en México</summary>
+        <ul>
+          <li><a href="../microbiologia-mexico.html">Antecedentes y control microbiológico</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Microbiología de los alimentos</summary>
+        <ul>
+          <li><a href="../crecimiento-microorganismos.html">Crecimiento de microorganismos</a></li>
+          <li><a href="../tipos-microorganismos.html">Tipos de microorganismos</a></li>
+          <li><a href="../microorganismos-indicadores.html">Microorganismos indicadores</a></li>
+          <li><a href="../patogenos.html">Patógenos</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Fundamentos del análisis</summary>
+        <ul>
+          <li><a href="../muestreo.html">Muestreo</a></li>
+          <li><a href="../tecnicas-microbiologicas.html">Técnicas microbiológicas</a></li>
+          <li><a href="../metodos-analisis.html">Métodos de análisis</a></li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Pruebas microbiológicas</summary>
+        <ul>
+          <li><a href="recepcion-muestras.html">Recepción de muestras</a></li>
+          <li><a href="diluciones.html">Diluciones</a></li>
+          <li><a href="mesofilos-aerobios.html">Mesófilos aerobios</a></li>
+          <li><a href="mohos-levaduras.html">Mohos y levaduras</a></li>
+          <li><a href="coliformes-placa.html">Coliformes totales en placa</a></li>
+          <li><a href="salmonella.html">Salmonella</a></li>
+          <li><a href="s-aureus.html">S. aureus</a></li>
+          <li><a href="nmp.html">Coliformes y E. coli por NMP</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Normatividad</summary>
+        <ul>
+          <li><a href="../normatividad.html">Normas Oficiales Mexicanas y Normas Mexicanas</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Buenas prácticas de laboratorio</summary>
+        <ul>
+          <li><a href="../buenas-practicas.html">Bioseguridad e instalaciones</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Medios de cultivo</summary>
+        <ul>
+          <li><a href="../medios-cultivo.html">Clasificación, agares, caldos y reactivos</a></li>
+        </ul>
+      </details>
+
+    </nav>
+
+    <main>
+
+      <p><a href="../../index.html">← Volver al inicio</a></p>
+
+      <h2>Salmonella</h2>
+      <h3>Método de referencia para el aislamiento de <em>Salmonella</em> sp.</h3>
+
+      <p>
+        Las especies de <em>Salmonella</em> son gramnegativas, anaerobias
+        facultativas, y corresponden a bacilos flagelados caracterizados
+        por los antígenos O, H y Vi. Casi todas las cepas patógenas
+        pertenecen a la especie <em>Salmonella enterica</em>.
+      </p>
+      <br />
+      <h2>Fundamentos</h2>
+      <div class="caja">
+        <p>
+          Los principales síntomas de salmonelosis incluyen vómitos, dolor
+          abdominal, diarrea, cefalea y escalofríos. Para el aislamiento e
+          identificación del patógeno se realizan diferentes pruebas de
+          manera secuencial.
+        </p>
+        <p>
+          Antes de la identificación se realiza un preenriquecimiento para
+          recuperar células estresadas o dañadas causadas por el alimento o
+          su procesamiento. Después se realiza un enriquecimiento selectivo
+          en caldos, en esta etapa se aprovechan las diferentes
+          características de <em>Salmonella</em> para favorecer su
+          recuperación frente a otros microorganismos.
+        </p>
+        <p>
+          Posteriormente, se realizan siembras selectivas; para
+          <em>Salmonella</em> se utilizan indicadores relacionados a la
+          fermentación de carbohidratos, descarboxilación de lisina y
+          producción de H<sub>2</sub>S. Con los medios diferenciales es
+          posible identificar colonias presuntivas de <em>Salmonella</em>.
+        </p>
+        <p>
+          Sin embargo, se tienen que realizar pruebas bioquímicas para
+          determinar que no se trata de otro organismo con un perfil
+          metabólico similar. Posteriormente, el aislamiento se somete a
+          pruebas serológicas para determinar su serotipo.
+        </p>
+      </div>
+
+      <!-- ============================================
+           Fichas de fundamento bioquímico de los medios
+           de cultivo: cards desplegables con <details>,
+           no necesitan JavaScript. Van en el orden en el
+           que se usan durante el método: enriquecimiento
+           selectivo, aislamiento selectivo y confirmación
+           bioquímica.
+           ============================================ -->
+
+      <details>
+        <summary>Fundamento del medio de cultivo: Caldo RVS (Rappaport-Vassiliadis)</summary>
+        <div class="caja">
+          <p>
+            <strong>Componentes generales:</strong> triptona, cloruro de
+            magnesio, cloruro de sodio, fosfato dipotásico, fosfato
+            monopotásico y verde malaquita.
+          </p>
+          <p>
+            Es un medio de enriquecimiento selectivo. La elevada presión
+            osmótica generada por el cloruro de magnesio y la temperatura de
+            incubación de 41 a 43 °C favorecen el crecimiento de
+            <em>Salmonella</em>. El colorante verde malaquita tiene efecto
+            antimicrobiano al dañar la capacidad de otras células para
+            producir la energía necesaria para sus procesos metabólicos
+            (Srivastava et al., 2004).
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Presuntivo: turbidez del medio → posible presencia de <em>Salmonella</em>.</li>
+            <li>No presuntivo: no hay turbidez → sugiere ausencia de <em>Salmonella</em>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento del medio de cultivo: Caldo MKTTn (Müller-Kauffmann Tetrationato-Novobiocina)</summary>
+        <div class="caja">
+          <p>
+            <strong>Componentes generales:</strong> caseína, sales biliares,
+            tiosulfato de sodio, solución yodo-yoduro potásico, carbonato de
+            calcio y novobiocina.
+          </p>
+          <p>
+            Es un medio de enriquecimiento selectivo. Las sales biliares y la
+            novobiocina inhiben el crecimiento de bacterias grampositivas y
+            de algunas enterobacterias competidoras. La selectividad del
+            medio se fundamenta en la capacidad de los microorganismos para
+            reducir el tetrationato, que es inestable en solución y se
+            genera in situ por la reacción entre el tiosulfato del medio y
+            el I<sub>2</sub> de la solución yodo-yoduro potásico (Torrico et
+            al., 2022).
+          </p>
+          <p>
+            <em>Salmonella</em> puede usar el tetrationato para aprovechar
+            la etanolamina o el 1,2-propanodiol como fuentes de carbono. Los
+            genes responsables de la respiración de tetrationato forman el
+            grupo <em>ttrABCRS</em>: <em>ttrABC</em> codifica los
+            componentes estructurales de la tetrationato reductasa
+            anaeróbica, mientras que <em>ttrRS</em> codifica un sistema
+            regulador de dos componentes que controla la expresión de esos
+            genes estructurales (Rohmer et al., 2011). Las enzimas del
+            operón <em>ttr</em> reducen el tetrationato a tiosulfato, que
+            puede reducirse posteriormente a sulfito más H<sub>2</sub>S
+            mediante las enzimas codificadas por los operones <em>phs</em> y
+            <em>asr</em> (Price-Carter et al., 2001).
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Presuntivo: turbidez del medio → posible presencia de <em>Salmonella</em>.</li>
+            <li>No presuntivo: no hay turbidez → sugiere ausencia de <em>Salmonella</em>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento del medio de cultivo: Agar Verde Brillante</summary>
+        <div class="caja">
+          <p>
+            <strong>Componentes generales:</strong> pluripeptona, extracto
+            de levadura, cloruro de sodio, lactosa, sacarosa, rojo de fenol
+            y verde brillante.
+          </p>
+          <p>
+            La lactosa y la sacarosa son los hidratos de carbono
+            fermentables; el rojo de fenol vira a amarillo cuando se
+            fermentan. El cloruro de sodio mantiene el balance osmótico y
+            el verde brillante actúa como agente selectivo que inhibe el
+            desarrollo de bacterias grampositivas y de algunas
+            gramnegativas.
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): colonias rojas, rosadas o blanquecinas sobre un fondo rojizo → presencia presuntiva de <em>Salmonella</em>.</li>
+            <li>Negativa (-): colonias amarillas o verde-amarillentas con cambio de color del medio → bacterias fermentadoras de lactosa/sacarosa; se descarta la búsqueda de <em>Salmonella</em>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento del medio de cultivo: Agar XLD (Xilosa, lisina, desoxicolato)</summary>
+        <div class="caja">
+          <p>
+            <strong>Componentes generales:</strong> xilosa, lactosa,
+            sacarosa, L-lisina, tiosulfato de sodio, citrato férrico
+            amónico, rojo de fenol y desoxicolato de sodio.
+          </p>
+          <p>
+            Es un medio selectivo y diferencial. El desoxicolato de sodio
+            inhibe microorganismos grampositivos. La fermentación de xilosa,
+            lactosa y sacarosa genera un ambiente ácido que vira el
+            indicador rojo de fenol a amarillo. La L-lisina permite detectar
+            la enzima lisina descarboxilasa, cuya reacción produce
+            cadaverina y alcaliniza el medio, virando el indicador de nuevo
+            a rojo. El medio también detecta la producción de H<sub>2</sub>S
+            a través del sistema tiosulfato de sodio-citrato férrico: el
+            H<sub>2</sub>S reacciona con el hierro del citrato férrico y
+            forma sulfuro ferroso, un precipitado negro característico.
+          </p>
+          <p>
+            A nivel bioquímico, la reducción de tiosulfato y sulfito a
+            H<sub>2</sub>S puede ocurrir por dos vías: la disimilativa, que
+            produce H<sub>2</sub>S tóxico, y la asimilativa, que produce
+            compuestos orgánicos de azufre como la cisteína (Kushkevych et
+            al., 2020). En <em>Salmonella</em> pueden darse ambas vías,
+            reguladas por tres operones principales: <em>phs</em>,
+            <em>cysJIH</em> y <em>asr</em> (Bentum et al., 2025). La mayoría
+            de las especies producen H<sub>2</sub>S mediante la vía
+            disimilativa, inducida de forma anaeróbica e independiente de la
+            asimilación biosintética de azufre (Heinzinger et al., 1995); el
+            operón <em>phsABC</em> codifica la tiosulfato reductasa
+            responsable de esta reacción, y el sulfito puede reducirse a
+            H<sub>2</sub>S mediante la sulfito reductasa anaerobia
+            disimilatoria codificada por los genes <em>asr</em> (Stoffels et
+            al., 2012). En la vía asimilativa, el sulfato se activa a
+            monofosfato de adenosina y después a 3'-fosfoadenosina-5'-
+            fosfosulfato (PAPS), del cual se obtiene sulfuro (Zhou et al.,
+            2021); los genes del operón <em>cysJIH</em> codifican una
+            sulfito reductasa (subunidad β), una sulfito reductasa
+            dependiente de NADPH (subunidad α) y una PAPS reductasa (Álvarez
+            et al., 2015).
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): colonias rojas con centro negro → presencia presuntiva de <em>Salmonella</em>.</li>
+            <li>Negativa (-): colonias rojas sin centro negro → presencia presuntiva de <em>Shigella</em>; colonias amarillas → bacterias fermentadoras no patógenas.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento del medio de cultivo: Agar ASB (Sulfito de bismuto)</summary>
+        <div class="caja">
+          <p>
+            <strong>Componentes generales:</strong> peptona, extracto de
+            carne, dextrosa, sulfato ferroso, sulfito de bismuto y verde
+            brillante.
+          </p>
+          <p>
+            Es un medio selectivo y diferencial. La dextrosa es el
+            carbohidrato fermentable. El sulfito de bismuto y el verde
+            brillante inhiben bacterias grampositivas y miembros del grupo
+            coliforme. <em>Salmonella</em> puede reducir el sulfito a
+            H<sub>2</sub>S, que reacciona con el sulfato ferroso produciendo
+            un precipitado negro; además, la reducción del sulfito de
+            bismuto forma bismuto metálico, que rodea la colonia con un
+            brillo característico.
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): colonias negras o verde oscuro con brillo metálico, u oscurecimiento del medio alrededor de la colonia → presencia presuntiva de <em>Salmonella</em>.</li>
+            <li>Negativa (-): colonias verdes, cafés o sin oscurecimiento → se descarta la búsqueda de <em>Salmonella</em>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento del medio de cultivo: Agar EH (Entérico Hektoen)</summary>
+        <div class="caja">
+          <p>
+            <strong>Componentes generales:</strong> peptona, extracto de
+            levadura, lactosa, sacarosa, salicina, sales biliares,
+            tiosulfato de sodio, citrato férrico amónico, fucsina ácida y
+            azul de bromotimol.
+          </p>
+          <p>
+            Es un medio selectivo y diferencial. Las sales biliares inhiben
+            el crecimiento de bacterias grampositivas y algunas
+            gramnegativas. La fucsina ácida y el azul de bromotimol son
+            indicadores de pH: la fermentación de lactosa, sacarosa y
+            salicina disminuye el pH y produce colonias amarillas o
+            anaranjadas; si el microorganismo no fermenta, las colonias
+            permanecen azules o verdes. El medio también detecta la
+            producción de H<sub>2</sub>S mediante el sistema tiosulfato de
+            sodio-citrato férrico.
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): colonias verde-azuladas con centro negro → presencia presuntiva de <em>Salmonella</em>.</li>
+            <li>Negativa (-): colonias verde-azuladas sin centro negro → presencia presuntiva de <em>Shigella</em>; colonias amarillas o anaranjadas → bacterias fermentadoras de carbohidratos, se descarta la búsqueda de <em>Salmonella</em>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento del medio de cultivo: Agar TSI (Triple azúcar-hierro)</summary>
+        <div class="caja">
+          <p>
+            <strong>Componentes generales:</strong> extracto de carne,
+            extracto de levadura, peptona, cloruro de sodio, lactosa,
+            glucosa, sacarosa, citrato de hierro (III), tiosulfato de sodio
+            y rojo de fenol.
+          </p>
+          <p>
+            Es un medio diferencial que se basa en las diferencias de
+            fermentación de lactosa, glucosa y sacarosa: al fermentar los
+            azúcares se producen ácidos que bajan el pH y viran el
+            indicador rojo de fenol a amarillo; también se detecta gas por
+            burbujas o agrietamiento del agar. El medio además detecta
+            H<sub>2</sub>S mediante el sistema tiosulfato de
+            sodio-citrato férrico.
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): superficie roja / fondo amarillo con ennegrecimiento → presencia presuntiva de <em>Salmonella</em>.</li>
+            <li>Negativa (-): superficie roja / fondo amarillo sin ennegrecimiento → no característico de <em>Salmonella</em>; superficie y fondo amarillos → bacterias fermentadoras de lactosa/sacarosa, se descarta la búsqueda de <em>Salmonella</em>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento del medio de cultivo: Agar LIA (Lisina-hierro)</summary>
+        <div class="caja">
+          <p>
+            <strong>Componentes generales:</strong> peptona, extracto de
+            levadura, glucosa, lisina, citrato de hierro y amonio,
+            tiosulfato de sodio y púrpura de bromocresol.
+          </p>
+          <p>
+            Es un medio diferencial basado en la descarboxilación y
+            desaminación de la lisina y en la producción de H<sub>2</sub>S.
+            Los microorganismos fermentadores de glucosa acidifican el
+            medio y viran el indicador a amarillo; si el microorganismo
+            produce lisina descarboxilasa, forma cadaverina, que alcaliniza
+            el medio y lo regresa a color púrpura.
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): superficie púrpura / fondo púrpura con ennegrecimiento → presencia presuntiva de <em>Salmonella</em>.</li>
+            <li>Negativa (-): superficie púrpura / fondo púrpura sin ennegrecimiento → no característico de <em>Salmonella</em>; fondo amarillo (con o sin superficie púrpura) → bacterias fermentadoras de lactosa/sacarosa, se descarta la búsqueda de <em>Salmonella</em>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento del medio de cultivo: Caldo L-Lisina descarboxilasa</summary>
+        <div class="caja">
+          <p>
+            <strong>Componentes generales:</strong> extracto de levadura,
+            peptona, L-lisina, glucosa y púrpura de bromocresol.
+          </p>
+          <p>
+            Similar al agar LIA: determina si el microorganismo posee la
+            enzima descarboxilasa para la lisina. La enzima metaboliza la
+            lisina a cadaverina, elevando el pH del medio y tornándolo a
+            color púrpura o violeta (Kohlerschmidt et al., 2021).
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): cambio de color a púrpura → presencia de descarboxilasa, característica de <em>Salmonella</em>.</li>
+            <li>Negativa (-): mantiene el color base o se vuelve ácido (amarillo) → fermentación inicial sin descarboxilación, se descarta la identificación de <em>Salmonella</em>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- ============================================
+           A partir de aquí, fundamentos de las pruebas
+           bioquímicas y serológicas de confirmación
+           (no son medios de cultivo, sino ensayos
+           enzimáticos e inmunológicos).
+           ============================================ -->
+
+      <details>
+        <summary>Fundamento de la prueba: Ureasa</summary>
+        <div class="caja">
+          <p>
+            Determina si un microorganismo es capaz de producir la enzima
+            ureasa. La ureasa participa de manera fundamental en el proceso
+            de mineralización dentro del ciclo global de nitrógeno; es
+            dependiente de níquel y cataliza la hidrólisis de la urea para
+            producir amoníaco y carbamato, este último se descompone
+            espontáneamente en una segunda molécula de amoníaco y
+            bicarbonato (Mazzei et al., 2021).
+          </p>
+          <p>
+            El medio de la prueba contiene urea e indicador de pH rojo de
+            fenol. La ureasa descompone la urea produciendo amoníaco y
+            dióxido de carbono, lo que genera un ambiente alcalino que vira
+            el indicador a un color rosa brillante (Kohlerschmidt et al.,
+            2021).
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): cambio de color a rosa o fucsia → presencia de ureasa; se descarta la identificación de <em>Salmonella</em>.</li>
+            <li>Negativa (-): sin cambio de color (amarillo o anaranjado) → ausencia de ureasa, característico de <em>Salmonella</em>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento de la prueba: Detección de β-galactosidasa (ONPG)</summary>
+        <div class="caja">
+          <p>
+            Demuestra la presencia de la enzima β-galactosidasa utilizando el
+            compuesto orgánico o-nitrofenil-β-D-galactopiranósido (ONPG). La
+            β-galactosidasa pertenece a la familia de las glicósido
+            hidrolasas: degrada principalmente el disacárido lactosa, pero
+            también puede catalizar diversos galacto-oligosacáridos (Király
+            et al., 2025).
+          </p>
+          <p>
+            Esta enzima está regulada por el <em>operón lac</em>, formado
+            por tres genes estructurales: <em>lacZ</em>, que codifica la
+            β-galactosidasa; <em>lacY</em>, que codifica una permeasa
+            necesaria para la captación de lactosa; y <em>lacA</em>, que
+            codifica una transacetilasa que transfiere un grupo acetilo de
+            la coenzima A (CoA) al grupo hidroxilo de los galactósidos
+            (Ramos et al., 2013). La expresión del operón se activa solo
+            cuando los niveles de lactosa fuera de la célula son altos y los
+            de glucosa son bajos.
+          </p>
+          <p>
+            En la prueba, el sustrato es el reactivo ONPG: un compuesto
+            incoloro que, al ser hidrolizado por la β-galactosidasa, forma
+            o-nitrofenol. Este sufre un cambio tautomérico a pH alcalino y
+            genera un color amarillo (MacFaddin, 2003).
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): desarrollo de color amarillo → presencia de β-galactosidasa; se descarta la identificación de <em>Salmonella</em>.</li>
+            <li>Negativa (-): sin cambio de color (incoloro) → ausencia de la enzima, característico de <em>Salmonella</em>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento de la prueba: Indol</summary>
+        <div class="caja">
+          <p>
+            Se basa en la capacidad del microorganismo de producir
+            triptofanasa, una enzima dependiente del piridoxal 5'-fosfato
+            (PLP) que cataliza la eliminación hidrolítica de L-triptófano
+            (L-Trp) a indol y piruvato de amonio (Kohlerschmidt et al.,
+            2021; Shimada et al., 2004). El aldehído del reactivo de Kovac
+            reacciona con el indol formando un compuesto rojo-violeta.
+          </p>
+          <p>
+            Esta prueba forma parte del panel IMViC (Indol, Rojo de metilo,
+            Voges-Proskauer, Citrato), que se detalla junto con el método de
+            coliformes/<em>E. coli</em> por NMP, ya que ahí se usa para
+            diferenciar <em>E. coli</em> (indol positiva) de otras
+            enterobacterias como <em>Salmonella</em> dentro del mismo panel
+            de confirmación bioquímica.
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): anillo rojo en segundos, en la interfase del medio con la fase alcohólica → producción de indol a partir de triptófano.</li>
+            <li>Negativa (-): sin desarrollo de color en la capa de alcohol, o anillo turbio/amarillo → incapacidad de producir indol.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento de la prueba: Voges-Proskauer (VP)</summary>
+        <div class="caja">
+          <p>
+            Identifica bacterias que presentan fermentación butanodiólica.
+            La producción de 2,3-butanodiol eleva la producción de dióxido
+            de carbono, lo que da por resultado la formación de menos
+            ácidos y la acumulación de acetoína; el balance entre acetoína y
+            2,3-butanodiol está determinado por la actividad de hidrógeno
+            disponible y por las diferencias en los potenciales redox
+            (MacFaddin, 2003).
+          </p>
+          <p>
+            La prueba detecta la presencia de acetoína cuando esta reacciona
+            con α-naftol al 5% en etanol y KOH al 40%. La peptona del medio
+            aporta los núcleos de guanidina que reaccionan con el diacetilo
+            bajo condiciones alcalinas.
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): color rosado-rojo en la superficie del medio → producción de acetoína.</li>
+            <li>Negativa (-): color amarillo o cobrizo en la superficie del medio → sin producción de acetoína.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fundamento de la prueba: Serológica (aglutinación)</summary>
+        <div class="caja">
+          <p>
+            El esquema de Kauffman-White subdivide el género
+            <em>Salmonella</em> en serotipos, siguiendo las combinaciones de
+            antígenos somáticos (O) y flagelares (H), que se identifican
+            mediante ensayos de aglutinación (Edwards &amp; Ewing, 1972).
+          </p>
+          <p>
+            La aglutinación es un fenómeno inmunológico en el que
+            anticuerpos se unen a antígenos presentes en la superficie de
+            partículas, formando complejos antígeno-anticuerpo que producen
+            aglomerados visibles (Kompaníková et al., 2016). En la prueba se
+            utilizan sueros que contienen anticuerpos específicos; por
+            ejemplo, el suero aglutinante somático se usa para la
+            identificación de antígenos O.
+          </p>
+          <p><strong>Interpretación:</strong></p>
+          <ul>
+            <li>Positiva (+): formación de aglutinación visible → presencia de antígenos específicos, confirmación de <em>Salmonella</em>.</li>
+            <li>Negativa (-): suspensión homogénea → ausencia de reacción antígeno-anticuerpo, se descarta la presencia de <em>Salmonella</em>.</li>
+          </ul>
+        </div>
+      <br />
+      </details>
+            <h2>Requerimientos del método</h2>
+      <div class="caja requerimientos">
+        <div>
+          <h3>Equipo</h3>
+          <ul>
+            <li>Autoclave</li>
+            <li>Balanza</li>
+            <li>Baño de agua</li>
+            <li>Bomba de vacío</li>
+            <li>Equipo de filtración</li>
+            <li>Homogeneizador</li>
+            <li>Horno</li>
+            <li>Incubadora</li>
+            <li>Potenciómetro</li>
+          </ul>
+        </div>
+        <br />
+        <div>
+          <h3>Materiales</h3>
+          <ul>
+            <li>Asa de platino</li>
+            <li>Caja Petri</li>
+            <li>Cucharas, bisturíes, cuchillos y pinzas</li>
+            <li>Filtros de membrana</li>
+            <li>Manguera de hule</li>
+            <li>Matraces</li>
+            <li>Matraces Kitazato</li>
+            <li>Mechero Bunsen</li>
+            <li>Pipetas</li>
+            <li>Tubos de ensaye</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Reactivos</h3>
+          <ul>
+            <li>2-metilbutan-2-ol</li>
+            <li>4-Dimetilaminobenzaldehído</li>
+            <li>Alcohol al 70%</li>
+            <li>Alcohol etílico 96%</li>
+            <li>Antisuero somático (O) polivalente de <em>Salmonella</em> spp</li>
+            <li>Cloruro de sodio</li>
+            <li>HCl r=1.18 g/mL</li>
+            <li>Sulfato de potasio (K<sub>2</sub>SO<sub>3</sub>)</li>
+            <li>KOH</li>
+            <li>Monohidrato de creatina</li>
+            <li>NaOH 1N</li>
+            <li>Novobiocina</li>
+            <li>ONPG</li>
+            <li>Reactivos para la reacción de indol (reactivo de Kovac o Erlich)</li>
+            <li>Reactivos para la reacción VP (α-naftol y KOH)</li>
+            <li>Solución acuosa de verde brillante al 1%</li>
+            <li>Solución de creatina</li>
+            <li>Sulfato ferroso</li>
+            <li>Tergitol/aniónico</li>
+            <li>Tolueno</li>
+            <li>Tritón X-100</li>
+            <li>Yodo</li>
+            <li>Yoduro de potasio</li>
+            <li>α-naftol</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Medios de cultivo</h3>
+          <ul>
+            <li>Agar nutritivo</li>
+            <li>Agar Urea de Christensen</li>
+            <li>Agar Verde Brillante</li>
+            <li>Agua peptonada amortiguada</li>
+            <li>Agar ASB</li>
+            <li>Caldo Dey-Engley</li>
+            <li>Caldo Lactosado</li>
+            <li>Caldo Nutritivo</li>
+            <li>Caldo Triptona al 1%</li>
+            <li>CST</li>
+            <li>Agar EH</li>
+            <li>Leche descremada</li>
+            <li>Agar LIA</li>
+            <li>Medio L-Lisina descarboxilasa</li>
+            <li>Caldo MKTTn</li>
+            <li>Caldo RVS</li>
+            <li>Solución salina fisiológica</li>
+            <li>Agar TSI</li>
+            <li>Agar XLD</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Cepas de referencia</h3>
+          <ul>
+            <li><em>Salmonella</em> Typhimurium ATCC 14028</li>
+            <li><em>Salmonella</em> diarizonae ATCC 12325</li>
+            <li><em>Salmonella</em> abortus equi ATCC 9842</li>
+          </ul>
+        </div>
+      </div>
+
+       <br />
+            <h2>Proceso</h2>
+      <div class="caja">
+        <p>
+          <em>Contenido pendiente: aquí va el diagrama de flujo del método
+          (Figura 7, "Diagrama de flujo para realizar la detección de
+          Salmonella sp."), en cuanto esté disponible la imagen.</em>
+               </p>
+      </div>
+      <br />
+
+    </main>
+
+  </div>
+
+</body>
+</html>

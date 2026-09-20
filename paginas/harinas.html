@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harinas · Manual de Pruebas Microbiológicas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Esta página está un nivel adentro (paginas/), por eso "../" -->
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <div class="pagina">
+
+    <!-- ================================================
+         MENÚ LATERAL
+         Igual que en index.html, pero con rutas ajustadas:
+         los enlaces a otras páginas de "paginas/" ya no llevan
+         el prefijo "paginas/" (esta página ya está adentro),
+         y los que van a "paginas/metodos/" solo necesitan
+         "metodos/".
+         ================================================ -->
+    <nav class="menu-lateral">
+
+      <details>
+        <summary>Microbiología en México</summary>
+        <ul>
+          <li><a href="microbiologia-mexico.html">Antecedentes y control microbiológico</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Microbiología de los alimentos</summary>
+        <ul>
+          <li><a href="crecimiento-microorganismos.html">Crecimiento de microorganismos</a></li>
+          <li><a href="tipos-microorganismos.html">Tipos de microorganismos</a></li>
+          <li><a href="microorganismos-indicadores.html">Microorganismos indicadores</a></li>
+          <li><a href="patogenos.html">Patógenos</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Fundamentos del análisis</summary>
+        <ul>
+          <li><a href="muestreo.html">Muestreo</a></li>
+          <li><a href="tecnicas-microbiologicas.html">Técnicas microbiológicas</a></li>
+          <li><a href="metodos-analisis.html">Métodos de análisis</a></li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Pruebas microbiológicas</summary>
+        <ul>
+          <li><a href="metodos/recepcion-muestras.html">Recepción de muestras</a></li>
+          <li><a href="metodos/diluciones.html">Diluciones</a></li>
+          <li><a href="metodos/mesofilos-aerobios.html">Mesófilos aerobios</a></li>
+          <li><a href="metodos/mohos-levaduras.html">Mohos y levaduras</a></li>
+          <li><a href="metodos/coliformes-placa.html">Coliformes totales en placa</a></li>
+          <li><a href="metodos/salmonella.html">Salmonella</a></li>
+          <li><a href="metodos/s-aureus.html">S. aureus</a></li>
+          <li><a href="metodos/nmp.html">Coliformes y E. coli por NMP</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Normatividad</summary>
+        <ul>
+          <li><a href="normatividad.html">Normas Oficiales Mexicanas y Normas Mexicanas</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Buenas prácticas de laboratorio</summary>
+        <ul>
+          <li><a href="buenas-practicas.html">Bioseguridad e instalaciones</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Medios de cultivo</summary>
+        <ul>
+          <li><a href="medios-cultivo.html">Clasificación, agares, caldos y reactivos</a></li>
+        </ul>
+      </details>
+
+    </nav>
+
+    <!-- ================================================
+         CONTENIDO: HARINAS
+         ================================================ -->
+    <main>
+
+      <p><a href="../index.html">← Volver al inicio</a></p>
+
+      <h1>Harinas</h1>
+
+      <img
+        src="../img/harinas.jpg"
+        alt="Harina de trigo en un tazón, junto a espigas de trigo"
+        width="320"
+      />
+
+      <p>
+        La harina es el producto de la molienda de un cereal. El objetivo de
+        la molienda es obtener preferentemente una harina en la que
+        predominen los constituyentes de las células del endospermo.
+      </p>
+
+      <!-- ============================================
+           PRUEBAS APLICABLES
+           Enlaza a los métodos ya definidos en el menú.
+           ============================================ -->
+      <h2>Pruebas aplicables</h2>
+      <ul>
+        <li><a href="metodos/recepcion-muestras.html">Recepción de muestras</a></li>
+        <li><a href="metodos/diluciones.html">Métodos de diluciones</a></li>
+        <li><a href="metodos/mesofilos-aerobios.html">Método cuenta bacterias aerobias</a></li>
+        <li><a href="metodos/coliformes-placa.html">Método para la cuenta de microorganismos coliformes totales en placa</a></li>
+        <li><a href="metodos/mohos-levaduras.html">Método para la cuenta de mohos y levaduras</a></li>
+      </ul>
+
+      <!-- ============================================
+           Estas cuatro secciones serán las pestañas
+           (Composición química, Microflora, Muestreo,
+           Límites) cuando se agregue JavaScript en la
+           semana 3. Por ahora van una debajo de otra.
+           ============================================ -->
+
+      <h2>Composición química</h2>
+      <div class="caja">
+        <table>
+          <caption>Tabla 3. Composición química de harina de trigo</caption>
+          <thead>
+            <tr>
+              <th scope="col">Componente</th>
+              <th scope="col">405</th>
+              <th scope="col">550</th>
+              <th scope="col">812</th>
+              <th scope="col">1050</th>
+              <th scope="col">1700</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tasa de extracción (%)</td>
+              <td>40-56%</td>
+              <td>64-71%</td>
+              <td>76-79%</td>
+              <td>82-85%</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td>Almidón (%)</td>
+              <td>82.3</td>
+              <td>81.8</td>
+              <td>78.1</td>
+              <td>77.8</td>
+              <td>69.2</td>
+            </tr>
+            <tr>
+              <td>Proteína, N x 5.8 (%)</td>
+              <td>11.7</td>
+              <td>12.3</td>
+              <td>13</td>
+              <td>12.9</td>
+              <td>12.7</td>
+            </tr>
+            <tr>
+              <td>Lípidos (%)</td>
+              <td>1</td>
+              <td>1.2</td>
+              <td>1.5</td>
+              <td>2</td>
+              <td>2.3</td>
+            </tr>
+            <tr>
+              <td>Fibra dietética (%)</td>
+              <td>4.7</td>
+              <td>5</td>
+              <td>5.6</td>
+              <td>6</td>
+              <td>13.4</td>
+            </tr>
+            <tr>
+              <td>Minerales, cenizas (%)</td>
+              <td>0.41</td>
+              <td>0.55</td>
+              <td>0.81</td>
+              <td>1.05</td>
+              <td>1.7</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Porcentaje en peso por materia seca de harina. El contenido
+          promedio de humedad de la harina es 13%. Datos aproximados.
+          La fibra dietética corresponde a carbohidratos no digeribles.
+          Adaptado de <em>Food Chemistry</em>, por H. D. Belitz, W. Grosch
+          y P. Schieberle, 2009.
+        </p>
+      </div>
+
+      <h2>Microflora</h2>
+      <div class="caja">
+        <p>
+          La microbiota en las harinas es producto de la contaminación de
+          los cereales de los que proviene la harina; los microorganismos
+          presentes en el cereal pueden sobrevivir el proceso de molienda,
+          sin embargo, la mayor parte de las células microbianas permanecen
+          en las fracciones ricas en salvado. El principal componente del
+          microbioma de las harinas de trigo blando y duro son las
+          bacterias de la familia <em>Enterobacteriaceae</em>
+          (De Angelis et al., 2019).
+        </p>
+        <p>
+          Las bacterias encontradas en harina de trigo incluyen esporas del
+          género <em>Bacillus</em>, bacterias coliformes y algunos géneros
+          de <em>Micrococcus</em>, <em>Alcaligenes</em> y
+          <em>Serratia</em>; las esporas de mohos son de los géneros
+          <em>Aspergillus</em> y <em>Penicillium</em>. En el caso de
+          harinas de maíz, los géneros de hongos predominantes son
+          <em>Fusarium</em> y <em>Penicillium</em> (Frazier, 1988).
+        </p>
+        <p>
+          Durante el proceso de elaboración de harina, la limpieza y el
+          tamizado reducen el número de microorganismos, pero el mayor
+          efecto de esta disminución se produce gracias a los agentes
+          blanqueadores.
+        </p>
+      </div>
+
+      <h2>Muestreo</h2>
+      <div class="caja">
+        <p>
+          <em>Contenido pendiente: falta redactar el plan de muestreo
+          específico para harinas (ver hoja «Pendientes» del inventario).</em>
+        </p>
+      </div>
+
+      <h2>Límites microbiológicos</h2>
+      <div class="caja">
+        <table>
+          <caption>
+            Tabla 6. Especificaciones microbiológicas para harinas de
+            cereales, sémolas o semolinas (NOM-247-SSA1-2008)
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Tipo de harina</th>
+              <th scope="col">Mesofílicos aerobios (UFC/g)</th>
+              <th scope="col">Coliformes totales (UFC/g)</th>
+              <th scope="col">Hongos (UFC/g)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Harina de trigo, sémolas o semolinas</td>
+              <td>50,000</td>
+              <td>NA</td>
+              <td>300</td>
+            </tr>
+            <tr>
+              <td>Harina de maíz</td>
+              <td>100,000</td>
+              <td>100</td>
+              <td>1,000</td>
+            </tr>
+            <tr>
+              <td>Harina de maíz nixtamalizada</td>
+              <td>50,000</td>
+              <td>100</td>
+              <td>1,000</td>
+            </tr>
+            <tr>
+              <td>Harina de centeno</td>
+              <td>100,000</td>
+              <td>100</td>
+              <td>200</td>
+            </tr>
+            <tr>
+              <td>Harina de cebada</td>
+              <td>100,000</td>
+              <td>100</td>
+              <td>200</td>
+            </tr>
+            <tr>
+              <td>Harina de avena</td>
+              <td>50,000</td>
+              <td>50</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>Harina de arroz</td>
+              <td>100,000</td>
+              <td>100</td>
+              <td>200</td>
+            </tr>
+            <tr>
+              <td>Harinas integrales</td>
+              <td>500,000</td>
+              <td>500</td>
+              <td>500</td>
+            </tr>
+            <tr>
+              <td>Harinas integrales de trigo</td>
+              <td>500,000</td>
+              <td>NA</td>
+              <td>NA</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>NA: no aplica.</p>
+      </div>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
