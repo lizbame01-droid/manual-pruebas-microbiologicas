@@ -1,0 +1,237 @@
+/* =============================================================
+   MANUAL DE PRUEBAS MICROBIOLÓGICAS — HOJA DE ESTILOS
+   =============================================================
+   Archivo enlazado desde cada HTML del sitio:
+   <link rel="stylesheet" href="../css/styles.css" />
+   (ruta relativa: ajustar los "../" según la carpeta del HTML)
+   ============================================================= */
+
+/* -------------------------------------------------------------
+   1. VARIABLES (Custom Properties)
+   -------------------------------------------------------------
+   Valores con nombre que se definen una sola vez y se reutilizan
+   en todo el archivo. Cambiar un color aquí lo actualiza en toda
+   la página. Se definen dentro de :root (la etiqueta <html>) y
+   se usan con la función var(--nombre).
+   ------------------------------------------------------------- */
+:root {
+  /* Paleta de color del proyecto */
+  --color-verde-oscuro: #415d46;   /* títulos, menú activo */
+  --color-verde-oliva: #7e8f5b;    /* botones, círculo activo */
+  --color-verde-claro: #d7ebc8;    /* fondo de cajas de contenido */
+  --color-azul-grisaceo: #98acc4;  /* acentos, enlaces */
+  --color-gris-verdoso: #626b6a;   /* texto secundario, bordes */
+
+  --color-fondo: #f7faf2;          /* fondo general de la página */
+  --color-texto: #2b2f28;          /* texto principal, casi negro */
+  --color-blanco: #ffffff;
+
+  /* Tipografía */
+  --font-serif: "Lora", Georgia, serif;       /* todo el texto general */
+  --font-table: "Public Sans", Arial, sans-serif; /* solo dentro de tablas */
+
+  /* Espaciado: valores reutilizables en vez de números distintos
+     en cada regla */
+  --espacio-xs: 0.5rem;
+  --espacio-sm: 1rem;
+  --espacio-md: 1.5rem;
+  --espacio-lg: 2.5rem;
+
+  /* Bordes redondeados */
+  --radio-sm: 6px;
+  --radio-circulo: 50%;
+}
+
+/* -------------------------------------------------------------
+   2. RESET BÁSICO
+   -------------------------------------------------------------
+   El selector universal (*) aplica a todos los elementos.
+   box-sizing: border-box hace que el padding y el border se
+   cuenten dentro del ancho definido, en vez de sumarse aparte
+   (evita que el modelo de caja cambie el tamaño final).
+   ------------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------------------------------------------------
+   3. ESTILOS BASE DEL DOCUMENTO
+   ------------------------------------------------------------- */
+body {
+  font-family: var(--font-serif);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6; /* más espacio entre líneas: se lee mejor en serif */
+}
+
+/* Line-length: en párrafos largos, que no crucen toda la pantalla */
+p {
+  max-width: 70ch; /* aprox. 70 caracteres por línea */
+  margin-bottom: var(--espacio-sm);
+}
+
+a {
+  color: var(--color-azul-grisaceo);
+}
+
+a:hover {
+  color: var(--color-verde-oscuro);
+}
+
+/* -------------------------------------------------------------
+   4. TÍTULOS (Heading Elements)
+   -------------------------------------------------------------
+   Un selector de elemento (h1, h2...) aplica a todas las
+   etiquetas de ese tipo.
+   ------------------------------------------------------------- */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  color: var(--color-verde-oscuro);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: var(--espacio-sm);
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* -------------------------------------------------------------
+   5. MENÚ LATERAL
+   -------------------------------------------------------------
+   Por ahora solo el estilo de cada elemento del menú, uno debajo
+   de otro. El acomodo en columnas junto al contenido se hace con
+   flexbox más adelante.
+   ------------------------------------------------------------- */
+.menu-lateral {
+  background-color: var(--color-verde-claro);
+  width: 280px;
+}
+
+/* <details> y <summary> son los elementos usados para las
+   flechitas desplegables del menú (no requieren JavaScript) */
+.menu-lateral summary {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-verde-oscuro);
+  padding: var(--espacio-sm) var(--espacio-md);
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-verde-oliva);
+  list-style: none; /* quita la flecha por defecto del navegador */
+}
+
+.menu-lateral summary::-webkit-details-marker {
+  display: none; /* quita la flecha por defecto en Chrome */
+}
+
+/* -------------------------------------------------------------
+   6. BOTONES
+   ------------------------------------------------------------- */
+.btn {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-blanco);
+  background-color: var(--color-verde-oliva);
+  border: none;
+  border-radius: var(--radio-sm);
+  padding: var(--espacio-xs) var(--espacio-md);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--color-verde-oscuro);
+}
+
+/* -------------------------------------------------------------
+   7. INSIGNIA DE ALIMENTO (círculo con un dibujo dentro)
+   -------------------------------------------------------------
+   La insignia es el círculo de fondo; el dibujo (blanco y negro,
+   en SVG) va encima como <img>. El color de fondo indica cuál
+   alimento está activo.
+   ------------------------------------------------------------- */
+.insignia {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radio-circulo);
+  background-color: var(--color-verde-claro); /* fondo de alimento inactivo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Clase de modificador: se agrega junto a .insignia cuando ese
+   alimento está seleccionado */
+.insignia--activa {
+  background-color: var(--color-azul-grisaceo);
+}
+
+.icono-alimento {
+  width: 34px;
+  height: 34px;
+}
+/* -------------------------------------------------------------
+   8. CAJAS DE CONTENIDO
+   -------------------------------------------------------------
+   Fondo verde claro usado para agrupar texto (por ejemplo, debajo
+   de un subtítulo como "Microflora" o "Fundamentos").
+   ------------------------------------------------------------- */
+.caja {
+  background-color: var(--color-verde-claro);
+  border-radius: var(--radio-sm);
+  padding: var(--espacio-md);
+  margin-top: var(--espacio-sm);
+}
+
+/* -------------------------------------------------------------
+   9. TABLAS
+   -------------------------------------------------------------
+   Aquí se usa Public Sans, la tipografía para datos.
+   border-collapse une los bordes de celdas vecinas en una sola
+   línea, en vez de verse doble.
+   ------------------------------------------------------------- */
+table {
+  font-family: var(--font-table);
+  border-collapse: collapse;
+  width: 100%;
+  margin: var(--espacio-md) 0;
+}
+
+caption {
+  font-family: var(--font-serif);
+  font-style: italic;
+  text-align: left;
+  margin-bottom: var(--espacio-xs);
+  color: var(--color-gris-verdoso);
+}
+
+th, td {
+  border: 1px solid var(--color-gris-verdoso);
+  padding: var(--espacio-xs);
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-verde-oscuro);
+  color: var(--color-blanco);
+  font-weight: 600;
+}
+
+/* Filas alternadas más claras, para facilitar seguir una línea
+   con la vista en tablas largas */
+tbody tr:nth-child(even) {
+  background-color: var(--color-verde-claro);
+}
