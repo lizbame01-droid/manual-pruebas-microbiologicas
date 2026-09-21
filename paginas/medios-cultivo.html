@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medios de cultivo · Manual de Pruebas Microbiológicas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Esta página está un nivel adentro (paginas/), por eso "../" -->
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <div class="pagina">
+
+    <nav class="menu-lateral">
+
+      <details>
+        <summary>Microbiología en México</summary>
+        <ul>
+          <li><a href="microbiologia-mexico.html">Antecedentes y control microbiológico</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Microbiología de los alimentos</summary>
+        <ul>
+          <li><a href="microbiologia-alimentos/crecimiento-microorganismos.html">Crecimiento de microorganismos</a></li>
+          <li><a href="microbiologia-alimentos/tipos-microorganismos.html">Tipos de microorganismos</a></li>
+          <li><a href="microbiologia-alimentos/microorganismos-indicadores.html">Microorganismos indicadores</a></li>
+          <li><a href="microbiologia-alimentos/patogenos.html">Patógenos</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Fundamentos del análisis</summary>
+        <ul>
+          <li><a href="muestreo.html">Muestreo</a></li>
+          <li><a href="tecnicas-microbiologicas.html">Técnicas microbiológicas</a></li>
+          <li><a href="metodos-analisis.html">Métodos de análisis</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Pruebas microbiológicas</summary>
+        <ul>
+          <li><a href="metodos/recepcion-muestras.html">Recepción de muestras</a></li>
+          <li><a href="metodos/diluciones.html">Diluciones</a></li>
+          <li><a href="metodos/mesofilos-aerobios.html">Mesófilos aerobios</a></li>
+          <li><a href="metodos/mohos-levaduras.html">Mohos y levaduras</a></li>
+          <li><a href="metodos/coliformes-placa.html">Coliformes totales en placa</a></li>
+          <li><a href="metodos/salmonella.html">Salmonella</a></li>
+          <li><a href="metodos/s-aureus.html">S. aureus</a></li>
+          <li><a href="metodos/nmp.html">Coliformes y E. coli por NMP</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Normatividad</summary>
+        <ul>
+          <li><a href="normatividad.html">Normas Oficiales Mexicanas y Normas Mexicanas</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Buenas prácticas de laboratorio</summary>
+        <ul>
+          <li><a href="buenas-practicas.html">Bioseguridad e instalaciones</a></li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Medios de cultivo</summary>
+        <ul>
+          <li><a href="medios-cultivo.html">Clasificación, agares, caldos y reactivos</a></li>
+        </ul>
+      </details>
+
+    </nav>
+
+    <main>
+
+      <p><a href="../index.html">← Volver al inicio</a></p>
+
+      <h2>Medios de cultivo</h2>
+      <h3>Clasificación, componentes y su papel en las pruebas microbiológicas</h3>
+
+      <p>
+        Un punto clave para comprender los fundamentos de las pruebas
+        microbiológicas es entender el rol de los medios de cultivo, ya
+        que no todos favorecen el crecimiento de todos los
+        microorganismos: las necesidades nutricionales varían según el
+        microorganismo. Un medio de cultivo es una solución o preparación
+        sólida, semisólida o líquida que contiene las sustancias
+        necesarias para el crecimiento, transporte o mantenimiento de los
+        microorganismos. Las diferencias en la composición de un medio
+        determinan qué grupo de microorganismos se desarrolla en él.
+      </p>
+
+      <br />
+      <h2>Clasificación por composición</h2>
+
+      <details>
+        <summary>Medio definido</summary>
+        <div class="caja">
+          <p>
+            Se conoce de forma precisa su composición química.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Medio complejo</summary>
+        <div class="caja">
+          <p>
+            Se desconoce la composición química exacta; se elabora con
+            hidrolizados microbianos, animales o vegetales.
+          </p>
+        </div>
+      </details>
+
+      <br />
+      <h2>Clasificación por utilización</h2>
+
+      <details>
+        <summary>Medio enriquecido</summary>
+        <div class="caja">
+          <p>
+            Es un medio complejo complementado con sustancias de alto
+            poder nutritivo. Es sencillo cultivar patógenos en el
+            laboratorio utilizando este tipo de medio.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Medio selectivo</summary>
+        <div class="caja">
+          <p>
+            Se le adicionan uno o más agentes inhibitorios, como
+            antibióticos o sales. Permite el aislamiento de
+            microorganismos específicos dentro de poblaciones mezcladas,
+            ya que solo crecen los microorganismos resistentes a esos
+            agentes.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Medio diferencial</summary>
+        <div class="caja">
+          <p>
+            Permite la identificación tentativa de los microorganismos: el
+            medio contiene un agente diferencial que facilita reconocer
+            grupos microbianos con distintas características metabólicas
+            o fisiológicas. Con frecuencia se utilizan indicadores de pH o
+            indicadores de oxidación-reducción.
+          </p>
+        </div>
+      </details>
+
+      <br />
+      <h2>Componentes de un medio de cultivo</h2>
+      <div class="caja">
+        <p>
+          La formulación varía según la prueba que se realice y el
+          microorganismo de interés. Sin embargo, los componentes
+          esenciales que suele incluir un medio de cultivo son: fuente de
+          carbono y energía, fuente de nitrógeno, sales minerales,
+          factores de crecimiento, agente solidificante, agua y un
+          sistema amortiguador.
+        </p>
+      </div>
+
+      <details>
+        <summary>Agar</summary>
+        <div class="caja">
+          <p>
+            Excelente agente solidificante: una vez fundido (90 ºC), puede
+            enfriarse hasta 45 ºC sin endurecerse. Es un polímero
+            sulfatado extraído normalmente de algas rojas, compuesto
+            principalmente por D-galactosa, 3,6-anhidro-L-galactosa y
+            ácido D-glucurónico. Algunos factores que afectan la
+            resistencia del gel son la concentración del agar, la fusión
+            repetida del medio y la esterilización prolongada.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Peptonas</summary>
+        <div class="caja">
+          <p>
+            Proteínas hidrolizadas formadas por digestión enzimática,
+            principalmente de caseína. Proporcionan nitrógeno, vitaminas,
+            minerales y aminoácidos esenciales para el crecimiento
+            microbiano.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Extractos (carne o levadura)</summary>
+        <div class="caja">
+          <p>
+            Usados como nutrientes, son extractos acuosos que contienen
+            péptidos de bajo peso molecular y aminoácidos, así como
+            carbohidratos, vitaminas, minerales y trazas de metales.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Buffer con fosfatos</summary>
+        <div class="caja">
+          <p>
+            El mantenimiento del pH de los medios generalmente se logra
+            incluyendo tampones adecuados. Como los microorganismos
+            crecen de manera óptima solo dentro de ciertos límites de pH,
+            este se mantiene generalmente dentro de unas pocas décimas de
+            una unidad de pH.
+          </p>
+        </div>
+      </details>
+
+      <br />
+      <h2>Catálogo de medios de cultivo</h2>
+      <div class="caja">
+        <p>
+          A continuación se listan todos los medios, caldos, aguas y
+          reactivos empleados en las pruebas microbiológicas de este
+          manual, agrupados por tipo. Cada ficha incluye únicamente su
+          preparación (ingredientes y procedimiento) y un enlace al
+          método o métodos donde se utiliza; el fundamento bioquímico de
+          cada prueba se describe en la página del método correspondiente.
+        </p>
+      </div>
+
+      <br />
+      <br />
+      <h3>Agares</h3>
+      <details>
+        <summary>Agar Triptona-Extracto de Levadura</summary>
+        <div class="caja">
+          <p><strong>Preparación</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Extracto de levadura</td><td>2.5 g</td></tr>
+                        <tr><td>Triptona</td><td>5.0 g</td></tr>
+                        <tr><td>Dextrosa</td><td>1.0 g</td></tr>
+                        <tr><td>Agar</td><td>15.0 g</td></tr>
+                        <tr><td>Agua</td><td>1 L</td></tr>
+                      </tbody>
+                    </table>
+                    <p>
+                      Suspender los componentes del medio deshidratado en un litro de agua. Hervir hasta total disolución.
+                    </p>
+                    <p>
+                      Distribuir en recipientes de vidrio esterilizables de capacidad no mayor a 500 mL, en cantidades de aproximadamente la mitad del volumen del mismo. Esterilizar en autoclave a 121 ± 1.0 ºC durante 15 min. El pH final del medio debe ser 7.0 ± 0.2 a 25 ºC.
+                    </p>
+                    <p>
+                      Si el medio se utiliza inmediatamente, enfriar a 45 ºC ± 1.0 ºC en baño de agua y mantenerlo a esa temperatura hasta su uso. El medio no debe fundirse más de una vez.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Agar Rojo Violeta Bilis Lactosa (RVBA)</summary>
+        <div class="caja">
+          <p><strong>Preparación</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Peptona</td><td>7.0 g</td></tr>
+                        <tr><td>Extracto de levadura</td><td>3.0 g</td></tr>
+                        <tr><td>Lactosa</td><td>10.0 g</td></tr>
+                        <tr><td>Sales biliares</td><td>1.5 g</td></tr>
+                        <tr><td>Cloruro de sodio</td><td>5.0 g</td></tr>
+                        <tr><td>Rojo neutro</td><td>0.03 g</td></tr>
+                        <tr><td>Cristal violeta</td><td>0.002 g</td></tr>
+                        <tr><td>Agar</td><td>15.0 g</td></tr>
+                        <tr><td>Agua</td><td>1.0 L</td></tr>
+                      </tbody>
+                    </table>
+                    <p>
+                      Mezclar los componentes en el agua y dejar reposar durante algunos minutos.
+                    </p>
+                    <p>
+                      Mezclar perfectamente y ajustar a pH 7.4 con ácido clorhídrico 0.1 N o con hidróxido de sodio 0.1 N a 25 ºC.
+                    </p>
+                    <p>
+                      Calentar con agitación constante y hervir durante 2 minutos. Enfriar inmediatamente el medio en un baño de agua hasta que llegue a 45 ºC. Evitar el sobrecalentamiento.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Agar Papa Dextrosa</summary>
+        <div class="caja">
+          <p><strong>Preparación</strong></p>
+                    <p>
+                      Disponible en forma deshidratada: seguir las instrucciones del fabricante y después esterilizar.
+                    </p>
+                    <p>
+                      Enfriar en baño de agua a 45 ± 1 ºC, acidificar a un pH de 3.5 ± 0.1 con ácido tartárico estéril al 10% (1.4 mL de ácido tartárico por cada 100 mL del medio). Mezclar y medir el pH con potenciómetro. Dejar solidificar una porción del medio.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Agar EMB-L (Eosina-Azul de metileno)</summary>
+        <div class="caja">
+          <p><strong>Preparación</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Peptona</td><td>10.0 g</td></tr>
+                        <tr><td>Lactosa</td><td>10.0 g</td></tr>
+                        <tr><td>K2HPO4</td><td>2.0 g</td></tr>
+                        <tr><td>Eosina Y</td><td>0.4 g</td></tr>
+                        <tr><td>Azul de metileno</td><td>0.065 g</td></tr>
+                        <tr><td>Agar</td><td>15.0 g</td></tr>
+                        <tr><td>Agua destilada</td><td>1000 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <p>
+                      Disolver la peptona, el fosfato y el agar en 1 L de agua; calentar hasta ebullición para la disolución completa. Distribuir en porciones de 100 o 200 mL y esterilizar no más de 121 ºC por 15 min.
+                    </p>
+                    <p>
+                      Fundir antes de su uso y adicionar a cada porción de 100 mL: 5 mL de solución de lactosa al 20% estéril, 2 mL de solución acuosa de eosina Y, y 4.3 mL de solución acuosa de azul de metileno al 0.15%.
+                    </p>
+                    <p>
+                      Si se usa el producto deshidratado, disolver todos los ingredientes de acuerdo con las instrucciones del fabricante.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Agar Verde Brillante</summary>
+        <div class="caja">
+          <p><strong>Preparación</strong></p>
+                    <p>
+                      Disponible en forma deshidratada: seguir las instrucciones del fabricante para su disolución y esterilización.
+                    </p>
+                    <p>
+                      Nota: en este manual también se emplea el caldo lactosa-bilis-verde brillante como medio relacionado — ver su preparación en la sección de medios adicionales.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Agar XLD (Xilosa, lisina, desoxicolato)</summary>
+        <div class="caja">
+          <p><strong>Preparación</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Extracto de levadura en polvo</td><td>3.0 g</td></tr>
+                        <tr><td>Cloruro de sodio</td><td>5.0 g</td></tr>
+                        <tr><td>Xilosa</td><td>3.5-3.75 g</td></tr>
+                        <tr><td>Lactosa</td><td>7.5 g</td></tr>
+                        <tr><td>Sacarosa</td><td>7.5 g</td></tr>
+                        <tr><td>L-lisina</td><td>5.0 g</td></tr>
+                        <tr><td>Tiosulfato de sodio</td><td>6.8 g</td></tr>
+                        <tr><td>Citrato férrico amónico</td><td>0.8 g</td></tr>
+                        <tr><td>Rojo de fenol</td><td>0.08 g</td></tr>
+                        <tr><td>Desoxicolato de sodio</td><td>1.0-2.5 g</td></tr>
+                        <tr><td>Agar</td><td>9.0-18.0 g</td></tr>
+                        <tr><td>Agua</td><td>1000 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <p>
+                      Disolver los ingredientes deshidratados en el agua, calentando con agitación frecuente hasta que el medio comience a hervir. Evitar el sobrecalentamiento. Ajustar el pH, si es necesario, a 7.4 ± 0.2 a 25 ºC.
+                    </p>
+                    <p>
+                      Para placas: transferir el medio inmediatamente a un baño de agua a 44 ºC, esperar a que atempere, agitar y vaciar en placas; dejar solidificar. Las placas deben estar completamente secas antes de su uso.
+                    </p>
+                    <p>
+                      El medio puede almacenarse por no más de 5 días a 3 ºC ± 2 ºC.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Agar ASB (Sulfito de bismuto)</summary>
+        <div class="caja">
+          <p><strong>Preparación</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Polipeptona (o peptona)</td><td>10 g</td></tr>
+                        <tr><td>Extracto de carne</td><td>5 g</td></tr>
+                        <tr><td>Dextrosa</td><td>5 g</td></tr>
+                        <tr><td>Na2HPO4</td><td>4 g</td></tr>
+                        <tr><td>FeSO4</td><td>0.3 g</td></tr>
+                        <tr><td>Sulfito de bismuto</td><td>8 g</td></tr>
+                        <tr><td>Verde brillante</td><td>0.025 g</td></tr>
+                        <tr><td>Agar</td><td>15-20 g</td></tr>
+                        <tr><td>Agua destilada</td><td>1 L</td></tr>
+                      </tbody>
+                    </table>
+                    <p>
+                      Mezclar los ingredientes con calentamiento y agitación constante, a ebullición por 1 min, hasta obtener una suspensión uniforme (el precipitado no se disuelve). Enfriar a 45-50 ºC.
+                    </p>
+                    <p>
+                      Suspender el precipitado con agitación suave y distribuir volúmenes de 20 mL en cajas Petri estériles de 15×100 mm. Dejar secar el agar por 2 h con las tapas parcialmente abiertas y después cerrarlas. pH 7.7 ± 0.2.
+                    </p>
+                    <p>
+                      No esterilizar. Preparar el medio un día antes de su uso y almacenar en oscuridad. El medio pierde selectividad después de 48 horas.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Agar EH (Entérico Hektoen)</summary>
+        <div class="caja">
+          <p><strong>Preparación</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Peptona</td><td>12-15 g</td></tr>
+                        <tr><td>Extracto de levadura</td><td>3 g</td></tr>
+                        <tr><td>Sales biliares No. 3</td><td>9 g</td></tr>
+                        <tr><td>Lactosa</td><td>12 g</td></tr>
+                        <tr><td>Sacarosa</td><td>12 g</td></tr>
+                        <tr><td>Salicina</td><td>2 g</td></tr>
+                        <tr><td>Cloruro de sodio</td><td>5 g</td></tr>
+                        <tr><td>Tiosulfato de sodio</td><td>5 g</td></tr>
+                        <tr><td>Citrato férrico amónico</td><td>1.5 g</td></tr>
+                        <tr><td>Azul de bromotimol</td><td>0.064-0.065 g</td></tr>
+                        <tr><td>Fucsina ácida</td><td>0.1 g</td></tr>
+                        <tr><td>Agar</td><td>14.0 g</td></tr>
+                        <tr><td>Agua destilada</td><td>1 L</td></tr>
+                      </tbody>
+                    </table>
+                    <p>
+                      Calentar a ebullición con agitación frecuente para disolver los ingredientes, sin exceder 1 min. No sobrecalentar. Enfriar a 45-50 ºC.
+                    </p>
+                    <p>
+                      Distribuir en porciones de 20 mL en cajas Petri de 15×100 mm. Dejar secar por 3 horas con las tapas parcialmente abiertas.
+                    </p>
+                    <p>
+                      Almacenar hasta 30 días en refrigeración (4 ºC ± 2 ºC). pH 7.5 ± 0.2.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Agar TSI (Triple azúcar-hierro)</summary>
+        <div class="caja">
+          <p><strong>Preparación</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Extracto de carne</td><td>3.0 g</td></tr>
+                        <tr><td>Extracto de levadura</td><td>3.0 g</td></tr>
+                        <tr><td>Peptona</td><td>15.0-20.0 g</td></tr>
+                        <tr><td>Cloruro de sodio</td><td>5.0 g</td></tr>
+                        <tr><td>Lactosa</td><td>10.0 g</td></tr>
+                        <tr><td>Sacarosa</td><td>10.0 g</td></tr>
+                        <tr><td>Glucosa</td><td>1.0 g</td></tr>
+                        <tr><td>Citrato de fierro (III)</td><td>0.2-0.3 g</td></tr>
+                        <tr><td>Tiosulfato de sodio</td><td>0.3 g</td></tr>
+                        <tr><td>Rojo de fenol</td><td>0.024 g</td></tr>
+                        <tr><td>Agar</td><td>12.0-15.0 g</td></tr>
+                        <tr><td>Agua</td><td>1000 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <p>
+                      Disolver los ingredientes en el agua por calentamiento. Ajustar el pH, si es necesario, a 7.4 ± 0.2 a 25 ºC.
+                    </p>
+                    <p>
+                      Distribuir 10 mL del medio en tubos de ensaye y esterilizar por 15 min a 121 ºC.
+                    </p>
+                    <p>
+                      Dejar solidificar en posición inclinada para obtener un fondo de 4 cm y un bisel de al menos 2.5 cm.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Agar LIA (Lisina-hierro)</summary>
+        <div class="caja">
+          <p><strong>Preparación</strong></p>
+                    <p>
+                      Disponible en forma deshidratada: seguir las instrucciones del fabricante para su disolución, distribución en tubos y esterilización, dejando solidificar en posición inclinada con fondo profundo para la lectura de la reacción de descarboxilación.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Agar Baird Parker (prueba presuntiva)</summary>
+        <div class="caja">
+          <p><strong>Preparación</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Triptona</td><td>10.0 g</td></tr>
+                        <tr><td>Extracto de carne</td><td>5.0 g</td></tr>
+                        <tr><td>Extracto de levadura</td><td>1.0 g</td></tr>
+                        <tr><td>Piruvato de sodio</td><td>10.0 g</td></tr>
+                        <tr><td>Glicina</td><td>12.0 g</td></tr>
+                        <tr><td>Cloruro de litio·6H2O</td><td>5.0 g</td></tr>
+                        <tr><td>Agar</td><td>15.0-20.0 g</td></tr>
+                        <tr><td>Agua destilada</td><td>950 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <p>
+                      pH 7.0 ± 0.2. Disolver los ingredientes en 950 mL de agua destilada con agitación constante y calentamiento. Esterilizar 15 min a 121 ºC.
+                    </p>
+                    <p>
+                      Si se utiliza inmediatamente, mantener fundido a 48-50 ºC antes de adicionar los ingredientes de enriquecimiento, o almacenar el medio solidificado a 4 ºC ± 1 ºC hasta por 1 mes. Fundir el medio antes de su uso.
+                    </p>
+                    <p>
+                      Ingredientes de enriquecimiento: telurito y yema de huevo. Adicionar asépticamente 5 mL de emulsión de yema de huevo-telurito de potasio, a temperatura ambiente, a 95 mL de la base fundida. Mezclar bien evitando burbujas y vaciar porciones de 15-18 mL en cajas Petri de 15×100 mm. El medio debe quedar densamente opaco. Secar las placas antes de su uso y guardarlas a 20-25 ºC hasta por 5 días.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Agar Nutritivo</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Extracto de carne</td><td>3.0 g</td></tr>
+                        <tr><td>Peptona</td><td>5.0 g</td></tr>
+                        <tr><td>Agar</td><td>15.0 g</td></tr>
+                        <tr><td>Agua</td><td>1000 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Disolver los ingredientes o el medio completo deshidratado en el agua, por calentamiento. Ajustar el pH, si es necesario, de manera que después de la esterilización quede en 6.8 ± 0.2 a 25 ºC.
+                    </p>
+                    <p>
+                      Transferir el medio a tubos o botellas de capacidad apropiada y esterilizar por 15 min a 121 ºC. Para placas, preparar de la misma manera.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Agar Urea de Christensen</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Medio base</td></tr>
+                        <tr><td>Peptona</td><td>1.0 g</td></tr>
+                        <tr><td>Glucosa</td><td>1.0 g</td></tr>
+                        <tr><td>Cloruro de sodio</td><td>5.0 g</td></tr>
+                        <tr><td>Fosfato dihidrogenado de potasio</td><td>2.0 g</td></tr>
+                        <tr><td>Rojo de fenol</td><td>0.012 g</td></tr>
+                        <tr><td>Agar</td><td>15.0 g</td></tr>
+                        <tr><td>Agua</td><td>1000 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Solución de urea</td></tr>
+                        <tr><td>Urea</td><td>400 g</td></tr>
+                        <tr><td>Agua</td><td>1000 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Medio completo</td></tr>
+                        <tr><td>Medio base</td><td>950 mL</td></tr>
+                        <tr><td>Solución de urea</td><td>50 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Medio base: disolver los ingredientes por calentamiento. Ajustar el pH de manera que después de la esterilización quede en 6.8 ± 0.2 a 25 ºC. Esterilizar por 15 min a 121 ºC.
+                    </p>
+                    <p>
+                      Solución de urea: disolver la urea en el agua y esterilizar por filtración (no se autoclava, ya que el calor descompone la urea).
+                    </p>
+                    <p>
+                      Medio completo: agregar asépticamente la solución de urea al medio base, previamente fundido y mantenido de 44 a 47 ºC en baño de agua. Distribuir 10 mL del medio completo por tubo de ensaye.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Agar Citrato de Simmons</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>NaNH4HPO4·4H2O</td><td>1.0-1.5 g</td></tr>
+                        <tr><td>KH2PO4 (monobásico)</td><td>1.0 g</td></tr>
+                        <tr><td>MgSO4·7H2O</td><td>0.2 g</td></tr>
+                        <tr><td>Citrato de sodio·2H2O</td><td>2.0-3.0 g</td></tr>
+                        <tr><td>Cloruro de sodio</td><td>5.0 g</td></tr>
+                        <tr><td>Agar</td><td>13-15 g</td></tr>
+                        <tr><td>Azul de bromotimol</td><td>0.08 g</td></tr>
+                        <tr><td>Agua destilada</td><td>1000 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Disolver los ingredientes y calentar a ebullición por 1 min.
+                    </p>
+                    <p>
+                      Distribuir en porciones de 5 mL en tubos con tapón de rosca, esterilizar por 15 min a 121 ºC y dejar solidificar en una superficie inclinada, para obtener una profundidad de 3 cm.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Agar AST (Agar Soya-Tripticaseína)</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Tripticasa peptona</td><td>15 g</td></tr>
+                        <tr><td>Fitona peptona</td><td>5 g</td></tr>
+                        <tr><td>Cloruro de sodio</td><td>5 g</td></tr>
+                        <tr><td>Agar</td><td>15 g</td></tr>
+                        <tr><td>Agua destilada</td><td>1 L</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Suspender los ingredientes en 1 L de agua destilada. Dejar reposar de 5 a 10 min. Calentar con agitación constante para disolver el agar y hervir por 1 min.
+                    </p>
+                    <p>
+                      Distribuir en tubos, cajas o matraces. Esterilizar a 121 ºC por 15 min. Se utiliza para la reactivación y el mantenimiento de las cepas control de <em>E. coli</em> y <em>S. aureus</em>.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Agar Azul de Toluidina-ADN</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>DNA de timo de carnero</td><td>0.3 g</td></tr>
+                        <tr><td>Agar</td><td>10.0 g</td></tr>
+                        <tr><td>CaCl2 (anhidro)</td><td>1.1 mg</td></tr>
+                        <tr><td>Cloruro de sodio</td><td>10 g</td></tr>
+                        <tr><td>Azul de toluidina O</td><td>0.083 g</td></tr>
+                        <tr><td>Tris (hidroximetil aminometano)</td><td>6.1 g</td></tr>
+                        <tr><td>Agua destilada</td><td>1 L</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      pH 9.0. Disolver el Tris en 1 L de agua destilada y ajustar el pH a 9.0. Adicionar los ingredientes restantes, a excepción del azul de toluidina.
+                    </p>
+                    <p>
+                      Calentar a ebullición para disolver el azul de toluidina en el medio. Distribuir en matraces o tubos con tapa de rosca.
+                    </p>
+                    <p>
+                      No es necesario esterilizar si se usa de inmediato. El medio estéril es estable a temperatura ambiente por 4 meses, y es satisfactorio después de varios ciclos de fusión. Se utiliza en la prueba de termonucleasa.
+                    </p>
+        </div>
+      </details>
+
+      <br />
+      <h3>Caldos</h3>
+      <details>
+        <summary>Caldo Lauril Triptosa (prueba presuntiva)</summary>
+        <div class="caja">
+          <p><strong>Preparación</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Concentración 1.5×</td></tr>
+                        <tr><td>Triptosa</td><td>30.0 g</td></tr>
+                        <tr><td>Lactosa</td><td>7.5 g</td></tr>
+                        <tr><td>Fosfato dipotásico</td><td>4.125 g</td></tr>
+                        <tr><td>Fosfato monopotásico</td><td>4.125 g</td></tr>
+                        <tr><td>Cloruro de sodio</td><td>7.5 g</td></tr>
+                        <tr><td>Lauril sulfato de sodio</td><td>0.15 g</td></tr>
+                        <tr><td>Agua destilada</td><td>1000.0 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Concentración sencilla</td></tr>
+                        <tr><td>Triptosa</td><td>20.0 g</td></tr>
+                        <tr><td>Lactosa</td><td>5.0 g</td></tr>
+                        <tr><td>Fosfato dipotásico</td><td>2.75 g</td></tr>
+                        <tr><td>Fosfato monopotásico</td><td>2.75 g</td></tr>
+                        <tr><td>Cloruro de sodio</td><td>5.0 g</td></tr>
+                        <tr><td>Lauril sulfato de sodio</td><td>0.1 g</td></tr>
+                        <tr><td>Agua destilada</td><td>1000.0 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <p>
+                      Disolver los ingredientes en agua destilada. Ajustar el pH a 6.8 ± 0.2 a 25 ºC.
+                    </p>
+                    <p>
+                      Distribuir en volúmenes de 10 mL en tubos de 16×160 mm para el medio de concentración sencilla, y de 20 mL en tubos de 20×200 mm para el medio de concentración 1.5×, cada tubo con una campana de fermentación.
+                    </p>
+                    <p>
+                      Esterilizar en autoclave por 15 min a 121 ± 1.0 ºC. Las campanas de fermentación no deben contener burbujas de aire después de la esterilización.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Caldo EC (prueba confirmativa)</summary>
+        <div class="caja">
+          <p><strong>Preparación</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Bacto triptosa o tripticasa</td><td>20.0 g</td></tr>
+                        <tr><td>Bacto lactosa</td><td>5.0 g</td></tr>
+                        <tr><td>Bacto sales biliares No. 3</td><td>1.5 g</td></tr>
+                        <tr><td>Fosfato dipotásico</td><td>4.0 g</td></tr>
+                        <tr><td>Fosfato monopotásico</td><td>1.5 g</td></tr>
+                        <tr><td>Cloruro de sodio</td><td>5.0 g</td></tr>
+                        <tr><td>Agua destilada</td><td>1000 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <p>
+                      Disolver los ingredientes en 1 L de agua destilada; dejar en reposo de 5 a 10 min y mezclar bien hasta la disolución completa. Ajustar el pH si es necesario (6.9 ± 0.2 a 25 ºC).
+                    </p>
+                    <p>
+                      Distribuir en porciones de 10 mL en tubos de ensaye de 16×150 mm con campanas de Durham, y esterilizar en autoclave durante 15 min a 121 ºC.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Caldo RVS (Rappaport-Vassiliadis)</summary>
+        <div class="caja">
+          <p><strong>Preparación</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Solución A</td></tr>
+                        <tr><td>Digerido enzimático de soya</td><td>5.0 g</td></tr>
+                        <tr><td>Cloruro de sodio</td><td>8.0 g</td></tr>
+                        <tr><td>KH2PO4</td><td>1.4 g</td></tr>
+                        <tr><td>K2HPO4</td><td>0.2 g</td></tr>
+                        <tr><td>Agua</td><td>1000 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Solución B</td></tr>
+                        <tr><td>MgCl2·6H2O</td><td>400.0 g</td></tr>
+                        <tr><td>Agua</td><td>1000 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Solución C</td></tr>
+                        <tr><td>Oxalato verde de malaquita</td><td>0.4 g</td></tr>
+                        <tr><td>Agua</td><td>100 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Medio completo</td></tr>
+                        <tr><td>Solución A</td><td>1000 mL</td></tr>
+                        <tr><td>Solución B</td><td>100 mL</td></tr>
+                        <tr><td>Solución C</td><td>10 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <p>
+                      Solución A: calentar a 70 ºC; prepararse el día de la elaboración del medio completo.
+                    </p>
+                    <p>
+                      Solución B: disolver el cloruro de magnesio en agua (es una sal muy higroscópica); puede almacenarse en frasco ámbar con tapa hermética a temperatura ambiente hasta por dos años.
+                    </p>
+                    <p>
+                      Solución C: disolver el oxalato en el agua; puede almacenarse en frasco ámbar a temperatura ambiente hasta por 8 meses.
+                    </p>
+                    <p>
+                      Medio completo: mezclar las tres soluciones y ajustar el pH de manera que después de la esterilización sea 5.2 ± 0.2. Antes de su uso, distribuir porciones de 10 mL en cada tubo y esterilizar a 115 ºC por 15 min. Almacenar a 3 ºC ± 2 ºC y utilizar el mismo día de su preparación.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Caldo MKTTn (Müller-Kauffmann Tetrationato-Novobiocina)</summary>
+        <div class="caja">
+          <p><strong>Preparación</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Medio base</td></tr>
+                        <tr><td>Extracto de carne</td><td>4.3 g</td></tr>
+                        <tr><td>Digerido enzimático de caseína</td><td>8.6 g</td></tr>
+                        <tr><td>Cloruro de sodio</td><td>2.6 g</td></tr>
+                        <tr><td>CaCO3</td><td>38.7 g</td></tr>
+                        <tr><td>Na2S2O3·5H2O</td><td>47.8 g</td></tr>
+                        <tr><td>Oxi sales biliares uso bacteriológico</td><td>4.78 g</td></tr>
+                      </tbody>
+                    </table>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Solución de yodo-yoduro</td></tr>
+                        <tr><td>Yodo</td><td>20.0 g</td></tr>
+                        <tr><td>Yoduro de potasio</td><td>25.0 g</td></tr>
+                        <tr><td>Agua</td><td>100 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Solución de novobiocina</td></tr>
+                        <tr><td>Novobiocina (sal sódica)</td><td>0.04 g</td></tr>
+                        <tr><td>Agua</td><td>5.0 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Medio completo</td></tr>
+                        <tr><td>Medio base</td><td>1000 mL</td></tr>
+                        <tr><td>Solución de yodo-yoduro</td><td>20 mL</td></tr>
+                        <tr><td>Solución de novobiocina</td><td>5 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <p>
+                      Medio base: disolver los ingredientes deshidratados en el agua, hervir por 5 min. Ajustar el pH, si es necesario, a 8.2 ± 0.2 a 25 ºC. Puede almacenarse hasta 4 semanas a 3 ºC ± 2 ºC.
+                    </p>
+                    <p>
+                      Solución de yodo-yoduro: disolver completamente el yoduro de potasio en 10 mL de agua, agregar el yodo y diluir a 100 mL con agua estéril, sin calentar. Almacenar en la oscuridad, a temperatura ambiente, en frasco bien cerrado.
+                    </p>
+                    <p>
+                      Solución de novobiocina: disolver la novobiocina en el agua y esterilizar por filtración; puede almacenarse hasta 4 semanas a 3 ºC ± 2 ºC.
+                    </p>
+                    <p>
+                      Medio completo: agregar asépticamente la solución de novobiocina a 1000 mL de medio base, mezclar, y después agregar la solución de yodo-yoduro. Mezclar bien y distribuir asépticamente en recipientes estériles. Debe utilizarse el mismo día de su preparación.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Caldo L-Lisina descarboxilasa</summary>
+        <div class="caja">
+          <p><strong>Preparación</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Monoclorhidrato de L-lisina</td><td>5.0 g</td></tr>
+                        <tr><td>Extracto de levadura</td><td>3.0 g</td></tr>
+                        <tr><td>Glucosa</td><td>1.0 g</td></tr>
+                        <tr><td>Púrpura de bromocresol</td><td>0.015-0.02 g</td></tr>
+                        <tr><td>Peptona</td><td>5.0 g</td></tr>
+                        <tr><td>Agua</td><td>1000 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <p>
+                      Disolver los componentes en el agua, con calentamiento si es necesario. Ajustar el pH de manera que después de la esterilización sea 6.8 ± 0.2 a 25 ºC.
+                    </p>
+                    <p>
+                      Transferir el medio en cantidades de 2 a 5 mL y esterilizar en autoclave por 15 min a 121 ºC.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Caldo Lactosado</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Concentración 1.5×</td></tr>
+                        <tr><td>Extracto de carne</td><td>4.5 g</td></tr>
+                        <tr><td>Peptona de gelatina</td><td>7.5 g</td></tr>
+                        <tr><td>Lactosa</td><td>7.5 g</td></tr>
+                        <tr><td>Agua destilada</td><td>1000.00 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Concentración sencilla</td></tr>
+                        <tr><td>Extracto de carne</td><td>3.0 g</td></tr>
+                        <tr><td>Peptona de gelatina</td><td>5.0 g</td></tr>
+                        <tr><td>Lactosa</td><td>5.0 g</td></tr>
+                        <tr><td>Agua destilada</td><td>1000.00 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Disolver los ingredientes en 1 L de agua. Ajustar el pH de manera que después de la esterilización sea 6.9 ± 0.2 a 25 ºC.
+                    </p>
+                    <p>
+                      Distribuir en volúmenes de 10 mL (concentración sencilla, tubos de 16×160 mm) o 20 mL (concentración 1.5×, tubos de 20×200 mm), cada tubo con campana de fermentación.
+                    </p>
+                    <p>
+                      Esterilizar en autoclave por 15 min a 121 ± 1.0 ºC. Las campanas de fermentación no deben contener burbujas de aire después de la esterilización.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Caldo Verde Brillante Lactosa Bilis</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Peptona</td><td>10.0 g</td></tr>
+                        <tr><td>Lactosa</td><td>10.0 g</td></tr>
+                        <tr><td>Sales biliares</td><td>20.0 g</td></tr>
+                        <tr><td>Verde brillante</td><td>0.0133 g</td></tr>
+                        <tr><td>Agua</td><td>1.0 L</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Disolver los componentes o el medio completo deshidratado en agua. Ajustar el pH de manera que después de la esterilización sea 7.2 a 25 ºC.
+                    </p>
+                    <p>
+                      Distribuir en cantidades de 10 mL en tubos de 16×160 mm con campana de fermentación. Esterilizar en autoclave 15 min a 121 ºC.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Caldo Triptona al 1%</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Triptona o tripticasa</td><td>10 g</td></tr>
+                        <tr><td>Agua destilada</td><td>1000 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Disolver los ingredientes y distribuir en porciones de 5 mL en tubos de ensaye de 16×125 mm o 16×150 mm.
+                    </p>
+                    <p>
+                      Esterilizar a 121 ºC por 15 min. pH final 6.9 ± 0.2.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Caldo MR-VP</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Peptona tamponada</td><td>7 g</td></tr>
+                        <tr><td>Glucosa</td><td>5 g</td></tr>
+                        <tr><td>K2HPO4</td><td>5 g</td></tr>
+                        <tr><td>Agua destilada</td><td>1000 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <p><em>pH 6.9 ± 0.2. Existen formulaciones equivalentes con digerido pancreático de caseína y digerido péptico de tejido animal, o con regulador de fosfatos, según el fabricante del medio deshidratado.</em></p>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Disolver los ingredientes con calentamiento suave si es necesario.
+                    </p>
+                    <p>
+                      Distribuir en volúmenes de 10 mL en tubos de ensaye de 16×150 mm (o 3 mL si se prepara como medio RM-VP) y esterilizar a 121 ºC por 15 min.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Caldo Citrato de Koser</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>NaNH4HPO4·4H2O</td><td>1.5 g</td></tr>
+                        <tr><td>KH2PO4 (monobásico)</td><td>1.0 g</td></tr>
+                        <tr><td>MgSO4·7H2O</td><td>0.2 g</td></tr>
+                        <tr><td>Citrato de sodio·2H2O</td><td>3.0 g</td></tr>
+                        <tr><td>Agua destilada</td><td>1000 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Distribuir 5 mL de caldo, preferentemente en tubos de ensaye con tapa de rosca, y esterilizar a 121 ºC por 15 min.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>BHI (infusión cerebro-corazón)</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Peptona</td><td>10.0 g</td></tr>
+                        <tr><td>Infusión de cerebro de ternero deshidratado</td><td>12.5 g</td></tr>
+                        <tr><td>Infusión de corazón de res deshidratado</td><td>5.0 g</td></tr>
+                        <tr><td>Glucosa</td><td>2.0 g</td></tr>
+                        <tr><td>Cloruro de sodio</td><td>5.0 g</td></tr>
+                        <tr><td>Fosfato disódico (Na2HPO4)</td><td>2.5 g</td></tr>
+                        <tr><td>Agua</td><td>1000 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Disolver los componentes o el medio completo comercial en agua hirviendo. Ajustar el pH de manera que después de la esterilización quede en 7.4 ± 0.2 a 25 ºC.
+                    </p>
+                    <p>
+                      Transferir el contenido a tubos o botellas, en cantidades iguales a 10 mL. Esterilizar el medio por 20 min a 121 ºC.
+                    </p>
+        </div>
+      </details>
+
+      <br />
+      <h3>Aguas y soluciones salinas</h3>
+      <details>
+        <summary>Agua peptonada</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Peptona</td><td>1.0 g</td></tr>
+                        <tr><td>Cloruro de sodio</td><td>8.5 g</td></tr>
+                        <tr><td>Agua</td><td>1.0 L</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Disolver los componentes en un litro de agua. Ajustar el pH a 7 ± 0.1 con NaOH 1.0 N.
+                    </p>
+                    <p>
+                      Distribuir en porciones de 99.90 y 9.0 mL, o en cualquier volumen múltiplo de nueve según se requiera. Esterilizar a 121 ± 1.0 ºC durante 15 min.
+                    </p>
+                    <p>
+                      Después de la esterilización, el pH y los volúmenes finales de la solución de trabajo deberán ser iguales a los iniciales. Si no se usa de inmediato, almacenar en un lugar oscuro entre 0 y 5 ºC, por no más de un mes.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Agua peptonada amortiguada</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Digerido enzimático de caseína</td><td>10.0 g</td></tr>
+                        <tr><td>Cloruro de sodio</td><td>5.0 g</td></tr>
+                        <tr><td>Na2HPO4·12H2O</td><td>9.0 g</td></tr>
+                        <tr><td>KH2PO4</td><td>1.5 g</td></tr>
+                        <tr><td>Agua</td><td>1000 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Disolver los ingredientes en el agua, calentando si es necesario. Ajustar el pH de manera que después de la esterilización quede en 7.0 ± 0.2 a 25 ºC.
+                    </p>
+                    <p>
+                      Distribuir el medio en frascos de la capacidad necesaria.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Solución Salina Fisiológica</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Cloruro de sodio</td><td>8.5 g</td></tr>
+                        <tr><td>Agua</td><td>1000 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Disolver el cloruro de sodio en el agua. Si es necesario, ajustar el pH de manera que después de la esterilización quede en 7.0 ± 0.2 a 25 ºC.
+                    </p>
+                    <p>
+                      Distribuir volúmenes de la solución de manera que, después de la esterilización, queden entre 90 y 100 mL. Esterilizar 15 min a 121 ºC.
+                    </p>
+        </div>
+      </details>
+
+      <br />
+      <h3>Reactivos y soluciones</h3>
+      <details>
+        <summary>Solución reguladora de fosfatos</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Fosfato de sodio monobásico</td><td>34.0 g</td></tr>
+                        <tr><td>Agua</td><td>1.0 L</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Disolver el fosfato en 500 mL de agua y ajustar el pH a 7.2 con NaOH 1.0 N. Llevar a 1 L con agua. Esterilizar durante 15 min a 121 ± 1.0 ºC. Conservar en refrigeración (solución concentrada).
+                    </p>
+                    <p>
+                      Solución de trabajo: tomar 1.25 mL de la solución concentrada y llevar a un litro con agua. Distribuir en porciones de 99.90 y 9 mL según se requiera y esterilizar a 121 ± 1.0 ºC durante 15 min.
+                    </p>
+                    <p>
+                      Después de la esterilización, el pH y los volúmenes finales de la solución de trabajo deberán ser iguales a los iniciales.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Solución estéril de ácido tartárico al 10%</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Ácido tartárico</td><td>10.0 g</td></tr>
+                        <tr><td>Agua destilada</td><td>100.0 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Disolver el ácido en el agua y esterilizar a 121 ± 1.0 ºC por 15 min, o por filtración a través de una membrana de 0.45 µm. Se utiliza para acidificar el agar papa-dextrosa.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Aceite de parafina o mineral estéril</summary>
+        <div class="caja">
+          <p>
+                      Puede esterilizarse por filtración de membrana de 0.22 µm.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Reactivo de Kovac</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>4-Dimetilaminobenzaldehído</td><td>5 g</td></tr>
+                        <tr><td>Ácido clorhídrico</td><td>25 mL</td></tr>
+                        <tr><td>2-metilbutan-2-ol</td><td>75 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Mezclar los componentes. Se utiliza para revelar la prueba de indol.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Diluyente de peptona al 0.1%</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Peptona</td><td>1 g</td></tr>
+                        <tr><td>Agua destilada</td><td>1000 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <p><em>pH 7.0 ± 0.2</em></p>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Disolver la peptona en el agua destilada y esterilizar a 121 ºC por 15 min.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Indicador rojo de metilo</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Rojo de metilo</td><td>0.10 g</td></tr>
+                        <tr><td>Etanol al 95%</td><td>300 mL</td></tr>
+                        <tr><td>Agua destilada</td><td>c.b.p. 500 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Disolver el rojo de metilo en 300 mL de etanol y aforar a 500 mL con agua destilada. Se utiliza para revelar la prueba de rojo de metilo.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Coloración de Gram</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Cristal violeta — solución A</td></tr>
+                        <tr><td>Cristal violeta (colorante 90%)</td><td>2.0 g</td></tr>
+                        <tr><td>Etanol 95%</td><td>20 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Cristal violeta — solución B</td></tr>
+                        <tr><td>Oxalato de amonio</td><td>0.8 g</td></tr>
+                        <tr><td>Agua destilada</td><td>80 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Lugol (mordente)</td></tr>
+                        <tr><td>Yodo</td><td>1.0 g</td></tr>
+                        <tr><td>Yoduro de potasio</td><td>2.0 g</td></tr>
+                        <tr><td>Agua destilada</td><td>300 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Colorante de contraste (safranina)</td></tr>
+                        <tr><td>Safranina</td><td>2.5 g</td></tr>
+                        <tr><td>Etanol al 95%</td><td>100 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Cristal violeta: disolver el cristal violeta en el etanol (solución A) y el oxalato de amonio en el agua destilada (solución B). Mezclar ambas soluciones y filtrar con papel filtro; almacenar por 24 h antes de su uso.
+                    </p>
+                    <p>
+                      Lugol: colocar el yoduro de potasio en un mortero, adicionar el yodo y triturar con el pistilo por 5-10 s; agregar 1 mL de agua y triturar, después 5 mL y triturar, después 10 mL y triturar. Vaciar en una botella de reactivo y enjuagar el mortero y el pistilo con la cantidad de agua necesaria para completar 300 mL.
+                    </p>
+                    <p>
+                      Colorante de contraste: preparar la solución concentrada de safranina en etanol. Solución de trabajo: adicionar 10 mL de la solución concentrada a 90 mL de agua destilada.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Solución de KOH</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>KOH</td><td>40 g</td></tr>
+                        <tr><td>Agua</td><td>100 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Disolver el KOH en el agua. Se utiliza como parte del reactivo de Voges-Proskauer y en la prueba de catalasa.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>α-naftol, solución etanólica</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>α-naftol</td><td>6 g</td></tr>
+                        <tr><td>Etanol al 96%</td><td>100 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Disolver el α-naftol en el etanol. Se utiliza junto con la solución de KOH para revelar la prueba de Voges-Proskauer.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Solución de creatina (N-amidinosarcosina)</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Monohidrato de creatina</td><td>0.5 g</td></tr>
+                        <tr><td>Agua</td><td>100 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Disolver el monohidrato de creatina en el agua. Se agrega al caldo MR-VP para mejorar la sensibilidad de la prueba de Voges-Proskauer.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Reactivo de β-galactosidasa (ONPG)</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Solución amortiguadora</td></tr>
+                        <tr><td>NaH2PO4</td><td>6.9 g</td></tr>
+                        <tr><td>NaOH</td><td>3 mL</td></tr>
+                        <tr><td>Agua</td><td>c.b.p. 50 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Solución de ONPG</td></tr>
+                        <tr><td>ONPG</td><td>0.08 g</td></tr>
+                        <tr><td>Agua</td><td>15 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td></td><td>Reactivo completo</td></tr>
+                        <tr><td>Solución amortiguadora</td><td>5 mL</td></tr>
+                        <tr><td>Solución de ONPG</td><td>15 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Solución amortiguadora: disolver el fosfato dihidrogenado de sodio en 45 mL de agua, ajustar el pH a 7.0 ± 0.2 a 25 ºC con la solución de hidróxido de sodio y llevar a un volumen final de 50 mL.
+                    </p>
+                    <p>
+                      Solución de ONPG: disolver el ONPG en el agua a aproximadamente 50 ºC y enfriar.
+                    </p>
+                    <p>
+                      Reactivo completo: agregar la solución amortiguadora a la solución de ONPG.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Solución de hidróxido de sodio 1.0 N</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Hidróxido de sodio</td><td>4.0 g</td></tr>
+                        <tr><td>Agua</td><td>100 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Disolver el hidróxido de sodio en el agua.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Emulsión de yema de huevo</summary>
+        <div class="caja">
+          <p>
+                      Utilizar huevos frescos y separar la yema de la clara. Mezclar las yemas con cuatro veces su volumen de agua y calentar la mezcla en baño de agua, controlando la temperatura a 45 ºC ± 0.5 ºC por 2 horas; dejar reposar de 18 a 24 h entre 0 y 5 ºC para que precipite.
+                    </p>
+                    <p>
+                      Decantar el sobrenadante líquido y esterilizarlo por filtración, a menos que la separación se haya realizado asépticamente. La emulsión puede almacenarse de 2 a 8 ºC por no más de 72 horas. Es el ingrediente de enriquecimiento del agar Baird Parker.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Solución de telurito de potasio</summary>
+        <div class="caja">
+          <p><strong>Ingredientes</strong></p>
+                    <table>
+                      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cantidad</th></tr></thead>
+                      <tbody>
+                        <tr><td>Telurito de potasio</td><td>1.0 g</td></tr>
+                        <tr><td>Agua</td><td>100 mL</td></tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <p><strong>Preparación</strong></p>
+                    <p>
+                      Disolver el telurito de potasio en agua con un mínimo de calentamiento. Esterilizar por filtración. Puede conservarse de 2 a 8 ºC por 6 meses. Es el segundo ingrediente de enriquecimiento del agar Baird Parker.
+                    </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Plasma de conejo con EDTA</summary>
+        <div class="caja">
+          <p>
+                      Utilizar plasma de conejo disponible comercialmente y rehidratar de acuerdo con las instrucciones del fabricante. Adicionar el EDTA al plasma ya hidratado.
+                    </p>
+                    <p>
+                      Si no se cuenta con plasma de conejo comercial, diluir plasma de conejo fresco en una proporción 1:3 con agua. Se utiliza en la prueba de coagulasa.
+                    </p>
+        </div>
+      </details>
+
+
+      <div class="caja">
+        <p>
+          <em>Nota: el Antisuero somático (O) polivalente de Salmonella y la
+          Solución trazable para verificación de potenciómetro son productos
+          comerciales que no requieren preparación en el laboratorio.</em>
+        </p>
+      </div>
+
+
+    </main>
+
+  </div>
+
+</body>
+</html>
