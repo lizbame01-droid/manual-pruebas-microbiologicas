@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buenas prácticas de laboratorio · Manual de Pruebas Microbiológicas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Esta página está un nivel adentro (paginas/), por eso "../" -->
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <div class="pagina">
+
+    <nav class="menu-lateral">
+
+      <details>
+        <summary>Microbiología en México</summary>
+        <ul>
+          <li><a href="microbiologia-mexico.html">Antecedentes y control microbiológico</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Microbiología de los alimentos</summary>
+        <ul>
+          <li><a href="microbiologia-alimentos/crecimiento-microorganismos.html">Crecimiento de microorganismos</a></li>
+          <li><a href="microbiologia-alimentos/tipos-microorganismos.html">Tipos de microorganismos</a></li>
+          <li><a href="microbiologia-alimentos/microorganismos-indicadores.html">Microorganismos indicadores</a></li>
+          <li><a href="microbiologia-alimentos/patogenos.html">Patógenos</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Fundamentos del análisis</summary>
+        <ul>
+          <li><a href="muestreo.html">Muestreo</a></li>
+          <li><a href="tecnicas-microbiologicas.html">Técnicas microbiológicas</a></li>
+          <li><a href="metodos-analisis.html">Métodos de análisis</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Pruebas microbiológicas</summary>
+        <ul>
+          <li><a href="metodos/recepcion-muestras.html">Recepción de muestras</a></li>
+          <li><a href="metodos/diluciones.html">Diluciones</a></li>
+          <li><a href="metodos/mesofilos-aerobios.html">Mesófilos aerobios</a></li>
+          <li><a href="metodos/mohos-levaduras.html">Mohos y levaduras</a></li>
+          <li><a href="metodos/coliformes-placa.html">Coliformes totales en placa</a></li>
+          <li><a href="metodos/salmonella.html">Salmonella</a></li>
+          <li><a href="metodos/s-aureus.html">S. aureus</a></li>
+          <li><a href="metodos/nmp.html">Coliformes y E. coli por NMP</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Normatividad</summary>
+        <ul>
+          <li><a href="normatividad.html">Normas Oficiales Mexicanas y Normas Mexicanas</a></li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Buenas prácticas de laboratorio</summary>
+        <ul>
+          <li><a href="buenas-practicas.html">Bioseguridad e instalaciones</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Medios de cultivo</summary>
+        <ul>
+          <li><a href="medios-cultivo.html">Clasificación, agares, caldos y reactivos</a></li>
+        </ul>
+      </details>
+
+    </nav>
+
+    <main>
+
+      <p><a href="../index.html">← Volver al inicio</a></p>
+
+      <h2>Buenas prácticas de laboratorio y bioseguridad</h2>
+      <h3>Reglas, procedimientos y medidas de bioseguridad para el laboratorio microbiológico</h3>
+
+      <p>
+        De acuerdo con la NOM-059-SSA1-2015, las Buenas Prácticas de
+        Laboratorio (BPL) son "el conjunto de reglas, procedimientos,
+        operaciones y prácticas establecidas para asegurar la calidad
+        e integridad de las actividades realizadas en el laboratorio y
+        de los datos analíticos obtenidos en ensayos o pruebas"
+        (Secretaría de Salud, 2015). Su objetivo es asegurar la
+        uniformidad, consistencia y confiabilidad de las pruebas para
+        diferentes productos, entre ellos los alimentos (Nambisan P.,
+        2017).
+      </p>
+
+      <br />
+      <h2>Principios de las Buenas Prácticas de Laboratorio</h2>
+      <div class="caja">
+        <p>
+          De manera general, los principios de las BPL establecidos
+          por la Farmacopea de los Estados Unidos Mexicanos (2014) son
+          los siguientes:
+        </p>
+      </div>
+
+      <details>
+        <summary>Los 18 principios de las BPL</summary>
+        <div class="caja">
+          <ol>
+            <li><strong>Organización y administración:</strong> es necesario contar con un organigrama que detalle la estructura de la organización y las posiciones del laboratorio en ella; las funciones y responsabilidades de todo el personal deben estar claramente establecidas.</li>
+            <li><strong>Sistema de aseguramiento de la calidad:</strong> los encargados del laboratorio deben establecer e implementar este sistema; la documentación debe ser comunicada, entendida, accesible e implementada por el personal.</li>
+            <li><strong>Control de la documentación:</strong> se debe definir un procedimiento para su control, ya que la documentación es fundamental en el sistema de gestión de la calidad.</li>
+            <li><strong>Registros:</strong> el laboratorio debe definir procedimientos para la gestión integral de los registros desde su creación hasta su destino final; deben contener información suficiente para repetir el ensayo o los cálculos.</li>
+            <li><strong>Equipo de procesamiento de datos:</strong> el laboratorio debe asegurar que los programas de cómputo escritos por el usuario estén correctamente documentados, detallados, validados o verificados, y sean adecuados para su uso.</li>
+            <li><strong>Personal:</strong> el número de trabajadores depende del tamaño de la organización; deben contar con la escolaridad, experiencia, capacitación y conocimientos técnicos necesarios.</li>
+            <li><strong>Instalaciones:</strong> su diseño debe responder a las funciones y operaciones que se realicen, como ensayos químicos, fisicoquímicos, microbiológicos y biológicos.</li>
+            <li><strong>Equipos, instrumentos y otros dispositivos:</strong> deben estar diseñados, construidos, adaptados, ubicados, calibrados y verificados según las operaciones del laboratorio, e instalarse para facilitar su operación, supervisión y mantenimiento.</li>
+            <li><strong>Reactivos:</strong> todas las sustancias utilizadas deben ser de la calidad y el grado convenientes para su uso; deben identificarse y organizarse por riesgo y peligro.</li>
+            <li><strong>Sustancias y materiales de referencia:</strong> son necesarios para calibrar o evaluar los dispositivos del laboratorio; se debe procurar que sean trazables al Sistema Internacional de Unidades.</li>
+            <li><strong>Calibración, verificación y calificación de equipo:</strong> se debe verificar el estado de cada dispositivo periódicamente según el plan establecido; solo el personal autorizado puede manipular los dispositivos.</li>
+            <li><strong>Recepción de muestras:</strong> las muestras deben ser representativas de los lotes del producto.</li>
+            <li><strong>Hoja de trabajo analítico:</strong> formato en el que el analista registra la información de la muestra, los reactivos y disolventes utilizados, así como los métodos, cálculos y resultados de las pruebas.</li>
+            <li><strong>Validación de procedimientos analíticos:</strong> se debe contar con evidencia de que los procedimientos son adecuados en las condiciones de uso; los métodos estandarizados son preparados y validados por un grupo de expertos.</li>
+            <li><strong>Pruebas:</strong> es necesario contar con registros que abarquen características de los elementos, fecha de recepción, caducidad, lote, pureza, y cantidades recibidas y utilizadas en los ensayos.</li>
+            <li><strong>Evaluación de los resultados de ensayo:</strong> de ser necesario, se deben evaluar estadísticamente los resultados para constatar su validez.</li>
+            <li><strong>Certificación de análisis:</strong> para cada lote, sustancia o producto evaluado se debe realizar un certificado de análisis.</li>
+            <li><strong>Seguridad:</strong> el laboratorio debe contar con medidas de seguridad generales y específicas para cada integrante del equipo de trabajo, conforme a la legislación vigente, así como aportar el material necesario para cumplirlas.</li>
+          </ol>
+        </div>
+      </details>
+
+      <br />
+      <h2>Bioseguridad</h2>
+      <div class="caja">
+        <p>
+          Las actividades de bioseguridad son importantes para
+          preservar la seguridad del personal, de la comunidad y del
+          medio ambiente frente a la exposición a agentes biológicos
+          patógenos, ya que el daño puede ir desde una infección hasta
+          una enfermedad o un brote en una población (OMS, 2023). La
+          bioseguridad es el "conjunto de medidas y acciones orientadas
+          a la protección del personal, la comunidad y el medio
+          ambiente para el manejo de agentes que representan un riesgo
+          a la salud" (Secretaría de Salud, 2015).
+        </p>
+      </div>
+
+      <details>
+        <summary>Evaluación de riesgo</summary>
+        <div class="caja">
+          <p>
+            Primero es necesario identificar los riesgos asociados en
+            el laboratorio mediante una evaluación, para después
+            implementar planes que los mitiguen. La evaluación de
+            riesgos debe realizarse de forma normalizada y sistemática,
+            para que sea repetible y comparable en un mismo contexto
+            (OMS, 2023). El marco de evaluación de riesgo comprende las
+            siguientes etapas:
+          </p>
+          <ol>
+            <li>Recopilar información sobre los agentes biológicos involucrados y los ensayos que se realizan dentro del laboratorio.</li>
+            <li>Evaluar riesgos: determinar la probabilidad de que se libere un agente biológico o se presente una exposición a él, la gravedad de las consecuencias, y decidir si el riesgo es aceptable o no.</li>
+            <li>Elaborar una estrategia de control de riesgo que oriente las medidas de control para reducirlo a un nivel aceptable.</li>
+            <li>Seleccionar y aplicar las medidas de control, tomando en cuenta la normatividad nacional y garantizando su monitoreo mediante inspecciones, certificaciones y auditorías.</li>
+            <li>Revisar regularmente los riesgos y las medidas de control, y modificarlos de ser necesario (OMS, 2023).</li>
+          </ol>
+        </div>
+      </details>
+
+      <details>
+        <summary>Niveles de bioseguridad</summary>
+        <div class="caja">
+          <p>
+            La evaluación de riesgo permite definir el Nivel de
+            Bioseguridad, directamente relacionado con el Grupo de
+            riesgo (categoría de microorganismos) que se maneja en el
+            laboratorio. En general se reconocen cuatro niveles, de
+            acuerdo con la patogenicidad, el rango de hospedadores, el
+            modo de transmisión, la disponibilidad local para prevenir
+            un brote y la disponibilidad de un tratamiento eficaz
+            (Nambisan P., 2017):
+          </p>
+          <ul>
+            <li><strong>Nivel 1:</strong> se manipulan agentes bien caracterizados que no representan un riesgo potencial.</li>
+            <li><strong>Nivel 2:</strong> se manipulan agentes que representan un peligro moderado para el personal y el ambiente.</li>
+            <li><strong>Nivel 3:</strong> manejo de agentes patógenos letales que pueden causar enfermedades graves o mortales.</li>
+            <li><strong>Nivel 4:</strong> se manipulan agentes peligrosos y exóticos con riesgo elevado y potencialmente mortal, para los que no existen vacunas ni tratamientos disponibles (Secretaría de Salud, 2015).</li>
+          </ul>
+          <p>
+            Si el laboratorio realiza únicamente las pruebas
+            comprendidas en este manual, difícilmente se presentará un
+            Grupo de riesgo 2, que comprende "microorganismos
+            patógenos, pero con poca probabilidad de representar un
+            riesgo grave para el personal de laboratorio, el ganado, la
+            comunidad o el medio ambiente, ya que existen tratamientos y
+            medidas preventivas eficaces para limitar la propagación de
+            la infección, por ejemplo, <em>E. coli</em> o
+            <em>Salmonella</em> spp." (Nambisan P., 2017). Por lo tanto,
+            ordinariamente el riesgo solo implicará adoptar las medidas
+            de un Nivel 1 de Bioseguridad, es decir, los requisitos
+            básicos y mínimos para trabajar de forma segura con agentes
+            biológicos (OMS, 2023).
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Buenas Prácticas y Procedimientos Microbiológicos (BPPM)</summary>
+        <div class="caja">
+          <p>
+            La mayoría de los accidentes dentro de un laboratorio son
+            causados por errores humanos, técnicas de laboratorio
+            incorrectas, mal uso de equipos y errores en la expresión
+            de registros. Las BPPM son un "código básico de prácticas
+            aplicable a todo tipo de actividades de laboratorio con
+            agentes biológicos, entre ellas los comportamientos
+            generales y las técnicas asépticas que deben observarse
+            siempre", con el fin de proteger al personal del
+            laboratorio y a la comunidad de infecciones, evitar la
+            contaminación del entorno y proteger los materiales de
+            trabajo (OMS, 2023). Las prácticas generales que deben
+            seguirse son:
+          </p>
+          <ul>
+            <li>La ropa del personal depende del nivel de bioseguridad; para un nivel 2 se utilizan prendas protectoras.</li>
+            <li>Los agentes infecciosos deben manipularse de forma segura, en recipientes correctamente identificados y resistentes para evitar derrames o fugas.</li>
+            <li>Al pipetear se debe utilizar siempre un dispositivo de pipeteo, y las pipetas deben tener un tapón de algodón para reducir la contaminación. Se prohíbe el pipeteo con la boca.</li>
+            <li>Se debe evitar la dispersión de microorganismos al manipular las asas de siembra.</li>
+            <li>Los desechos de muestras que contengan agentes biológico-infecciosos deben tratarse conforme a la norma vigente.</li>
+            <li>Descontaminar las zonas de trabajo con el sanitizante apropiado después de cada periodo de trabajo.</li>
+            <li>Los tiempos de incubación para pruebas microbiológicas de menos de 3 días de duración se deben expresar en horas.</li>
+            <li>Las actividades deben realizarse de acuerdo con los procedimientos normalizados de operación.</li>
+            <li>Todos los accidentes, incidentes o enfermedades inesperadas deben reportarse inmediatamente.</li>
+            <li>Utilizar técnicas correctas para reducir la generación de aerosoles y gotas al manipular muestras.</li>
+            <li>No almacenar alimentos, bebidas u objetos personales dentro del laboratorio, ni realizar actividades personales como comer, beber, fumar, maquillarse o tocarse la cara.</li>
+            <li>No llevarse ningún objeto a la boca.</li>
+            <li>Lavarse las manos correctamente.</li>
+            <li>No acercar llamas o fuentes de calor cerca de material inflamable.</li>
+            <li>Comprobar que se cuenta con los suministros necesarios antes de iniciar las actividades.</li>
+            <li>Los suministros deben almacenarse en un lugar seguro.</li>
+            <li>Todos los agentes biológicos y agentes químicos deben estar correctamente etiquetados.</li>
+            <li>La zona de trabajo se mantendrá ordenada, limpia y libre de objetos y material no esencial.</li>
+          </ul>
+        </div>
+      </details>
+
+      <br />
+      <h2>Organización, instalaciones y personal del laboratorio</h2>
+
+      <details>
+        <summary>Organización del laboratorio</summary>
+        <div class="caja">
+          <p>
+            En el diagrama y diseño del laboratorio deben tomarse en
+            cuenta los requisitos de las buenas prácticas de
+            microbiología y seguridad, ya que es indispensable evitar
+            la contaminación del ambiente y minimizar la contaminación
+            cruzada de los cultivos microbiológicos. En general, el
+            laboratorio deberá estar dividido en áreas limpias,
+            asépticas y áreas de cultivos viables.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Instalaciones</summary>
+        <div class="caja">
+          <p>
+            El diseño debe cumplir con la normativa vigente respecto a
+            las condiciones de seguridad dentro de un laboratorio,
+            además de establecer los requerimientos de cada área en
+            función de un análisis de riesgo. Algunos requisitos
+            básicos de bioseguridad con los que debe contar un
+            laboratorio que trabaja con agentes biológicos son:
+          </p>
+          <ul>
+            <li>Contar con un espacio amplio para realizar las actividades de manera segura.</li>
+            <li>El laboratorio será de acceso restringido.</li>
+            <li>Las paredes, muebles y suelo deberán ser fáciles de limpiar.</li>
+            <li>El alumbrado debe ser el adecuado para realizar las actividades.</li>
+            <li>La ventilación debe garantizar flujos de aire que no comprometan la seguridad.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Personal</summary>
+        <div class="caja">
+          <p>
+            Los análisis deben realizarse y supervisarse por personal
+            capacitado, calificado y autorizado para la realización de
+            ensayos microbiológicos. El laboratorio debe garantizar que
+            el personal haya recibido entrenamiento para realizar las
+            pruebas específicas, así como en los siguientes temas:
+            medidas de seguridad, peligros en el laboratorio, técnicas
+            básicas de microbiología, técnicas de esterilización y
+            técnicas asépticas, métodos de control microbiológico y
+            validación del método, conceptos de contaminación y manejo
+            de residuos, técnicas de monitoreo ambiental, calificación,
+            operación y mantenimiento de equipos, y preparación,
+            manejo, pruebas de control de calidad y conservación de
+            medios de cultivo.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Equipo de protección personal (EPP)</summary>
+        <div class="caja">
+          <p>
+            De acuerdo con la NOM-017-STPS-2008, el equipo de
+            protección personal es el "conjunto de elementos y
+            dispositivos, diseñados específicamente para proteger al
+            trabajador contra accidentes y enfermedades que pudieran
+            ser causados por agentes o factores generados con motivo de
+            sus actividades de trabajo y de la atención de
+            emergencias". En un laboratorio biológico, es el equipo que
+            se utiliza como barrera contra los agentes biológicos para
+            minimizar la exposición, tal como bata, calzado, guantes,
+            protección ocular (gafas protectoras) o protección
+            respiratoria.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Equipos de laboratorio</summary>
+        <div class="caja">
+          <p>
+            Los equipos deben estar diseñados, fabricados e instalados
+            para facilitar su manejo y permitir operaciones de
+            limpieza, descontaminación y certificación. Para operarlos
+            de manera segura, la organización debe asegurar que se
+            cuente con suficiente espacio para su uso, además de
+            mantener el registro de uso, mantenimiento, calibración y
+            calificación de cada instrumento o equipo.
+          </p>
+        </div>
+      </details>
+
+      <br />
+      <h2>Manejo de materiales, muestras y resultados</h2>
+
+      <details>
+        <summary>Limpieza, sanitización, descontaminación y gestión de desechos</summary>
+        <div class="caja">
+          <p>
+            Se debe contar con un programa que incluya la rotación de
+            los sanitizantes, de manera que se demuestre su efectividad
+            de acuerdo con las actividades realizadas en cada área. En
+            los equipos se debe realizar la limpieza y sanitización
+            según el uso y las recomendaciones del fabricante, o seguir
+            el procedimiento que aplique, con la finalidad de minimizar
+            los riesgos de contaminación dentro del laboratorio.
+          </p>
+          <p>
+            En cuanto a la manipulación de material de desecho
+            contaminado, se debe contar con un procedimiento para su
+            identificación, separación y posterior tratamiento. El
+            tratamiento final de los desechos se realiza en función del
+            material, los agentes biológicos, los métodos de
+            descontaminación y los protocolos existentes, como la
+            desinfección química o térmica (autoclave o incineración).
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Materiales y cultivos de referencia</summary>
+        <div class="caja">
+          <p>
+            El almacenamiento, conservación y control de los cultivos
+            debe minimizar el riesgo de contaminación o de cambios en
+            las características de crecimiento de los microorganismos.
+            Los materiales y sustancias de referencia que se utilizan
+            dentro del laboratorio deben almacenarse en sitios de fácil
+            acceso para el usuario.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Medios de cultivo</summary>
+        <div class="caja">
+          <p>
+            Es esencial asegurar la calidad de los medios de cultivo,
+            ya que constituyen la base de la mayoría de las pruebas
+            microbiológicas. La preparación de los medios, su
+            almacenaje apropiado y las pruebas de control de calidad
+            aseguran la confiabilidad de los resultados.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Muestreo y manejo de muestras</summary>
+        <div class="caja">
+          <p>
+            Es importante minimizar el tiempo entre el muestreo y el
+            inicio de la prueba, así como controlar las condiciones de
+            almacenamiento o transporte, ya que las sustancias mal
+            envasadas pueden suponer un riesgo para la seguridad del
+            personal. Además, el muestreo microbiológico debe
+            realizarse con técnicas asépticas.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Interpretación y expresión de los resultados</summary>
+        <div class="caja">
+          <p>
+            Los resultados se deben reportar de acuerdo con el tipo de
+            método de análisis. Es importante recalcar que los
+            resultados de los análisis pueden ser difíciles de
+            interpretar debido a distintas situaciones; por ejemplo, la
+            distribución de los microorganismos en una muestra o
+            ambiente puede no ser homogénea. Por lo tanto, si las
+            pruebas presentan diferencias respecto al resultado
+            esperado, estas deben ser interpretadas por un microbiólogo
+            con experiencia.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Verificación y validación de métodos de análisis</summary>
+        <div class="caja">
+          <p>
+            Es indispensable demostrar que el método de ensayo
+            específico utilizado para el análisis de un producto es
+            adecuado para su realización, en la recuperación de
+            bacterias, levaduras y hongos filamentosos en presencia del
+            producto específico, simulando las condiciones reales en
+            las que se utiliza.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Resultados fuera de especificación</summary>
+        <div class="caja">
+          <p>
+            Generalmente, las razones por las que se observa una
+            contaminación microbiana que no cumple con el criterio de
+            aceptación establecido son: error del analista del
+            laboratorio, condiciones ambientales del laboratorio que
+            generan contaminación, o materiales con un nivel o tipo de
+            contaminantes fuera de los límites establecidos. En
+            cualquier caso, es necesario notificar al responsable del
+            laboratorio y realizar una evaluación integral y completa
+            del laboratorio.
+          </p>
+        </div>
+      </details>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
+
