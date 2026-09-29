@@ -23,6 +23,10 @@
          a paginas/, ningún prefijo para quedarse dentro de metodos/ -->
     <nav class="menu-lateral">
 
+      <div class="menu-encabezado">
+        <a href="../../index.html">Manual de pruebas microbiológicas</a>
+      </div>
+
       <details>
         <summary>Microbiología en México</summary>
         <ul>
@@ -88,149 +92,229 @@
 
     <main>
 
-      <p><a href="../../index.html">← Volver al inicio</a></p>
+      <div class="fila-superior">
+        <a href="../../index.html" class="enlace-volver"><span aria-hidden="true">&larr;</span>Inicio</a>
 
-      <h2>Coliformes totales en placa</h2>
-      <h3>Método para la cuenta de microorganismos coliformes totales en placa</h3>
-
-      <p>
-        Coliformes: grupo de bacterias gramnegativas, anaerobias
-        facultativas, no productoras de esporas, que fermentan la lactosa
-        produciendo ácido y gas.
-      </p>
-      <br />
-      <h2>Fundamentos</h2>
-      <div class="caja">
-        <p>
-          El grupo de coliformes se sigue utilizando como microorganismos
-          indicadores. Sin embargo, es importante destacar que la
-          contabilización de coliformes totales no necesariamente implica
-          que el alimento esté contaminado con patógenos, ya que pueden ser
-          parte de la microbiota natural de la materia prima. Por lo tanto,
-          el resultado debe interpretarse considerando la matriz evaluada y
-          el proceso al que se somete.
-        </p>
-        <p>
-          El agar utilizado contiene lactosa en su formulación, lo que
-          permite identificar a aquellas bacterias capaces de fermentar el
-          carbohidrato; una vez que los coliformes han utilizado la lactosa,
-          las colonias desarrolladas adquieren tonalidades rojizas.
-        </p>
+        <div class="herramientas-superior">
+        <a href="../calculadora-ufc.html" class="boton-herramienta">
+          <img src="../../img/icono-calculadora-ufc.svg" alt="" width="18" height="18" />
+          Calculadora UFC
+        </a>
+        <a href="../hojas-verificacion.html" class="boton-herramienta">
+          <img src="../../img/icono-hoja-verificacion.svg" alt="" width="18" height="18" />
+          Hojas de verificación
+        </a>
+        </div>
       </div>
+
+      <h1>Método para la cuenta de microorganismos coliformes totales en placa</h1>
 
       <!-- ============================================
-           Ficha de fundamento bioquímico del medio de
-           cultivo: card desplegable con <details>, no
-           necesita JavaScript.
+           EXPLORADOR DEL MÉTODO
+           .metodo-explorador (sección 17 de styles.css) reparte
+           dos columnas: a la izquierda el contenido (.metodo-contenido,
+           un grupo de .pestana-panel, igual que en las páginas de
+           alimento) y a la derecha una fila vertical de botones
+           (.pestanas-nav--vertical). Al hacer clic en un botón, el
+           panel de esa sección reemplaza a "Definición" (el panel
+           que se ve por defecto, marcado con
+           .pestana-panel--predeterminado); al volver a tocar el
+           mismo botón, "Definición" reaparece. Esa lógica de
+           "reaparecer" está en js/pestanas.js.
            ============================================ -->
-      <details>
-        <summary>Fundamento del medio de cultivo: Agar Rojo Violeta Bilis Lactosa (RVBA)</summary>
-        <div class="caja">
-          <p>
-            <strong>Componentes generales:</strong> extracto de levadura,
-            sales biliares, peptona, lactosa, cloruro de sodio, cristal
-            violeta, rojo neutro.
-          </p>
-          <p>
-            La peptona es fuente de nitrógeno, vitaminas, minerales y
-            aminoácidos esenciales para el crecimiento; el extracto de
-            levadura proporciona vitaminas, especialmente las del grupo B.
-            Las sales biliares y el cristal violeta inhiben el crecimiento
-            de bacterias grampositivas. La lactosa es el carbohidrato
-            fermentable que proporciona carbono y energía. Los coliformes
-            fermentadores de lactosa se diferencian gracias al indicador
-            rojo neutro.
-          </p>
-        </div>
-      <br />
-      </details>
-            <h2>Requerimientos del método</h2>
-      <div class="caja requerimientos">
-        <div>
-          <h3>Equipo</h3>
-          <ul>
-            <li>Horno</li>
-            <li>Baño de agua</li>
-            <li>Vasos</li>
-            <li>Incubadora</li>
-            <li>Contador de colonias</li>
-            <li>Registrador</li>
-            <li>Microscopio óptico</li>
-            <li>Potenciómetro</li>
-          </ul>
-        </div>
-        <br />
-        <div>
-          <h3>Materiales</h3>
-          <ul>
-            <li>Pipetas</li>
-            <li>Frascos de vidrio</li>
-            <li>Tubos 16x150</li>
-            <li>Utensilios esterilizables</li>
-            <li>Cajas Petri</li>
-          </ul>
-        </div>
+      <div class="pestanas pestanas--metodo">
+        <div class="metodo-explorador">
 
-        <div>
-          <h3>Reactivos</h3>
-          <ul>
-            <li>Solución reguladora de fosfatos</li>
-            <li>Agua peptonada</li>
-          </ul>
-        </div>
+          <div class="metodo-contenido">
 
-        <div>
-          <h3>Medios de cultivo</h3>
-          <ul>
-            <li>Agar Rojo Violeta Bilis Lactosa (RVBA)</li>
-          </ul>
-        </div>
-      </div>
+            <div class="pestana-panel pestana-panel--predeterminado pestana-panel--activo" id="metodo-definicion">
+              <p>
+                Coliformes: grupo de bacterias gramnegativas, anaerobias
+                facultativas, no productoras de esporas, que fermentan la lactosa
+                produciendo ácido y gas.
+              </p>
 
-       <br />
-            <h2>Proceso</h2>
-      <div class="caja">
-        <p>
-          <em>Contenido pendiente: aquí va el diagrama de flujo del método
-          (Figura 6, "Diagrama de flujo para realizar cuenta de coliformes
-          totales en placa"), en cuanto esté disponible la imagen.</em>
-               </p>
-      </div>
-      <br />
-      <h2>Cálculo del método</h2>
-      <div class="caja">
-        <table>
-          <caption>Tabla 14. Conteo de colonias para coliformes totales en placa</caption>
-          <thead>
-            <tr>
-              <th scope="col">Estado de la placa</th>
-              <th scope="col">Conteo</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Placas que contienen entre 15-150 colonias</td>
-              <td>Separar las placas que contienen el número antes mencionado de colonias características en dos diluciones consecutivas y contar las colonias presentes. Calcular UFC tomando los criterios del numeral 7.3 (ver <a href="mesofilos-aerobios.html">Tabla 11 de mesófilos aerobios</a>).</td>
-            </tr>
-            <tr>
-              <td>Placas que contienen menos de 15 colonias características</td>
-              <td>Reportar el número obtenido seguido de la dilución correspondiente.</td>
-            </tr>
-            <tr>
-              <td>Placas con colonias no características</td>
-              <td>Reportar el resultado como: menos de un coliforme por 1/F.D por gramo (F.D: factor de dilución).</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <br />
+              <h2>Fundamento</h2>
+              <p>
+                El grupo de coliformes se sigue utilizando como microorganismos
+                indicadores. Sin embargo, es importante destacar que la
+                contabilización de coliformes totales no necesariamente implica
+                que el alimento esté contaminado con patógenos, ya que pueden ser
+                parte de la microbiota natural de la materia prima. Por lo tanto,
+                el resultado debe interpretarse considerando la matriz evaluada y
+                el proceso al que se somete.
+              </p>
+              <p>
+                El agar utilizado contiene lactosa en su formulación, lo que
+                permite identificar a aquellas bacterias capaces de fermentar el
+                carbohidrato; una vez que los coliformes han utilizado la lactosa,
+                las colonias desarrolladas adquieren tonalidades rojizas.
+              </p>
+            </div>
 
-        <a href="../calculadora-ufc.html" class="btn">Calculadora UFC/g</a>
+            <div class="pestana-panel" id="pestana-principios-tecnicos">
+              <h2>Principios técnicos</h2>
 
+              <!-- ============================================
+                   Fichas desplegables: una por cada medio de
+                   cultivo, prueba bioquímica o prueba serológica
+                   que use el método. .fichas agrupa una o más
+                   <details class="ficha">, cada una con un botón
+                   circular (.ficha-icono) en vez del triángulo que
+                   trae por defecto — el CSS está en la sección 19
+                   de styles.css. Sigue sin necesitar JavaScript.
+                   ============================================ -->
+              <div class="caja">
+                <div class="fichas">
+                  <details class="ficha">
+                    <summary>
+                      <span class="ficha-icono"></span>
+                      <span class="ficha-etiqueta">Agar Rojo Violeta Bilis Lactosa (RVBA)</span>
+                    </summary>
+                    <div class="caja ficha-contenido">
+                      <p>
+                        <strong>Componentes generales:</strong> extracto de levadura,
+                        sales biliares, peptona, lactosa, cloruro de sodio, cristal
+                        violeta, rojo neutro.
+                      </p>
+                      <p>
+                        La peptona es fuente de nitrógeno, vitaminas, minerales y
+                        aminoácidos esenciales para el crecimiento; el extracto de
+                        levadura proporciona vitaminas, especialmente las del grupo B.
+                        Las sales biliares y el cristal violeta inhiben el crecimiento
+                        de bacterias grampositivas. La lactosa es el carbohidrato
+                        fermentable que proporciona carbono y energía. Los coliformes
+                        fermentadores de lactosa se diferencian gracias al indicador
+                        rojo neutro.
+                      </p>
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </div>
+
+            <div class="pestana-panel" id="pestana-requerimientos">
+              <h2>Requerimientos del método</h2>
+              <div class="caja requerimientos">
+                <div>
+                  <h3>Equipo</h3>
+                  <ul class="lista-checklist">
+                    <li><label><input type="checkbox" /> Horno</label></li>
+                    <li><label><input type="checkbox" /> Baño de agua</label></li>
+                    <li><label><input type="checkbox" /> Vasos</label></li>
+                    <li><label><input type="checkbox" /> Incubadora</label></li>
+                    <li><label><input type="checkbox" /> Contador de colonias</label></li>
+                    <li><label><input type="checkbox" /> Registrador</label></li>
+                    <li><label><input type="checkbox" /> Microscopio óptico</label></li>
+                    <li><label><input type="checkbox" /> Potenciómetro</label></li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3>Materiales</h3>
+                  <ul class="lista-checklist">
+                    <li><label><input type="checkbox" /> Pipetas</label></li>
+                    <li><label><input type="checkbox" /> Frascos de vidrio</label></li>
+                    <li><label><input type="checkbox" /> Tubos 16x150</label></li>
+                    <li><label><input type="checkbox" /> Utensilios esterilizables</label></li>
+                    <li><label><input type="checkbox" /> Cajas Petri</label></li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3>Reactivos</h3>
+                  <ul class="lista-checklist">
+                    <li><label><input type="checkbox" /> Solución reguladora de fosfatos</label></li>
+                    <li><label><input type="checkbox" /> Agua peptonada</label></li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3>Medios de cultivo</h3>
+                  <ul class="lista-checklist">
+                    <li><label><input type="checkbox" /> Agar Rojo Violeta Bilis Lactosa (RVBA)</label></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="pestana-panel" id="pestana-proceso">
+              <h2>Proceso</h2>
+              <div class="caja">
+                <p>
+                  <em>Contenido pendiente: aquí va el diagrama de flujo del método
+                  (Figura 6, "Diagrama de flujo para realizar cuenta de coliformes
+                  totales en placa"), en cuanto esté disponible la imagen.</em>
+                </p>
+              </div>
+            </div>
+
+            <div class="pestana-panel" id="pestana-calculo">
+              <h2>Cálculo del método</h2>
+              <div class="caja">
+                <table>
+                  <caption>Tabla 14. Conteo de colonias para coliformes totales en placa</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Estado de la placa</th>
+                      <th scope="col">Conteo</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Placas que contienen entre 15-150 colonias</td>
+                      <td>Separar las placas que contienen el número antes mencionado de colonias características en dos diluciones consecutivas y contar las colonias presentes. Calcular UFC tomando los criterios del numeral 7.3 (ver <a href="mesofilos-aerobios.html">Tabla 11 de mesófilos aerobios</a>).</td>
+                    </tr>
+                    <tr>
+                      <td>Placas que contienen menos de 15 colonias características</td>
+                      <td>Reportar el número obtenido seguido de la dilución correspondiente.</td>
+                    </tr>
+                    <tr>
+                      <td>Placas con colonias no características</td>
+                      <td>Reportar el resultado como: menos de un coliforme por 1/F.D por gramo (F.D: factor de dilución).</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h3>Cálculo UFC/g</h3>
+                <p>
+                  Usa la calculadora del manual para obtener el resultado a partir
+                  del conteo de colonias, el factor de dilución y el volumen de
+                  siembra.
+                </p>
+                <a href="../calculadora-ufc.html" class="btn">Ir a la calculadora UFC</a>
+              </div>
+            </div>
+
+          </div><!-- /metodo-contenido -->
+
+          <div class="pestanas-nav pestanas-nav--vertical">
+            <button class="pestana-boton pestana-boton--fila" data-pestana="principios-tecnicos">
+              <span class="pestana-icono"></span>
+              <span class="pestana-etiqueta">Principios técnicos</span>
+            </button>
+            <button class="pestana-boton pestana-boton--fila" data-pestana="requerimientos">
+              <span class="pestana-icono"></span>
+              <span class="pestana-etiqueta">Requerimientos</span>
+            </button>
+            <button class="pestana-boton pestana-boton--fila" data-pestana="proceso">
+              <span class="pestana-icono"></span>
+              <span class="pestana-etiqueta">Proceso</span>
+            </button>
+            <button class="pestana-boton pestana-boton--fila" data-pestana="calculo">
+              <span class="pestana-icono"></span>
+              <span class="pestana-etiqueta">Cálculo del método</span>
+            </button>
+          </div>
+
+        </div><!-- /metodo-explorador -->
+      </div><!-- /pestanas--metodo -->
 
     </main>
 
   </div>
+
+  <script src="../../js/pestanas.js" defer></script>
 
 </body>
 </html>

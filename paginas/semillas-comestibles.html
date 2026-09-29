@@ -20,6 +20,10 @@
 
     <nav class="menu-lateral">
 
+      <div class="menu-encabezado">
+        <a href="../index.html">Manual de pruebas microbiológicas</a>
+      </div>
+
       <details>
         <summary>Microbiología en México</summary>
         <ul>
@@ -83,33 +87,76 @@
 
     </nav>
 
+        <!-- ================================================
+         CONTENIDO: SEMILLAS-COMESTIBLES
+         ================================================ -->
     <main>
 
-      <p><a href="../index.html">← Volver al inicio</a></p>
+      <a href="../index.html" class="enlace-volver"><span aria-hidden="true">&larr;</span>Inicio</a>
 
       <h1>Semillas comestibles</h1>
 
-      <img
-        src="../img/semillas-comestibles.jpg"
-        alt="Semillas comestibles, como calabaza y girasol, en un contenedor"
-        width="320"
-      />
-
-      <p>
+      <!-- ============================================
+           ENCABEZADO
+           Imagen y párrafo de introducción uno junto al
+           otro (ver sección 14 de styles.css), en vez de
+           uno arriba del otro: ocupa menos alto de pantalla.
+           ============================================ -->
+      <div class="encabezado-alimento">
+        <img
+          src="../img/semillas-comestibles.jpg"
+          alt="Semillas comestibles, como calabaza y girasol, en un contenedor"
+          width="170"
+        />
+        <p>
         Semillas que se consumen de forma directa o se utilizan en la
         elaboración de otros productos, como leguminosas, semillas de
         calabaza y girasol, entre otras.
-      </p>
+      
+        </p>
+      </div>
 
-      <h2>Pruebas aplicables</h2>
-      <ul>
-        <li><a href="metodos/recepcion-muestras.html">Recepción de muestras</a></li>
-        <li><a href="metodos/diluciones.html">Métodos de diluciones</a></li>
-        <li><a href="metodos/mesofilos-aerobios.html">Método cuenta bacterias aerobias</a></li>
-        <li><a href="metodos/coliformes-placa.html">Método para la cuenta de microorganismos coliformes totales en placa</a></li>
-        <li><a href="metodos/mohos-levaduras.html">Método para la cuenta de mohos y levaduras</a></li>
-      </ul>
+      <!-- ============================================
+           PESTAÑAS
+           Van justo debajo de la definición, a todo lo
+           ancho, sin depender de la imagen (que ya terminó
+           arriba, dentro de .encabezado-alimento).
+           El div.pestanas agrupa la barra de botones
+           (.pestanas-nav) y los 3 paneles (.pestana-panel):
+           Composición química, Microflora y Muestreo.
+           "Límites microbiológicos" ya NO es una pestaña:
+           queda siempre visible, más abajo, junto con
+           Pruebas aplicables.
+           js/pestanas.js es el que muestra/oculta cada panel
+           al hacer clic en su botón; el CSS está en la
+           sección 12 de styles.css.
 
+           Cada botón tiene dos partes: un círculo
+           (.pestana-icono, todavía sin imagen, solo color de
+           fondo) y una etiqueta de texto (.pestana-etiqueta)
+           debajo. Ningún botón ni panel lleva la clase
+           "--activo" en el HTML, así que al abrir la página los
+           tres empiezan replegados; el primero que se despliega
+           es el que el usuario toque.
+           ============================================ -->
+      <div class="pestanas">
+
+        <div class="pestanas-nav">
+          <button class="pestana-boton" data-pestana="composicion">
+            <span class="pestana-icono"></span>
+            <span class="pestana-etiqueta">Composición química</span>
+          </button>
+          <button class="pestana-boton" data-pestana="microflora">
+            <span class="pestana-icono"></span>
+            <span class="pestana-etiqueta">Microflora</span>
+          </button>
+          <button class="pestana-boton" data-pestana="muestreo">
+            <span class="pestana-icono"></span>
+            <span class="pestana-etiqueta">Muestreo</span>
+          </button>
+        </div>
+
+        <div class="pestana-panel" id="pestana-composicion">
       <h2>Composición química</h2>
       <div class="caja">
         <table>
@@ -201,6 +248,10 @@
         </p>
       </div>
 
+      
+        </div><!-- /pestana-composicion -->
+
+        <div class="pestana-panel" id="pestana-microflora">
       <h2>Microflora</h2>
       <div class="caja">
         <p>
@@ -221,6 +272,10 @@
         </p>
       </div>
 
+      
+        </div><!-- /pestana-microflora -->
+
+        <div class="pestana-panel" id="pestana-muestreo">
       <h2>Muestreo</h2>
       <div class="caja">
         <p>
@@ -230,7 +285,28 @@
         </p>
       </div>
 
-      <h2>Límites microbiológicos</h2>
+      
+        </div><!-- /pestana-muestreo -->
+
+      </div><!-- /pestanas -->
+
+      <!-- ============================================
+           LÍMITES MICROBIOLÓGICOS + PRUEBAS APLICABLES
+           .contenido-alimento (sección 15 de styles.css) los
+           acomoda en dos columnas: límites microbiológicos a la
+           izquierda (con su tabla más chica que antes) y pruebas
+           aplicables a la derecha (columna angosta). En
+           pantallas angostas, pruebas aplicables pasa debajo de
+           límites en vez de quedar apretados al lado.
+
+           Límites microbiológicos ya no es una pestaña: se
+           muestra siempre, sin importar qué botón esté activo
+           arriba.
+           ============================================ -->
+      <div class="contenido-alimento">
+
+      <div class="columna-limites">
+        <h2>Límites microbiológicos</h2>
       <div class="caja">
         <table>
           <caption>
@@ -253,9 +329,27 @@
         <p>*Solo para pastas con huevo.</p>
       </div>
 
+    
+      </div><!-- /columna-limites -->
+
+      <aside class="columna-pruebas">
+        <h2>Pruebas aplicables</h2>
+        <ul class="lista-pruebas">
+          <li><a href="metodos/recepcion-muestras.html"><span class="prueba-icono"></span>Recepción de muestras</a></li>
+          <li><a href="metodos/diluciones.html"><span class="prueba-icono"></span>Métodos de diluciones</a></li>
+          <li><a href="metodos/mesofilos-aerobios.html"><span class="prueba-icono"></span>Método cuenta bacterias aerobias</a></li>
+          <li><a href="metodos/coliformes-placa.html"><span class="prueba-icono"></span>Método para la cuenta de microorganismos coliformes totales en placa</a></li>
+          <li><a href="metodos/mohos-levaduras.html"><span class="prueba-icono"></span>Método para la cuenta de mohos y levaduras</a></li>
+        </ul>
+      </aside>
+
+      </div><!-- /contenido-alimento -->
+
     </main>
 
   </div>
+
+  <script src="../js/pestanas.js" defer></script>
 
 </body>
 </html>

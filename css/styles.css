@@ -18,7 +18,10 @@
   /* Paleta de color del proyecto.
      Los dos verdes claros se conservan de la paleta anterior;
      el resto viene de la nueva paleta azul-grisácea. */
-  --color-oscuro: #547071;    /* títulos, menú activo, encabezado de tabla */
+  --color-oscuro: #547071;    /* títulos, menú activo */
+  --color-tabla-encabezado: #1c2b2d; /* fondo del encabezado de tabla: bien
+                                         oscuro (casi negro azulado) para que
+                                         el texto blanco resalte con fuerza */
   --color-medio: #688391;     /* botones, borde del menú */
   --color-gris: #87a1ab;      /* texto secundario, bordes de tabla */
   --color-acento: #a7bfc7;    /* enlaces, insignia de alimento activo */
@@ -127,6 +130,29 @@ h3 {
                      espacio al contenido; mantiene su ancho fijo */
 }
 
+/* Encabezado del menú: una franja de un tono oscuro, distinto del
+   verde del resto del menú, con el nombre del manual. Da un punto
+   de referencia arriba de todo (a la misma altura que el botón
+   "Inicio" del contenido), para que ese botón no se vea suelto. */
+.menu-encabezado {
+  background-color: var(--color-oscuro);
+  padding: var(--espacio-md);
+}
+
+.menu-encabezado a {
+  display: block;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  color: var(--color-blanco);
+  text-decoration: none;
+}
+
+.menu-encabezado a:hover {
+  color: var(--color-azul-claro);
+}
+
 /* <details> y <summary> son los elementos que usamos para las
    flechitas desplegables del menú (no necesitan JavaScript) */
 .menu-lateral summary {
@@ -192,6 +218,30 @@ h3 {
   background-color: var(--color-oscuro);
 }
 
+/* Segundo estilo de botón, para cuando hay más de uno lado a lado
+   (por ejemplo, calculadora + hoja de verificación) y uno de los
+   dos no debe verse igual de "pesado" que el principal. */
+.btn--secundario {
+  color: var(--color-oscuro);
+  background-color: transparent;
+  border: 1.5px solid var(--color-medio);
+}
+
+.btn--secundario:hover {
+  background-color: var(--color-azul-mas-claro);
+  color: var(--color-oscuro);
+}
+
+/* Agrupa dos o más botones en fila, con espacio entre ellos; si no
+   caben en pantallas angostas, pasan a la siguiente línea en vez de
+   encimarse. */
+.grupo-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-sm);
+  margin-top: var(--espacio-sm);
+}
+
 /* -------------------------------------------------------------
    7. INSIGNIA DE ALIMENTO (círculo con un dibujo dentro)
    -------------------------------------------------------------
@@ -252,7 +302,10 @@ caption {
   font-style: italic;
   text-align: left;
   margin-bottom: var(--espacio-xs);
-  color: rgba(84, 112, 113, 0.85); /* azul oscuro semitransparente, a partir de --color-oscuro */
+  color: var(--color-texto); /* antes era un azul semitransparente que se
+                                 perdía sobre el fondo de la caja; ahora usa
+                                 el mismo color oscuro y sólido del texto
+                                 general, para que se lea bien */
 }
 
 th, td {
@@ -262,7 +315,7 @@ th, td {
 }
 
 th {
-  background-color: var(--color-oscuro);
+  background-color: var(--color-tabla-encabezado);
   color: var(--color-blanco);
   font-weight: 600;
 }
@@ -288,7 +341,9 @@ td {
 
 main {
   flex: 1;    /* ocupa todo el espacio restante después del menú */
-  padding: var(--espacio-lg);
+  /* Menos espacio arriba que a los lados y abajo, para que el
+     botón "Inicio" no empiece tan abajo de la pantalla. */
+  padding: var(--espacio-sm) var(--espacio-lg) var(--espacio-lg);
 }
 
 /* Barra superior: los 3 íconos en fila, alineados a la derecha */
@@ -401,7 +456,524 @@ main {
   margin-bottom: var(--espacio-xs);
 }
 
-.requerimientos > div {
-  flex: 1;
-  min-width: 180px; /* evita que las columnas queden demasiado angostas */
+/* -------------------------------------------------------------
+   12. PESTAÑAS (TABS)
+   -------------------------------------------------------------
+   Esta es la primera parte del sitio que depende de JavaScript
+   (ver js/pestanas.js). El CSS solo define cómo se ve cada estado;
+   es el script el que decide CUÁNDO agregar o quitar la clase
+   "--activo" de cada botón y cada panel.
+
+   Por eso: un .pestana-panel está oculto (display: none) por
+   defecto, y solo se muestra cuando además tiene la clase
+   .pestana-panel--activo. Si JavaScript no cargara por alguna
+   razón, ningún panel se mostraría — por eso el primer botón y el
+   primer panel de cada grupo llevan la clase "--activo" ya escrita
+   en el HTML, para que se vea algo incluso antes de hacer clic.
+
+   Cada botón reutiliza la misma idea que .insignia (un círculo con
+   un ícono adentro, sección 7): un círculo de fondo (.pestana-icono)
+   con el nombre debajo (.pestana-etiqueta). Por ahora el círculo
+   queda vacío/gris; cuando tengas los SVG de cada ícono, se colocan
+   adentro como <img class="icono-alimento">, igual que en las
+   tarjetas de alimento de la portada.
+   ------------------------------------------------------------- */
+.pestanas-nav {
+  display: flex;
+  flex-wrap: wrap; /* en pantallas angostas, los botones pasan a la siguiente línea */
+  gap: var(--espacio-lg);
+  margin-bottom: var(--espacio-md);
+  /* Corre los botones hacia la derecha, para que queden alineados
+     debajo del párrafo de definición y no debajo de la imagen.
+     170px es el ancho de la imagen en .encabezado-alimento, y
+     --espacio-lg es el mismo "gap" que separa la imagen del
+     párrafo: sumados, es justo donde empieza el texto. */
+  margin-left: calc(170px + var(--espacio-lg));
+}
+
+/* En pantallas angostas, la imagen y el párrafo se acomodan en
+   columna (ver el media query de .encabezado-alimento), así que
+   los botones vuelven a empezar desde la izquierda */
+@media (max-width: 640px) {
+  .pestanas-nav {
+    margin-left: 0;
+  }
+}
+
+.pestana-boton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espacio-xs);
+  width: 110px;
+  font-family: var(--font-table);
+  font-size: 0.8rem;
+  color: var(--color-texto);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.pestana-icono {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radio-circulo);
+  background-color: var(--color-verde-claro); /* mismo tono que .insignia inactiva */
+}
+
+.pestana-boton:hover .pestana-icono {
+  background-color: var(--color-azul-claro);
+}
+
+.pestana-boton--activo .pestana-icono {
+  background-color: var(--color-acento); /* mismo tono que .insignia--activa */
+}
+
+.pestana-boton--activo .pestana-etiqueta {
+  font-weight: 600;
+  color: var(--color-oscuro);
+}
+
+.pestana-panel {
+  display: none;
+}
+
+.pestana-panel--activo {
+  display: block;
+}
+
+/* -------------------------------------------------------------
+   13. LISTA DE PRUEBAS APLICABLES
+   -------------------------------------------------------------
+   Versión "bonita" de la lista de enlaces a los métodos: cada
+   fila lleva un círculo (mismo estilo que .pestana-icono, más
+   pequeño) a la izquierda del nombre del método.
+   ------------------------------------------------------------- */
+.lista-pruebas {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-sm);
+}
+
+.lista-pruebas li a {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-sm);
+  font-family: var(--font-table);
+  color: var(--color-texto);
+  text-decoration: none;
+}
+
+.lista-pruebas li a:hover {
+  color: var(--color-oscuro);
+}
+
+.lista-pruebas li a:hover .prueba-icono {
+  background-color: var(--color-azul-claro);
+}
+
+.prueba-icono {
+  width: 40px;
+  height: 40px;
+  min-width: 40px; /* evita que el círculo se aplaste si el nombre es largo */
+  border-radius: var(--radio-circulo);
+  background-color: var(--color-verde-claro);
+}
+
+/* Transición suave del color de fondo al pasar el mouse, tanto en
+   los círculos de las pestañas como en los de la lista de pruebas.
+   Es un detalle pequeño, pero hace que la página se sienta menos
+   "seca" al usarla (parte de hacer el diseño más amigable). */
+.pestana-icono,
+.prueba-icono {
+  transition: background-color 0.15s ease;
+}
+
+/* -------------------------------------------------------------
+   14. ENCABEZADO DE PÁGINA DE ALIMENTO
+   -------------------------------------------------------------
+   Imagen y párrafo de introducción uno junto al otro en vez de
+   uno arriba del otro: ocupa menos alto de pantalla.
+   ------------------------------------------------------------- */
+.encabezado-alimento {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-lg);
+  margin-bottom: var(--espacio-md);
+}
+
+.encabezado-alimento img {
+  border-radius: var(--radio-sm);
+  flex-shrink: 0; /* la imagen no se achica para hacerle lugar al texto */
+}
+
+.encabezado-alimento p {
+  margin-bottom: 0;
+}
+
+/* En pantallas angostas, la imagen y el texto se acomodan en
+   columna para no quedar apretados */
+@media (max-width: 640px) {
+  .encabezado-alimento {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* -------------------------------------------------------------
+   15. PÁGINA DE ALIMENTO: PESTAÑAS ARRIBA, PRUEBAS + LÍMITES ABAJO
+   -------------------------------------------------------------
+   Orden de la página, de arriba hacia abajo:
+     1. Encabezado (imagen + definición) — sección 14.
+     2. Pestañas (Composición química / Microflora / Muestreo),
+        a todo lo ancho, justo debajo de la definición. Como
+        .pestanas es un <div> normal (ocupa toda una fila por sí
+        solo), no necesita ninguna regla especial aquí para
+        quedar debajo del párrafo y no tocar la imagen: eso ya lo
+        hace el flujo normal de HTML.
+     3. .contenido-alimento: una fila con dos columnas que se
+        reparten TODO el ancho disponible entre las dos, sin dejar
+        huecos ni en medio ni a los lados: Límites microbiológicos
+        (con su tabla más chica que antes) y Pruebas aplicables.
+
+   grid-template-columns: 2fr 1fr define dos columnas que se
+   reparten el 100% del ancho en proporción 2 a 1 (límites, al
+   tener una tabla, recibe el doble de espacio que pruebas
+   aplicables). Como los dos números son "fr" (fracciones) y no
+   medidas fijas como "260px", las columnas siempre suman el ancho
+   completo de la fila, sea cual sea el tamaño de la pantalla — ya
+   no puede quedar espacio vacío sin repartir.
+
+   Para que esto se vea bien, tanto la caja de límites como su
+   tabla vuelven a ocupar el 100% de su columna (en vez de
+   encogerse a su contenido), así que ninguna de las dos cajas deja
+   espacio sin usar por dentro tampoco.
+   ------------------------------------------------------------- */
+.contenido-alimento {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--espacio-lg);
+  align-items: start; /* cada columna conserva su propia altura */
+  margin-top: var(--espacio-md);
+}
+
+.columna-pruebas {
+  background-color: var(--color-blanco);
+  border-radius: var(--radio-sm);
+  padding: var(--espacio-md);
+  box-shadow: 0 1px 4px rgba(84, 112, 113, 0.15);
+}
+
+.columna-pruebas h2 {
+  font-size: 1.25rem;
+}
+
+/* La caja y la tabla de límites ocupan el 100% de su columna (que
+   ahora siempre es una fracción fija del ancho total, gracias al
+   grid de arriba), y la tabla usa letra y espaciado un poco más
+   chicos que el resto del sitio para verse compacta. */
+.columna-limites .caja {
+  width: 100%;
+}
+
+.columna-limites table {
+  width: 100%;
+  font-size: 0.85rem;
+}
+
+.columna-limites th,
+.columna-limites td {
+  padding: 0.4rem var(--espacio-xs);
+}
+
+/* En pantallas angostas (por ejemplo, una laptop chica con la
+   ventana no maximizada, o una tablet), pruebas aplicables pasa a
+   quedar debajo de límites, cada una ocupando todo el ancho, en
+   vez de apretados uno al lado del otro */
+@media (max-width: 900px) {
+  .contenido-alimento {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* -------------------------------------------------------------
+   16. ENLACE "VOLVER AL INICIO"
+   -------------------------------------------------------------
+   Antes era un simple enlace de texto con una flecha escrita a
+   mano ("← Volver al inicio"). Ahora es una pastilla (botón con
+   las esquinas totalmente redondeadas) con una flecha aparte en
+   su propio <span>, para que se vea como un botón "volver" y no
+   como un enlace suelto dentro del texto.
+   ------------------------------------------------------------- */
+.enlace-volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-table);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-oscuro);
+  background-color: var(--color-azul-mas-claro);
+  border-radius: 999px; /* un número más grande que la mitad del alto
+                            redondea las esquinas por completo */
+  padding: 0.4rem 1rem;
+  text-decoration: none;
+  margin-bottom: var(--espacio-md);
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.enlace-volver:hover {
+  background-color: var(--color-azul-claro);
+  color: var(--color-oscuro);
+  transform: translateX(-3px); /* pequeño gesto hacia la izquierda al pasar el mouse */
+}
+
+.enlace-volver span {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* -------------------------------------------------------------
+   17. PÁGINA DE MÉTODO: EXPLORADOR CON PESTAÑAS VERTICALES
+   -------------------------------------------------------------
+   Las páginas de método (mesófilos aerobios, diluciones, etc.) no
+   tienen una tabla "de referencia" tan corta como Límites
+   microbiológicos en las páginas de alimento, así que en vez de
+   dejar algo siempre visible y el resto en pestañas horizontales
+   (sección 15), aquí TODO el contenido vive en pestañas, y la
+   barra de botones se acomoda en una columna vertical a la
+   derecha, no en una fila arriba.
+
+   .metodo-explorador reparte dos columnas con grid: la primera
+   (1fr) para el contenido, y la segunda (ancho fijo) para la
+   columna de botones. Como la columna de botones tiene un ancho
+   fijo y la de contenido usa "fr" (fracción), el contenido siempre
+   ocupa el resto del espacio disponible, sin dejar huecos.
+
+   El primer panel que se ve (antes de tocar cualquier botón) es
+   "Definición" (.pestana-panel--predeterminado): cuando se toca un
+   botón, Definición se oculta y aparece el panel de esa sección; al
+   volver a tocar el mismo botón, Definición reaparece. Ese
+   comportamiento de "reaparecer" está en js/pestanas.js.
+   ------------------------------------------------------------- */
+.metodo-explorador {
+  display: grid;
+  grid-template-columns: 1fr 210px;
+  gap: var(--espacio-lg);
+  align-items: start;
+  margin-top: var(--espacio-md);
+}
+
+.metodo-contenido {
+  min-width: 0; /* evita que una tabla ancha empuje esta columna más allá de su espacio */
+}
+
+.metodo-contenido h2 {
+  margin-top: 0;
+}
+
+/* Variante vertical de .pestanas-nav (sección 12): misma idea de
+   círculo + etiqueta por botón, pero en columna y sin el corrimiento
+   hacia la derecha que usan las páginas de alimento (margin-left),
+   porque aquí la columna de botones ya está a la derecha por sí
+   sola, gracias al grid de arriba. */
+.pestanas-nav--vertical {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: var(--espacio-md);
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+/* Variante en fila de .pestana-boton: el círculo queda a la
+   izquierda y la etiqueta a su lado, en vez de círculo arriba y
+   etiqueta abajo. */
+.pestana-boton--fila {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  text-align: left;
+}
+
+.pestana-boton--fila .pestana-etiqueta {
+  text-align: left;
+}
+
+.subtitulo-metodo {
+  color: var(--color-gris);
+  font-style: italic;
+  margin-top: calc(-1 * var(--espacio-xs));
+}
+
+/* En pantallas angostas la columna de botones vuelve a acomodarse
+   arriba del contenido, en fila (como en las páginas de alimento),
+   en vez de quedar apretada a un lado. */
+@media (max-width: 900px) {
+  .metodo-explorador {
+    grid-template-columns: 1fr;
+  }
+
+  .pestanas-nav--vertical {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: var(--espacio-md);
+  }
+
+  .pestana-boton--fila {
+    width: auto;
+  }
+}
+
+/* -------------------------------------------------------------
+   18. LISTAS TIPO CHECKLIST
+   -------------------------------------------------------------
+   Usadas en "Requerimientos del método" (Equipo, Materiales,
+   Medios de cultivo): cada elemento lleva una casilla real de HTML
+   (<input type="checkbox">) para poder ir marcando lo que ya se
+   tiene listo antes de correr la prueba. El navegador se encarga de
+   marcar/desmarcar la casilla solo; no hace falta JavaScript.
+   ------------------------------------------------------------- */
+.lista-checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-xs);
+}
+
+.lista-checklist label {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-xs);
+  cursor: pointer;
+}
+
+.lista-checklist input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-acento);
+  cursor: pointer;
+}
+
+/* -------------------------------------------------------------
+   19. FICHAS TÉCNICAS (dentro de un panel de pestañas)
+   -------------------------------------------------------------
+   Una ficha es un <details> (fundamento de un medio de cultivo,
+   una prueba bioquímica o una prueba serológica), pero en vez del
+   triángulo que trae por defecto usa un botón circular
+   (.ficha-icono), con el mismo estilo de .pestana-icono. No
+   necesita JavaScript: el navegador ya sabe abrir y cerrar un
+   <details> solo con la etiqueta <summary>; aquí solo se le cambia
+   la apariencia.
+
+   .fichas agrupa varias fichas en columna, con espacio entre ellas.
+   Cada ficha vive dentro de una .caja (la del panel de "Fichas
+   técnicas"); su propio contenido, al desplegarse, usa OTRA .caja
+   pero de color blanco (.ficha-contenido) para que se note que está
+   anidada adentro de la primera, en vez de perderse con el mismo
+   tono de azul.
+   ------------------------------------------------------------- */
+.fichas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-sm);
+}
+
+.ficha summary {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-sm);
+  cursor: pointer;
+  font-family: var(--font-table);
+  font-weight: 600;
+  color: var(--color-texto);
+  list-style: none; /* quita el triángulo por defecto en Firefox */
+}
+
+.ficha summary::-webkit-details-marker {
+  display: none; /* quita el triángulo por defecto en Chrome/Safari/Edge */
+}
+
+.ficha-icono {
+  width: 32px;
+  height: 32px;
+  min-width: 32px; /* evita que el círculo se aplaste si la etiqueta es larga */
+  border-radius: var(--radio-circulo);
+  background-color: var(--color-verde-claro);
+  transition: background-color 0.15s ease;
+}
+
+.ficha summary:hover .ficha-icono {
+  background-color: var(--color-azul-claro);
+}
+
+.ficha[open] summary .ficha-icono {
+  background-color: var(--color-acento);
+}
+
+.ficha-contenido {
+  background-color: var(--color-blanco);
+  box-shadow: 0 1px 4px rgba(84, 112, 113, 0.15);
+}
+
+/* -------------------------------------------------------------
+   20. BOTONES DE HERRAMIENTAS (páginas de método)
+   -------------------------------------------------------------
+   Calculadora UFC y Hojas de verificación, arriba a la derecha de
+   la página, del mismo tamaño que el botón "Inicio" (.enlace-volver):
+   un ícono chico + el nombre, en una sola fila, sin descripción
+   debajo.
+   ------------------------------------------------------------- */
+/* Agrupa "Inicio" y .herramientas-superior en la misma fila:
+   "Inicio" queda a la izquierda y las herramientas a la derecha,
+   gracias a space-between. En pantallas angostas, si no caben en
+   una sola línea, bajan a la siguiente (flex-wrap). */
+.fila-superior {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--espacio-sm);
+  margin-bottom: var(--espacio-md);
+}
+
+.fila-superior .enlace-volver {
+  margin-bottom: 0; /* ya lo controla el gap de .fila-superior */
+}
+
+.herramientas-superior {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--espacio-sm);
+}
+
+.boton-herramienta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-table);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-oscuro);
+  background-color: var(--color-azul-mas-claro);
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  text-decoration: none;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.boton-herramienta img {
+  width: 18px;
+  height: 18px;
+}
+
+.boton-herramienta:hover {
+  background-color: var(--color-azul-claro);
+  transform: translateX(-3px);
 }

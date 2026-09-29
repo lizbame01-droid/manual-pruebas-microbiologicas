@@ -23,6 +23,10 @@
          a paginas/, ningún prefijo para quedarse dentro de metodos/ -->
     <nav class="menu-lateral">
 
+      <div class="menu-encabezado">
+        <a href="../../index.html">Manual de pruebas microbiológicas</a>
+      </div>
+
       <details>
         <summary>Microbiología en México</summary>
         <ul>
@@ -88,127 +92,228 @@
 
     <main>
 
-      <p><a href="../../index.html">← Volver al inicio</a></p>
+      <div class="fila-superior">
+        <a href="../../index.html" class="enlace-volver"><span aria-hidden="true">&larr;</span>Inicio</a>
 
-      <h2>Mohos y levaduras</h2>
-      <h3>Método para la cuenta de mohos y levaduras</h3>
-
-      <p>
-        "Moho" nombra a ciertos hongos filamentosos multicelulares con
-        aspecto aterciopelado, mientras que las levaduras son hongos
-        unicelulares con formas esféricas u ovoides.
-      </p>
-      <br />
-      <h2>Fundamentos</h2>
-      <div class="caja">
-        <p>
-          En general, muchos mohos y levaduras pueden desarrollarse a
-          temperaturas moderadas y tolerar condiciones ácidas. Uno de los
-          riesgos asociados a la contaminación por algunas especies de
-          hongos es la producción de micotoxinas bajo determinadas
-          condiciones.
-        </p>
-        <p>
-          Varias de las matrices alimentarias que se analizan en este manual
-          presentan baja actividad de agua; por ello, el recuento de mohos y
-          levaduras es relevante, debido a que algunas especies toleran
-          valores de a<sub>w</sub> menores que otros microorganismos.
-        </p>
-        <p>
-          La acidificación del medio limita el crecimiento de bacterias y
-          facilita el recuento de mohos y levaduras. El recuento de este
-          tipo de microorganismos se estima mediante el conteo de colonias
-          en placa, expresado en UFC/g.
-        </p>
+        <div class="herramientas-superior">
+        <a href="../calculadora-ufc.html" class="boton-herramienta">
+          <img src="../../img/icono-calculadora-ufc.svg" alt="" width="18" height="18" />
+          Calculadora UFC
+        </a>
+        <a href="../hojas-verificacion.html" class="boton-herramienta">
+          <img src="../../img/icono-hoja-verificacion.svg" alt="" width="18" height="18" />
+          Hojas de verificación
+        </a>
+        </div>
       </div>
+
+      <h1>Método para la cuenta de mohos y levaduras</h1>
 
       <!-- ============================================
-           Ficha de fundamento bioquímico del medio de
-           cultivo: card desplegable con <details>, no
-           necesita JavaScript.
+           EXPLORADOR DEL MÉTODO
+           .metodo-explorador (sección 17 de styles.css) reparte
+           dos columnas: a la izquierda el contenido (.metodo-contenido,
+           un grupo de .pestana-panel, igual que en las páginas de
+           alimento) y a la derecha una fila vertical de botones
+           (.pestanas-nav--vertical). Al hacer clic en un botón, el
+           panel de esa sección reemplaza a "Definición" (el panel
+           que se ve por defecto, marcado con
+           .pestana-panel--predeterminado); al volver a tocar el
+           mismo botón, "Definición" reaparece. Esa lógica de
+           "reaparecer" está en js/pestanas.js.
            ============================================ -->
-      <details>
-        <summary>Fundamento del medio de cultivo: Agar Papa Dextrosa</summary>
-        <div class="caja">
-          <p><strong>Componentes generales:</strong> dextrosa y extracto de papa.</p>
-          <p>
-            Es un medio simple utilizado para el cultivo y cuenta de hongos y
-            levaduras provenientes de diferentes tipos de muestra; la
-            infusión de papa y la glucosa favorecen el desarrollo abundante
-            de mohos y levaduras. Este agar es ligeramente ácido, por lo que
-            inhibe el crecimiento de algunas bacterias.
-          </p>
-        </div>
-      <br />
-      </details>
-            <h2>Requerimientos del método</h2>
-      <div class="caja requerimientos">
-        <div>
-          <h3>Equipo</h3>
-          <ul>
-            <li>Horno</li>
-            <li>Incubadora</li>
-            <li>Autoclave</li>
-            <li>Baño de agua</li>
-            <li>Contador de colonias</li>
-            <li>Registrador mecánico</li>
-            <li>Microscopio</li>
-            <li>Potenciómetro</li>
-          </ul>
-        </div>
-        <br />
-        <div>
-          <h3>Materiales</h3>
-          <ul>
-            <li>Pipetas bacteriológicas</li>
-            <li>Cajas Petri</li>
-            <li>Frascos de vidrio de 250 mL</li>
-            <li>Tubos de 16x150 mm</li>
-            <li>Utensilios esterilizables</li>
-          </ul>
-        </div>
+      <div class="pestanas pestanas--metodo">
+        <div class="metodo-explorador">
 
-        <div>
-          <h3>Reactivos</h3>
-          <ul>
-            <li>Solución reguladora de fosfatos</li>
-            <li>Solución estéril de ácido tartárico al 10%</li>
-          </ul>
-        </div>
+          <div class="metodo-contenido">
 
-        <div>
-          <h3>Medios de cultivo</h3>
-          <ul>
-            <li>Agar papa dextrosa</li>
-          </ul>
-        </div>
-      </div>
+            <div class="pestana-panel pestana-panel--predeterminado pestana-panel--activo" id="metodo-definicion">
+              <p>
+                "Moho" nombra a ciertos hongos filamentosos multicelulares con
+                aspecto aterciopelado, mientras que las levaduras son hongos
+                unicelulares con formas esféricas u ovoides.
+              </p>
 
-       <br />
-            <h2>Proceso</h2>
-      <div class="caja">
-        <p>
-          <em>Contenido pendiente: aquí va el diagrama de flujo del método
-          (Figura 5, "Diagrama de flujo para realizar cuenta de mohos y
-          levaduras"), en cuanto esté disponible la imagen.</em>
-               </p>
-      </div>
-      <br />
-      <h2>Cálculo del método</h2>
-      <div class="caja">
-        <p>
-          Se consideran placas con un conteo de 10 a 150 colonias. Para el
-          resto de los casos (diluciones fuera de rango, colonias
-          extendidas, placas sin colonias, etc.) se toman en cuenta los
-          mismos criterios de la <a href="mesofilos-aerobios.html">Tabla 11
-          de mesófilos aerobios</a>.
-        </p>
-      </div>
-      <br />
-      <a href="../calculadora-ufc.html" class="btn"> Calculadora UFC</a>
+              <h2>Fundamento</h2>
+              <p>
+                En general, muchos mohos y levaduras pueden desarrollarse a
+                temperaturas moderadas y tolerar condiciones ácidas. Uno de los
+                riesgos asociados a la contaminación por algunas especies de
+                hongos es la producción de micotoxinas bajo determinadas
+                condiciones.
+              </p>
+              <p>
+                Varias de las matrices alimentarias que se analizan en este manual
+                presentan baja actividad de agua; por ello, el recuento de mohos y
+                levaduras es relevante, debido a que algunas especies toleran
+                valores de a<sub>w</sub> menores que otros microorganismos.
+              </p>
+              <p>
+                La acidificación del medio limita el crecimiento de bacterias y
+                facilita el recuento de mohos y levaduras. El recuento de este
+                tipo de microorganismos se estima mediante el conteo de colonias
+                en placa, expresado en UFC/g.
+              </p>
+            </div>
 
+            <div class="pestana-panel" id="pestana-principios-tecnicos">
+              <h2>Principios técnicos</h2>
+
+              <!-- ============================================
+                   Fichas desplegables: una por cada medio de
+                   cultivo, prueba bioquímica o prueba serológica
+                   que use el método. .fichas agrupa una o más
+                   <details class="ficha">, cada una con un botón
+                   circular (.ficha-icono) en vez del triángulo que
+                   trae por defecto — el CSS está en la sección 19
+                   de styles.css. Sigue sin necesitar JavaScript.
+                   ============================================ -->
+              <div class="caja">
+                <div class="fichas">
+                  <details class="ficha">
+                    <summary>
+                      <span class="ficha-icono"></span>
+                      <span class="ficha-etiqueta">Agar Papa Dextrosa</span>
+                    </summary>
+                    <div class="caja ficha-contenido">
+                      <p><strong>Componentes generales:</strong> dextrosa y extracto de papa.</p>
+                      <p>
+                        Es un medio simple utilizado para el cultivo y cuenta de hongos y
+                        levaduras provenientes de diferentes tipos de muestra; la
+                        infusión de papa y la glucosa favorecen el desarrollo abundante
+                        de mohos y levaduras. Este agar es ligeramente ácido, por lo que
+                        inhibe el crecimiento de algunas bacterias.
+                      </p>
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </div>
+
+            <div class="pestana-panel" id="pestana-requerimientos">
+              <h2>Requerimientos del método</h2>
+              <div class="caja requerimientos">
+                <div>
+                  <h3>Equipo</h3>
+                  <ul class="lista-checklist">
+                    <li><label><input type="checkbox" /> Horno</label></li>
+                    <li><label><input type="checkbox" /> Incubadora</label></li>
+                    <li><label><input type="checkbox" /> Autoclave</label></li>
+                    <li><label><input type="checkbox" /> Baño de agua</label></li>
+                    <li><label><input type="checkbox" /> Contador de colonias</label></li>
+                    <li><label><input type="checkbox" /> Registrador mecánico</label></li>
+                    <li><label><input type="checkbox" /> Microscopio</label></li>
+                    <li><label><input type="checkbox" /> Potenciómetro</label></li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3>Materiales</h3>
+                  <ul class="lista-checklist">
+                    <li><label><input type="checkbox" /> Pipetas bacteriológicas</label></li>
+                    <li><label><input type="checkbox" /> Cajas Petri</label></li>
+                    <li><label><input type="checkbox" /> Frascos de vidrio de 250 mL</label></li>
+                    <li><label><input type="checkbox" /> Tubos de 16x150 mm</label></li>
+                    <li><label><input type="checkbox" /> Utensilios esterilizables</label></li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3>Reactivos</h3>
+                  <ul class="lista-checklist">
+                    <li><label><input type="checkbox" /> Solución reguladora de fosfatos</label></li>
+                    <li><label><input type="checkbox" /> Solución estéril de ácido tartárico al 10%</label></li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3>Medios de cultivo</h3>
+                  <ul class="lista-checklist">
+                    <li><label><input type="checkbox" /> Agar papa dextrosa</label></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="pestana-panel" id="pestana-proceso">
+              <h2>Proceso</h2>
+              <div class="caja">
+                <p>
+                  <em>Contenido pendiente: aquí va el diagrama de flujo del método
+                  (Figura 5, "Diagrama de flujo para realizar cuenta de mohos y
+                  levaduras"), en cuanto esté disponible la imagen.</em>
+                </p>
+              </div>
+            </div>
+
+            <div class="pestana-panel" id="pestana-calculo">
+              <h2>Cálculo del método</h2>
+              <div class="caja">
+                <p>
+                  Se consideran placas con un conteo de 10 a 150 colonias. Para el
+                  resto de los casos (diluciones fuera de rango, colonias
+                  extendidas, placas sin colonias, etc.) se toman en cuenta los
+                  mismos criterios de la <a href="mesofilos-aerobios.html">Tabla 11
+                  de mesófilos aerobios</a>.
+                </p>
+
+                <h3>Cálculo UFC/g</h3>
+                <p>
+                  Usa la calculadora del manual para obtener el resultado a partir
+                  del conteo de colonias, el factor de dilución y el volumen de
+                  siembra.
+                </p>
+                <a href="../calculadora-ufc.html" class="btn">Ir a la calculadora UFC</a>
+              </div>
+            </div>
+
+            <div class="pestana-panel" id="pestana-informe">
+              <h2>Informe de la prueba</h2>
+              <div class="caja">
+                <p>
+                  Unidades formadoras de colonias, ____ UFC/g, de mohos en agar
+                  papa-dextrosa acidificado, incubadas ____ días a ____ °C.
+                </p>
+                <p>
+                  Unidades formadoras de colonias, ____ UFC/g, de levaduras en agar
+                  papa-dextrosa acidificado, incubadas ____ días a ____ °C.
+                </p>
+              </div>
+            </div>
+
+          </div><!-- /metodo-contenido -->
+
+          <div class="pestanas-nav pestanas-nav--vertical">
+            <button class="pestana-boton pestana-boton--fila" data-pestana="principios-tecnicos">
+              <span class="pestana-icono"></span>
+              <span class="pestana-etiqueta">Principios técnicos</span>
+            </button>
+            <button class="pestana-boton pestana-boton--fila" data-pestana="requerimientos">
+              <span class="pestana-icono"></span>
+              <span class="pestana-etiqueta">Requerimientos</span>
+            </button>
+            <button class="pestana-boton pestana-boton--fila" data-pestana="proceso">
+              <span class="pestana-icono"></span>
+              <span class="pestana-etiqueta">Proceso</span>
+            </button>
+            <button class="pestana-boton pestana-boton--fila" data-pestana="calculo">
+              <span class="pestana-icono"></span>
+              <span class="pestana-etiqueta">Cálculo del método</span>
+            </button>
+            <button class="pestana-boton pestana-boton--fila" data-pestana="informe">
+              <span class="pestana-icono"></span>
+              <span class="pestana-etiqueta">Informe de la prueba</span>
+            </button>
+          </div>
+
+        </div><!-- /metodo-explorador -->
+      </div><!-- /pestanas--metodo -->
 
     </main>
+
+  </div>
+
+  <script src="../../js/pestanas.js" defer></script>
 
 </body>
 </html>
