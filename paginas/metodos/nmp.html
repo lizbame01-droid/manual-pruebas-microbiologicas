@@ -454,10 +454,11 @@
             <div class="pestana-panel" id="pestana-proceso">
               <h2>Proceso</h2>
               <div class="caja">
-                <p>
-                  <em>Contenido pendiente: aquí va el diagrama de flujo del método,
-                  en cuanto esté disponible la imagen.</em>
-                </p>
+                <!-- Diagramas paso a paso: ver js/diagramas-datos.js y js/diagrama-flujo.js -->
+                <div class="diagrama-flujo" data-diagrama="nmp-presuntiva"></div>
+                <div class="diagrama-flujo" data-diagrama="nmp-confirmativa"></div>
+                <div class="diagrama-flujo" data-diagrama="nmp-ecoli-presuntiva"></div>
+                <div class="diagrama-flujo" data-diagrama="nmp-ecoli-bioquimicas"></div>
               </div>
             </div>
 
@@ -525,6 +526,9 @@
   </div>
 
   <script src="../../js/pestanas.js" defer></script>
+  <script src="../../js/diagramas-datos.js" defer></script>
+  <script src="../../js/diagrama-flujo.js" defer></script>
 
+  <script src="../../js/estructura.js" defer></script>
 </body>
 </html>

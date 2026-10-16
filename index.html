@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body class="inicio">
 
   <!-- Contenedor flex: acomoda el menú y el contenido en columnas -->
   <div class="pagina">
@@ -99,25 +99,33 @@
        ================================================ -->
   <main>
 
-    <!-- Barra superior: herramientas del manual -->
-    <div class="barra-herramientas">
-      <a href="paginas/calculadora-ufc.html">
-        <img src="img/icono-calculadora-ufc.svg" alt="Calculadora UFC" width="48" height="48" />
-        <p>Calculadora UFC</p>
+    <!-- Herramientas del manual: js/estructura.js las coloca en la barra
+         superior, a la derecha del botón "Contenido" -->
+    <div class="barra-herramientas" data-barra-extra>
+      <a href="paginas/como-usar-el-manual.html" title="Cómo usar el manual">
+        <img src="img/icono-ayuda.svg" alt="" width="48" height="48" />
+        <p>Cómo usar el manual</p>
       </a>
-      <a href="paginas/calculadora-nmp.html">
-        <img src="img/icono-calculadora-nmp.svg" alt="Calculadora NMP" width="48" height="48" />
-        <p>Calculadora NMP</p>
+      <a href="paginas/calculadora-ufc.html" title="Calculadora UFC">
+        <img src="img/icono-calculadora-ufc.svg" alt="" width="48" height="48" />
+        <p>UFC</p>
       </a>
-      <a href="paginas/hojas-verificacion.html">
-        <img src="img/icono-hoja-verificacion.svg" alt="Hojas de verificación" width="48" height="48" />
+      <a href="paginas/calculadora-nmp.html" title="Calculadora NMP">
+        <img src="img/icono-calculadora-nmp.svg" alt="" width="48" height="48" />
+        <p>NMP</p>
+      </a>
+      <a href="paginas/hojas-verificacion.html" title="Hojas de verificación">
+        <img src="img/icono-hoja-verificacion.svg" alt="" width="48" height="48" />
         <p>Hojas de verificación</p>
+      </a>
+      <a href="paginas/hojas-resultados.html" title="Hoja de resultados">
+        <img src="img/icono-hoja-resultados.svg" alt="" width="48" height="48" />
+        <p>Hoja de resultados</p>
       </a>
     </div>
 
     <!-- Título principal -->
     <h1>Manual pruebas microbiológicas</h1>
-    <p><a href="paginas/como-usar-el-manual.html">Cómo usar este manual</a></p>
 
     <!-- Selección de alimento -->
     <section class="seccion-alimentos">
@@ -163,5 +171,11 @@
 
   </div>
 
+  <!-- Acceso a los registros guardados en este navegador -->
+  <div class="acceso-registros">
+    <a href="paginas/mis-registros.html" class="boton-herramienta">Mis registros</a>
+  </div>
+
+  <script src="js/estructura.js" defer></script>
 </body>
 </html>

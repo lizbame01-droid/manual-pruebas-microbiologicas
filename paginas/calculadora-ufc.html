@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora UFC · Manual de Pruebas Microbiológicas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Esta página está un nivel adentro (paginas/), por eso "../" -->
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <div class="pagina">
+
+    <!-- ================================================
+         MENÚ LATERAL (igual que en las demás páginas de "paginas/")
+         ================================================ -->
+    <nav class="menu-lateral">
+
+      <div class="menu-encabezado">
+        <a href="../index.html">Manual de pruebas microbiológicas</a>
+      </div>
+
+      <details>
+        <summary>Microbiología en México</summary>
+        <ul>
+          <li><a href="microbiologia-mexico.html">Antecedentes y control microbiológico</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Microbiología de los alimentos</summary>
+        <ul>
+          <li><a href="microbiologia-alimentos/crecimiento-microorganismos.html">Crecimiento de microorganismos</a></li>
+          <li><a href="microbiologia-alimentos/tipos-microorganismos.html">Tipos de microorganismos</a></li>
+          <li><a href="microbiologia-alimentos/microorganismos-indicadores.html">Microorganismos indicadores</a></li>
+          <li><a href="microbiologia-alimentos/patogenos.html">Patógenos</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Fundamentos del análisis</summary>
+        <ul>
+          <li><a href="muestreo.html">Muestreo</a></li>
+          <li><a href="tecnicas-microbiologicas.html">Técnicas microbiológicas</a></li>
+          <li><a href="metodos-analisis.html">Métodos de análisis</a></li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Pruebas microbiológicas</summary>
+        <ul>
+          <li><a href="metodos/recepcion-muestras.html">Recepción de muestras</a></li>
+          <li><a href="metodos/diluciones.html">Diluciones</a></li>
+          <li><a href="metodos/mesofilos-aerobios.html">Mesófilos aerobios</a></li>
+          <li><a href="metodos/mohos-levaduras.html">Mohos y levaduras</a></li>
+          <li><a href="metodos/coliformes-placa.html">Coliformes totales en placa</a></li>
+          <li><a href="metodos/salmonella.html">Salmonella</a></li>
+          <li><a href="metodos/s-aureus.html">S. aureus</a></li>
+          <li><a href="metodos/nmp.html">Coliformes y E. coli por NMP</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Normatividad</summary>
+        <ul>
+          <li><a href="normatividad.html">Normas Oficiales Mexicanas y Normas Mexicanas</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Buenas prácticas de laboratorio</summary>
+        <ul>
+          <li><a href="buenas-practicas.html">Bioseguridad e instalaciones</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Medios de cultivo</summary>
+        <ul>
+          <li><a href="medios-cultivo.html">Clasificación, agares, caldos y reactivos</a></li>
+        </ul>
+      </details>
+
+    </nav>
+
+    <main>
+
+      <div class="fila-superior">
+        <a href="../index.html" class="enlace-volver"><span aria-hidden="true">&larr;</span>Inicio</a>
+        <div class="herramientas-superior">
+          <a href="mis-registros.html" class="boton-herramienta">Mis registros</a>
+          <a href="hojas-resultados.html" class="boton-herramienta">Hojas de resultados</a>
+          <a href="hojas-verificacion.html" class="boton-herramienta">
+            <img src="../img/icono-hoja-verificacion.svg" alt="" width="18" height="18" />
+            Hojas de verificación
+          </a>
+        </div>
+      </div>
+
+      <h1>Calculadora UFC</h1>
+
+      <p>
+        Calcula las unidades formadoras de colonias (UFC) con la fórmula del manual:
+        UFC = (número de colonias × factor de dilución) ÷ volumen sembrado. Se captura cada
+        placa con su dilución, se obtiene el promedio y, con el método y el tipo de alimento,
+        se indica si el resultado cumple con el límite del manual.
+      </p>
+
+      <form id="calculadora-ufc" class="calc-formulario" novalidate>
+
+        <h2>Datos de las placas</h2>
+        <div class="caja">
+          <div class="calc-campos">
+            <label class="calc-campo calc-campo--corto">
+              <span>Número de placas</span>
+              <input type="number" name="numero_placas" value="2" min="1" max="12" step="1" />
+            </label>
+            <label class="calc-campo calc-campo--corto">
+              <span>Volumen sembrado (mL)</span>
+              <input type="number" name="volumen" value="1" min="0" step="any" />
+            </label>
+            <label class="calc-campo calc-campo--corto">
+              <span>Resultado en</span>
+              <select name="unidad">
+                <option value="g">UFC/g</option>
+                <option value="mL">UFC/mL</option>
+              </select>
+            </label>
+            <label class="calc-campo">
+              <span>Código o lote de muestra <small>(para enviar a la hoja)</small></span>
+              <input type="text" name="muestra" />
+            </label>
+          </div>
+
+          <table class="calc-tabla">
+            <caption>Colonias contadas y dilución de cada placa</caption>
+            <thead>
+              <tr>
+                <th scope="col">Placa</th>
+                <th scope="col">Colonias</th>
+                <th scope="col">Dilución</th>
+                <th scope="col">Intervalo del método</th>
+              </tr>
+            </thead>
+            <!-- Las filas se generan en js/calculadora-ufc.js según el número de placas -->
+            <tbody id="calc-placas"></tbody>
+          </table>
+        </div>
+
+        <h2>Resultado</h2>
+        <div class="caja calc-caja-resultado">
+          <div id="calc-resultado" aria-live="polite"></div>
+        </div>
+
+        <!-- Aparece cuando ya hay un promedio -->
+        <div id="calc-evaluar" hidden>
+          <h2>Evaluación con los límites del manual</h2>
+          <div class="caja">
+            <div class="calc-campos">
+              <label class="calc-campo">
+                <span>Método</span>
+                <select name="metodo"></select>
+              </label>
+              <label class="calc-campo">
+                <span>Tipo de alimento</span>
+                <select name="alimento"></select>
+              </label>
+            </div>
+            <p id="calc-veredicto" class="calc-veredicto" aria-live="polite"></p>
+            <p class="calc-nota">
+              Límites de las tablas del manual, en UFC/g. «≤» indica máximo permitido y «&lt;»
+              indica que el resultado debe ser menor que el valor. El intervalo de colonias de
+              cada placa depende del método elegido.
+            </p>
+          </div>
+        </div>
+
+        <div class="hoja-botones">
+          <button type="submit" id="calc-enviar" class="btn" disabled>Enviar a la hoja de resultados</button>
+          <button type="reset" class="btn btn--secundario">Limpiar</button>
+        </div>
+        <p id="calc-estado" class="hoja-estado" role="status" aria-live="polite"></p>
+        <p class="nota-privacidad">
+          La calculadora no guarda nada. Para conservar el resultado, se envía a la
+          <a href="hojas-resultados.html">hoja de resultados</a> (necesita el código o lote de la muestra),
+          donde se guarda solo en este navegador.
+        </p>
+
+      </form>
+
+    </main>
+
+  </div>
+
+  <script src="../js/almacen.js" defer></script>
+  <script src="../js/limites.js" defer></script>
+  <script src="../js/calculadora-ufc.js" defer></script>
+  <script src="../js/estructura.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hoja de resultados · Manual de Pruebas Microbiológicas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Esta página está un nivel adentro (paginas/), por eso "../" -->
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <div class="pagina">
+
+    <!-- ================================================
+         MENÚ LATERAL (igual que en las demás páginas de "paginas/")
+         ================================================ -->
+    <nav class="menu-lateral">
+
+      <div class="menu-encabezado">
+        <a href="../index.html">Manual de pruebas microbiológicas</a>
+      </div>
+
+      <details>
+        <summary>Microbiología en México</summary>
+        <ul>
+          <li><a href="microbiologia-mexico.html">Antecedentes y control microbiológico</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Microbiología de los alimentos</summary>
+        <ul>
+          <li><a href="microbiologia-alimentos/crecimiento-microorganismos.html">Crecimiento de microorganismos</a></li>
+          <li><a href="microbiologia-alimentos/tipos-microorganismos.html">Tipos de microorganismos</a></li>
+          <li><a href="microbiologia-alimentos/microorganismos-indicadores.html">Microorganismos indicadores</a></li>
+          <li><a href="microbiologia-alimentos/patogenos.html">Patógenos</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Fundamentos del análisis</summary>
+        <ul>
+          <li><a href="muestreo.html">Muestreo</a></li>
+          <li><a href="tecnicas-microbiologicas.html">Técnicas microbiológicas</a></li>
+          <li><a href="metodos-analisis.html">Métodos de análisis</a></li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Pruebas microbiológicas</summary>
+        <ul>
+          <li><a href="metodos/recepcion-muestras.html">Recepción de muestras</a></li>
+          <li><a href="metodos/diluciones.html">Diluciones</a></li>
+          <li><a href="metodos/mesofilos-aerobios.html">Mesófilos aerobios</a></li>
+          <li><a href="metodos/mohos-levaduras.html">Mohos y levaduras</a></li>
+          <li><a href="metodos/coliformes-placa.html">Coliformes totales en placa</a></li>
+          <li><a href="metodos/salmonella.html">Salmonella</a></li>
+          <li><a href="metodos/s-aureus.html">S. aureus</a></li>
+          <li><a href="metodos/nmp.html">Coliformes y E. coli por NMP</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Normatividad</summary>
+        <ul>
+          <li><a href="normatividad.html">Normas Oficiales Mexicanas y Normas Mexicanas</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Buenas prácticas de laboratorio</summary>
+        <ul>
+          <li><a href="buenas-practicas.html">Bioseguridad e instalaciones</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Medios de cultivo</summary>
+        <ul>
+          <li><a href="medios-cultivo.html">Clasificación, agares, caldos y reactivos</a></li>
+        </ul>
+      </details>
+
+    </nav>
+
+    <main>
+
+      <div class="fila-superior">
+        <a href="../index.html" class="enlace-volver"><span aria-hidden="true">&larr;</span>Inicio</a>
+        <div class="herramientas-superior">
+          <a href="mis-registros.html" class="boton-herramienta">Mis registros</a>
+          <a href="calculadora-ufc.html" class="boton-herramienta">Calculadora UFC</a>
+          <a href="calculadora-nmp.html" class="boton-herramienta">Calculadora NMP</a>
+          <a href="hojas-verificacion.html" class="boton-herramienta">
+            <img src="../img/icono-hoja-verificacion.svg" alt="" width="18" height="18" />
+            Hojas de verificación
+          </a>
+        </div>
+      </div>
+
+      <h1>Hoja de resultados</h1>
+
+      <p>
+        Reúne en una sola hoja los resultados de las pruebas que aplican a cada matriz
+        alimentaria y los compara con los límites del manual. Los valores se capturan a mano o
+        llegan desde las calculadoras (<a href="calculadora-ufc.html">UFC</a> y
+        <a href="calculadora-nmp.html">NMP</a>) con el botón «Enviar a la hoja de resultados».
+      </p>
+
+      <form id="hoja-resultados" class="calc-formulario hoja-resultados" novalidate>
+
+        <div class="caja">
+          <div class="calc-campos">
+            <label class="calc-campo">
+              <span>Matriz alimentaria</span>
+              <select name="alimento"></select>
+            </label>
+            <label class="calc-campo">
+              <span>Código o lote de muestra</span>
+              <input type="text" name="lote" />
+            </label>
+            <label class="calc-campo calc-campo--corto">
+              <span>Fecha del análisis</span>
+              <input type="date" name="fecha" />
+            </label>
+          </div>
+        </div>
+
+        <h2>Resultados por prueba</h2>
+        <div class="caja">
+          <table class="calc-tabla res-tabla">
+            <caption>Pruebas que aplican a la matriz elegida</caption>
+            <thead>
+              <tr>
+                <th scope="col">Prueba</th>
+                <th scope="col">Resultado</th>
+                <th scope="col">Límite del manual</th>
+                <th scope="col">Veredicto</th>
+                <th scope="col" class="res-col-acciones">Calculadora</th>
+              </tr>
+            </thead>
+            <!-- Las filas se generan en js/hojas-resultados.js según la matriz -->
+            <tbody id="res-filas"></tbody>
+          </table>
+          <p class="calc-nota" id="res-no-aplican"></p>
+          <p class="calc-nota">
+            «=» es un valor contado; «&lt;» es un resultado «menor que» (sin colonias o sin
+            tubos positivos) y «&gt;» uno «mayor que». Los límites del manual de coliformes
+            están en UFC/g; el NMP/g se compara con el mismo valor.
+          </p>
+        </div>
+
+        <div class="caja">
+          <p class="res-dictamen-linea">Dictamen de la matriz: <strong id="res-dictamen">—</strong></p>
+          <label class="calc-campo">
+            <span>Observaciones</span>
+            <input type="text" name="observaciones" />
+          </label>
+        </div>
+
+        <div class="hoja-botones">
+          <button type="submit" class="btn">Guardar hoja de resultados</button>
+          <button type="button" class="btn btn--secundario" id="res-imprimir">Imprimir</button>
+          <button type="reset" class="btn btn--secundario">Limpiar</button>
+        </div>
+        <p id="res-estado" class="hoja-estado" role="status" aria-live="polite"></p>
+        <p class="nota-privacidad">
+          Los datos se guardan únicamente en este navegador; no se envían a ningún servidor.
+          Pueden consultarse y descargarse en <a href="mis-registros.html">Mis registros</a>.
+        </p>
+
+      </form>
+
+    </main>
+
+  </div>
+
+  <script src="../js/almacen.js" defer></script>
+  <script src="../js/limites.js" defer></script>
+  <script src="../js/hojas-resultados.js" defer></script>
+  <script src="../js/estructura.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora NMP · Manual de Pruebas Microbiológicas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Esta página está un nivel adentro (paginas/), por eso "../" -->
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <div class="pagina">
+
+    <!-- ================================================
+         MENÚ LATERAL (igual que en las demás páginas de "paginas/")
+         ================================================ -->
+    <nav class="menu-lateral">
+
+      <div class="menu-encabezado">
+        <a href="../index.html">Manual de pruebas microbiológicas</a>
+      </div>
+
+      <details>
+        <summary>Microbiología en México</summary>
+        <ul>
+          <li><a href="microbiologia-mexico.html">Antecedentes y control microbiológico</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Microbiología de los alimentos</summary>
+        <ul>
+          <li><a href="microbiologia-alimentos/crecimiento-microorganismos.html">Crecimiento de microorganismos</a></li>
+          <li><a href="microbiologia-alimentos/tipos-microorganismos.html">Tipos de microorganismos</a></li>
+          <li><a href="microbiologia-alimentos/microorganismos-indicadores.html">Microorganismos indicadores</a></li>
+          <li><a href="microbiologia-alimentos/patogenos.html">Patógenos</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Fundamentos del análisis</summary>
+        <ul>
+          <li><a href="muestreo.html">Muestreo</a></li>
+          <li><a href="tecnicas-microbiologicas.html">Técnicas microbiológicas</a></li>
+          <li><a href="metodos-analisis.html">Métodos de análisis</a></li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Pruebas microbiológicas</summary>
+        <ul>
+          <li><a href="metodos/recepcion-muestras.html">Recepción de muestras</a></li>
+          <li><a href="metodos/diluciones.html">Diluciones</a></li>
+          <li><a href="metodos/mesofilos-aerobios.html">Mesófilos aerobios</a></li>
+          <li><a href="metodos/mohos-levaduras.html">Mohos y levaduras</a></li>
+          <li><a href="metodos/coliformes-placa.html">Coliformes totales en placa</a></li>
+          <li><a href="metodos/salmonella.html">Salmonella</a></li>
+          <li><a href="metodos/s-aureus.html">S. aureus</a></li>
+          <li><a href="metodos/nmp.html">Coliformes y E. coli por NMP</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Normatividad</summary>
+        <ul>
+          <li><a href="normatividad.html">Normas Oficiales Mexicanas y Normas Mexicanas</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Buenas prácticas de laboratorio</summary>
+        <ul>
+          <li><a href="buenas-practicas.html">Bioseguridad e instalaciones</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Medios de cultivo</summary>
+        <ul>
+          <li><a href="medios-cultivo.html">Clasificación, agares, caldos y reactivos</a></li>
+        </ul>
+      </details>
+
+    </nav>
+
+    <main>
+
+      <div class="fila-superior">
+        <a href="../index.html" class="enlace-volver"><span aria-hidden="true">&larr;</span>Inicio</a>
+        <div class="herramientas-superior">
+          <a href="mis-registros.html" class="boton-herramienta">Mis registros</a>
+          <a href="hojas-resultados.html" class="boton-herramienta">Hojas de resultados</a>
+          <a href="hojas-verificacion.html" class="boton-herramienta">
+            <img src="../img/icono-hoja-verificacion.svg" alt="" width="18" height="18" />
+            Hojas de verificación
+          </a>
+        </div>
+      </div>
+
+      <h1>Calculadora NMP</h1>
+
+      <p>
+        Estima el número más probable (NMP/g) de coliformes totales o E. coli a partir de los
+        tubos positivos de tres diluciones consecutivas, con las tablas del Apéndice H de la
+        NOM-210-SSA1-2014. Si hay más de tres diluciones, se eligen las tres consecutivas con
+        el criterio de la norma (H.8.5.3).
+      </p>
+
+      <form id="calculadora-nmp" class="calc-formulario" novalidate>
+
+        <h2>Datos de los tubos</h2>
+        <div class="caja">
+          <div class="calc-campos">
+            <label class="calc-campo calc-campo--corto">
+              <span>Prueba</span>
+              <select name="prueba"></select>
+            </label>
+            <label class="calc-campo calc-campo--corto">
+              <span>Tubos por dilución</span>
+              <select name="tubos">
+                <option value="3">3 tubos</option>
+                <option value="5">5 tubos</option>
+              </select>
+            </label>
+            <label class="calc-campo">
+              <span>Código o lote de muestra <small>(para enviar a la hoja)</small></span>
+              <input type="text" name="muestra" />
+            </label>
+          </div>
+
+          <table class="calc-tabla">
+            <caption>Muestra por tubo y tubos positivos de cada dilución (de mayor a menor cantidad)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Dilución</th>
+                <th scope="col">Muestra por tubo</th>
+                <th scope="col">Tubos positivos</th>
+                <th scope="col">Uso en el cálculo</th>
+              </tr>
+            </thead>
+            <!-- Las filas se generan en js/calculadora-nmp.js -->
+            <tbody id="nmp-filas"></tbody>
+          </table>
+          <div class="hoja-botones">
+            <button type="button" class="btn btn--secundario btn--chico" id="nmp-agregar">Agregar dilución</button>
+            <button type="button" class="btn btn--secundario btn--chico" id="nmp-quitar">Quitar última</button>
+          </div>
+        </div>
+
+        <h2>Resultado</h2>
+        <div class="caja calc-caja-resultado">
+          <div id="nmp-resultado" aria-live="polite"></div>
+        </div>
+
+        <div id="nmp-evaluar" hidden>
+          <h2>Evaluación con los límites del manual</h2>
+          <div class="caja">
+            <div class="calc-campos">
+              <label class="calc-campo">
+                <span>Tipo de alimento</span>
+                <select name="alimento"></select>
+              </label>
+            </div>
+            <p id="nmp-veredicto" class="calc-veredicto" aria-live="polite"></p>
+            <p class="calc-nota">
+              Los límites del manual de coliformes están en UFC/g; aquí el NMP/g se compara con
+              ese mismo valor. Los resultados con «&lt;» o «&gt;» son topes y pueden no permitir
+              una conclusión. E. coli no tiene límite en las tablas del manual.
+            </p>
+          </div>
+        </div>
+
+        <div class="hoja-botones">
+          <button type="submit" id="nmp-enviar" class="btn" disabled>Enviar a la hoja de resultados</button>
+          <button type="reset" class="btn btn--secundario">Limpiar</button>
+        </div>
+        <p id="nmp-estado" class="hoja-estado" role="status" aria-live="polite"></p>
+        <p class="nota-privacidad">
+          La calculadora no guarda nada. Para conservar el resultado, se envía a la
+          <a href="hojas-resultados.html">hoja de resultados</a> (necesita el código o lote de la muestra),
+          donde se guarda solo en este navegador.
+        </p>
+
+      </form>
+
+    </main>
+
+  </div>
+
+  <script src="../js/almacen.js" defer></script>
+  <script src="../js/limites.js" defer></script>
+  <script src="../js/tablas-nmp.js" defer></script>
+  <script src="../js/calculadora-nmp.js" defer></script>
+  <script src="../js/estructura.js" defer></script>
+</body>
+</html>

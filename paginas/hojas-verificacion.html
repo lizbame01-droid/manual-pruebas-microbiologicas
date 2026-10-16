@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hojas de verificación · Manual de Pruebas Microbiológicas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Esta página está un nivel adentro (paginas/), por eso "../" -->
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <div class="pagina">
+
+    <!-- ================================================
+         MENÚ LATERAL (igual que en las demás páginas de "paginas/")
+         ================================================ -->
+    <nav class="menu-lateral">
+
+      <div class="menu-encabezado">
+        <a href="../index.html">Manual de pruebas microbiológicas</a>
+      </div>
+
+      <details>
+        <summary>Microbiología en México</summary>
+        <ul>
+          <li><a href="microbiologia-mexico.html">Antecedentes y control microbiológico</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Microbiología de los alimentos</summary>
+        <ul>
+          <li><a href="microbiologia-alimentos/crecimiento-microorganismos.html">Crecimiento de microorganismos</a></li>
+          <li><a href="microbiologia-alimentos/tipos-microorganismos.html">Tipos de microorganismos</a></li>
+          <li><a href="microbiologia-alimentos/microorganismos-indicadores.html">Microorganismos indicadores</a></li>
+          <li><a href="microbiologia-alimentos/patogenos.html">Patógenos</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Fundamentos del análisis</summary>
+        <ul>
+          <li><a href="muestreo.html">Muestreo</a></li>
+          <li><a href="tecnicas-microbiologicas.html">Técnicas microbiológicas</a></li>
+          <li><a href="metodos-analisis.html">Métodos de análisis</a></li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Pruebas microbiológicas</summary>
+        <ul>
+          <li><a href="metodos/recepcion-muestras.html">Recepción de muestras</a></li>
+          <li><a href="metodos/diluciones.html">Diluciones</a></li>
+          <li><a href="metodos/mesofilos-aerobios.html">Mesófilos aerobios</a></li>
+          <li><a href="metodos/mohos-levaduras.html">Mohos y levaduras</a></li>
+          <li><a href="metodos/coliformes-placa.html">Coliformes totales en placa</a></li>
+          <li><a href="metodos/salmonella.html">Salmonella</a></li>
+          <li><a href="metodos/s-aureus.html">S. aureus</a></li>
+          <li><a href="metodos/nmp.html">Coliformes y E. coli por NMP</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Normatividad</summary>
+        <ul>
+          <li><a href="normatividad.html">Normas Oficiales Mexicanas y Normas Mexicanas</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Buenas prácticas de laboratorio</summary>
+        <ul>
+          <li><a href="buenas-practicas.html">Bioseguridad e instalaciones</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Medios de cultivo</summary>
+        <ul>
+          <li><a href="medios-cultivo.html">Clasificación, agares, caldos y reactivos</a></li>
+        </ul>
+      </details>
+
+    </nav>
+
+    <main>
+
+      <div class="fila-superior">
+        <a href="../index.html" class="enlace-volver"><span aria-hidden="true">&larr;</span>Inicio</a>
+        <div class="herramientas-superior">
+          <a href="mis-registros.html" class="boton-herramienta">Mis registros</a>
+          <a href="hojas-resultados.html" class="boton-herramienta">Hojas de resultados</a>
+        </div>
+      </div>
+
+      <h1>Hojas de verificación</h1>
+
+      <p>
+        Las hojas de verificación sirven para registrar los datos de la muestra, del
+        análisis y la interpretación del resultado. Pueden llenarse en pantalla y
+        guardarse, o imprimirse en blanco para llenarse a mano.
+      </p>
+
+      <!-- ============================================
+           Mismo patrón de pestañas verticales que las
+           páginas de método (metodo-explorador + pestanas-nav
+           vertical + pestana-boton--fila), reutilizado aquí
+           para cambiar entre las 3 hojas disponibles.
+           ============================================ -->
+      <div class="pestanas">
+        <div class="metodo-explorador">
+          <div class="metodo-contenido">
+
+            <!-- ---------------------------------------------
+                 Hoja PM001 — Recuento de mesófilos aerobios
+                 --------------------------------------------- -->
+            <div class="pestana-panel pestana-panel--activo hoja-verificacion" id="pestana-mesofilos">
+              <div class="hoja-acciones">
+                <button type="button" class="btn btn--secundario" onclick="window.print()">Imprimir esta hoja</button>
+              </div>
+
+              <h2>Hoja de verificación: Recuento de mesófilos aerobios</h2>
+
+              <form class="hoja-form" data-metodo="mesofilos-aerobios" data-codigo="PM001" novalidate>
+
+              <table>
+                <tbody>
+                  <tr><th>Código</th><td>PM001</td></tr>
+                  <tr><th>Revisión</th><td>1</td></tr>
+                  <tr><th>Procedimiento</th><td>Recuento de bacterias aerobias mesófilas en placa</td></tr>
+                  <tr><th>Norma referencia</th><td>NOM-247-SSA1-2008</td></tr>
+                </tbody>
+              </table>
+
+              <h3>Datos de muestra</h3>
+              <table>
+                <tbody>
+                  <tr><th><label for="mesofilos-matriz">Tipo de matriz alimentaria</label></th><td><input type="text" id="mesofilos-matriz" name="tipo_matriz" /></td></tr>
+                  <tr><th><label for="mesofilos-lote">Código o lote de muestra</label></th><td><input type="text" id="mesofilos-lote" name="codigo_lote_muestra" required /></td></tr>
+                  <tr><th>Condición muestra</th><td>
+                      <label class="opcion"><input type="radio" name="condicion_fisica" value="solida" /> Sólida</label>
+                      <label class="opcion"><input type="radio" name="condicion_fisica" value="liquida" /> Líquida</label>
+                      <span class="separador"></span>
+                      <label class="opcion"><input type="radio" name="condicion_congelacion" value="congelada" /> Congelada</label>
+                      <label class="opcion"><input type="radio" name="condicion_congelacion" value="descongelada" /> Descongelada</label>
+                  </td></tr>
+                  <tr><th><label for="mesofilos-temp-recepcion">Temperatura recepción</label></th><td><input type="number" step="any" class="campo-corto" id="mesofilos-temp-recepcion" name="temperatura_recepcion" /> ºC</td></tr>
+                  <tr><th><label for="mesofilos-fecha">Fecha y hora de recepción</label></th><td><input type="date" class="campo-medio" id="mesofilos-fecha" name="fecha_recepcion" /> <input type="time" class="campo-corto" id="mesofilos-hora" name="hora_recepcion" aria-label="Hora de recepción" /></td></tr>
+                  <tr><th><label for="mesofilos-obs-muestra">Observaciones</label></th><td class="celda-observaciones"><textarea id="mesofilos-obs-muestra" name="observaciones_muestra" rows="2"></textarea></td></tr>
+                </tbody>
+              </table>
+
+              <h3>Datos del análisis</h3>
+              <table>
+                <tbody>
+                  <tr><th><label for="mesofilos-medio">Medio de cultivo</label></th><td><input type="text" id="mesofilos-medio" name="medio_cultivo" /></td></tr>
+                  <tr><th><label for="mesofilos-incub-temp">Condiciones incubación</label></th><td><input type="number" step="any" class="campo-corto" id="mesofilos-incub-temp" name="temperatura_incubacion" /> ºC &nbsp;&nbsp;&nbsp; <input type="number" step="any" class="campo-corto" id="mesofilos-incub-horas" name="horas_incubacion" aria-label="Horas de incubación" /> h</td></tr>
+                  <tr><th><label for="mesofilos-dilucion">Dilución</label></th><td><input type="number" step="any" class="campo-corto" id="mesofilos-dilucion" name="dilucion" /> g/mL</td></tr>
+                  <tr><th><label for="mesofilos-volumen">Volumen sembrado</label></th><td><input type="number" step="any" class="campo-corto" id="mesofilos-volumen" name="volumen_sembrado" /> mL</td></tr>
+                  <tr><th><label for="mesofilos-recuento">Recuento colonias</label></th><td><input type="text" id="mesofilos-recuento" name="recuento_colonias" /></td></tr>
+                  <tr><th><label for="mesofilos-resultado">Resultado final</label></th><td><input type="text" class="campo-medio" id="mesofilos-resultado" name="resultado_final" /> UFC/g</td></tr>
+                </tbody>
+              </table>
+
+              <h3>Interpretación</h3>
+              <table>
+                <tbody>
+                  <tr><th><label for="mesofilos-limite">Límite máximo</label></th><td><input type="text" class="campo-medio" id="mesofilos-limite" name="limite_maximo" /> UFC/g o mL</td></tr>
+                  <tr><th>Interpretación resultado</th><td>
+                      <label class="opcion"><input type="radio" name="interpretacion" value="cumple" /> CUMPLE</label>
+                      <label class="opcion"><input type="radio" name="interpretacion" value="no_cumple" /> NO CUMPLE</label>
+                  </td></tr>
+                  <tr><th><label for="mesofilos-obs-interp">Observaciones</label></th><td class="celda-observaciones"><textarea id="mesofilos-obs-interp" name="observaciones_interpretacion" rows="2"></textarea></td></tr>
+                </tbody>
+              </table>
+
+              <div class="hoja-botones">
+                <button type="submit" class="btn">Guardar hoja</button>
+                <button type="reset" class="btn btn--secundario">Limpiar</button>
+              </div>
+              <p class="hoja-estado" role="status" aria-live="polite"></p>
+
+              </form>
+            </div>
+
+            <!-- ---------------------------------------------
+                 Hoja PM002 — Recuento de mohos y levaduras
+                 --------------------------------------------- -->
+            <div class="pestana-panel hoja-verificacion" id="pestana-mohos">
+              <div class="hoja-acciones">
+                <button type="button" class="btn btn--secundario" onclick="window.print()">Imprimir esta hoja</button>
+              </div>
+
+              <h2>Hoja de verificación: Recuento de mohos y levaduras</h2>
+
+              <form class="hoja-form" data-metodo="mohos-levaduras" data-codigo="PM002" novalidate>
+
+              <table>
+                <tbody>
+                  <tr><th>Código</th><td>PM002</td></tr>
+                  <tr><th>Revisión</th><td>1</td></tr>
+                  <tr><th>Procedimiento</th><td>Recuento de mohos y levaduras en placa</td></tr>
+                  <tr><th>Norma referencia</th><td>NOM-247-SSA1-2008</td></tr>
+                </tbody>
+              </table>
+
+              <h3>Datos de muestra</h3>
+              <table>
+                <tbody>
+                  <tr><th><label for="mohos-matriz">Tipo de matriz alimentaria</label></th><td><input type="text" id="mohos-matriz" name="tipo_matriz" /></td></tr>
+                  <tr><th><label for="mohos-lote">Código o lote de muestra</label></th><td><input type="text" id="mohos-lote" name="codigo_lote_muestra" required /></td></tr>
+                  <tr><th>Condición muestra</th><td>
+                      <label class="opcion"><input type="radio" name="condicion_fisica" value="solida" /> Sólida</label>
+                      <label class="opcion"><input type="radio" name="condicion_fisica" value="liquida" /> Líquida</label>
+                      <span class="separador"></span>
+                      <label class="opcion"><input type="radio" name="condicion_congelacion" value="congelada" /> Congelada</label>
+                      <label class="opcion"><input type="radio" name="condicion_congelacion" value="descongelada" /> Descongelada</label>
+                  </td></tr>
+                  <tr><th><label for="mohos-temp-recepcion">Temperatura recepción</label></th><td><input type="number" step="any" class="campo-corto" id="mohos-temp-recepcion" name="temperatura_recepcion" /> ºC</td></tr>
+                  <tr><th><label for="mohos-fecha">Fecha y hora de recepción</label></th><td><input type="date" class="campo-medio" id="mohos-fecha" name="fecha_recepcion" /> <input type="time" class="campo-corto" id="mohos-hora" name="hora_recepcion" aria-label="Hora de recepción" /></td></tr>
+                  <tr><th><label for="mohos-obs-muestra">Observaciones</label></th><td class="celda-observaciones"><textarea id="mohos-obs-muestra" name="observaciones_muestra" rows="2"></textarea></td></tr>
+                </tbody>
+              </table>
+
+              <h3>Datos del análisis</h3>
+              <table>
+                <tbody>
+                  <tr><th><label for="mohos-medio">Medio de cultivo</label></th><td><input type="text" id="mohos-medio" name="medio_cultivo" /></td></tr>
+                  <tr><th><label for="mohos-incub-temp">Condiciones incubación</label></th><td><input type="number" step="any" class="campo-corto" id="mohos-incub-temp" name="temperatura_incubacion" /> ºC &nbsp;&nbsp;&nbsp; <input type="number" step="any" class="campo-corto" id="mohos-incub-horas" name="horas_incubacion" aria-label="Horas de incubación" /> h</td></tr>
+                  <tr><th><label for="mohos-dilucion">Dilución</label></th><td><input type="number" step="any" class="campo-corto" id="mohos-dilucion" name="dilucion" /> g/mL</td></tr>
+                  <tr><th><label for="mohos-volumen">Volumen sembrado</label></th><td><input type="number" step="any" class="campo-corto" id="mohos-volumen" name="volumen_sembrado" /> mL</td></tr>
+                  <tr><th><label for="mohos-recuento">Recuento colonias</label></th><td><input type="text" id="mohos-recuento" name="recuento_colonias" /></td></tr>
+                  <tr><th><label for="mohos-resultado">Resultado final</label></th><td><input type="text" class="campo-medio" id="mohos-resultado" name="resultado_final" /> UFC/g</td></tr>
+                </tbody>
+              </table>
+
+              <h3>Interpretación</h3>
+              <table>
+                <tbody>
+                  <tr><th><label for="mohos-limite">Límite máximo</label></th><td><input type="text" class="campo-medio" id="mohos-limite" name="limite_maximo" /> UFC/g o mL</td></tr>
+                  <tr><th>Interpretación resultado</th><td>
+                      <label class="opcion"><input type="radio" name="interpretacion" value="cumple" /> CUMPLE</label>
+                      <label class="opcion"><input type="radio" name="interpretacion" value="no_cumple" /> NO CUMPLE</label>
+                  </td></tr>
+                  <tr><th><label for="mohos-obs-interp">Observaciones</label></th><td class="celda-observaciones"><textarea id="mohos-obs-interp" name="observaciones_interpretacion" rows="2"></textarea></td></tr>
+                </tbody>
+              </table>
+
+              <div class="hoja-botones">
+                <button type="submit" class="btn">Guardar hoja</button>
+                <button type="reset" class="btn btn--secundario">Limpiar</button>
+              </div>
+              <p class="hoja-estado" role="status" aria-live="polite"></p>
+
+              </form>
+            </div>
+
+            <!-- ---------------------------------------------
+                 Hoja PM003 — Recuento de coliformes totales
+                 --------------------------------------------- -->
+            <div class="pestana-panel hoja-verificacion" id="pestana-coliformes">
+              <div class="hoja-acciones">
+                <button type="button" class="btn btn--secundario" onclick="window.print()">Imprimir esta hoja</button>
+              </div>
+
+              <h2>Hoja de verificación: Recuento de coliformes totales</h2>
+
+              <form class="hoja-form" data-metodo="coliformes-placa" data-codigo="PM003" novalidate>
+
+              <table>
+                <tbody>
+                  <tr><th>Código</th><td>PM003</td></tr>
+                  <tr><th>Revisión</th><td>1</td></tr>
+                  <tr><th>Procedimiento</th><td>Recuento de coliformes totales en placa</td></tr>
+                  <tr><th>Norma referencia</th><td>NOM-247-SSA1-2008</td></tr>
+                </tbody>
+              </table>
+
+              <h3>Datos de muestra</h3>
+              <table>
+                <tbody>
+                  <tr><th><label for="coliformes-matriz">Tipo de matriz alimentaria</label></th><td><input type="text" id="coliformes-matriz" name="tipo_matriz" /></td></tr>
+                  <tr><th><label for="coliformes-lote">Código o lote de muestra</label></th><td><input type="text" id="coliformes-lote" name="codigo_lote_muestra" required /></td></tr>
+                  <tr><th>Condición muestra</th><td>
+                      <label class="opcion"><input type="radio" name="condicion_fisica" value="solida" /> Sólida</label>
+                      <label class="opcion"><input type="radio" name="condicion_fisica" value="liquida" /> Líquida</label>
+                      <span class="separador"></span>
+                      <label class="opcion"><input type="radio" name="condicion_congelacion" value="congelada" /> Congelada</label>
+                      <label class="opcion"><input type="radio" name="condicion_congelacion" value="descongelada" /> Descongelada</label>
+                  </td></tr>
+                  <tr><th><label for="coliformes-temp-recepcion">Temperatura recepción</label></th><td><input type="number" step="any" class="campo-corto" id="coliformes-temp-recepcion" name="temperatura_recepcion" /> ºC</td></tr>
+                  <tr><th><label for="coliformes-fecha">Fecha y hora de recepción</label></th><td><input type="date" class="campo-medio" id="coliformes-fecha" name="fecha_recepcion" /> <input type="time" class="campo-corto" id="coliformes-hora" name="hora_recepcion" aria-label="Hora de recepción" /></td></tr>
+                  <tr><th><label for="coliformes-obs-muestra">Observaciones</label></th><td class="celda-observaciones"><textarea id="coliformes-obs-muestra" name="observaciones_muestra" rows="2"></textarea></td></tr>
+                </tbody>
+              </table>
+
+              <h3>Datos del análisis</h3>
+              <table>
+                <tbody>
+                  <tr><th><label for="coliformes-medio">Medio de cultivo</label></th><td><input type="text" id="coliformes-medio" name="medio_cultivo" /></td></tr>
+                  <tr><th><label for="coliformes-incub-temp">Condiciones incubación</label></th><td><input type="number" step="any" class="campo-corto" id="coliformes-incub-temp" name="temperatura_incubacion" /> ºC &nbsp;&nbsp;&nbsp; <input type="number" step="any" class="campo-corto" id="coliformes-incub-horas" name="horas_incubacion" aria-label="Horas de incubación" /> h</td></tr>
+                  <tr><th><label for="coliformes-dilucion">Dilución</label></th><td><input type="number" step="any" class="campo-corto" id="coliformes-dilucion" name="dilucion" /> g/mL</td></tr>
+                  <tr><th><label for="coliformes-volumen">Volumen sembrado</label></th><td><input type="number" step="any" class="campo-corto" id="coliformes-volumen" name="volumen_sembrado" /> mL</td></tr>
+                  <tr><th><label for="coliformes-recuento">Recuento colonias</label></th><td><input type="text" id="coliformes-recuento" name="recuento_colonias" /></td></tr>
+                  <tr><th><label for="coliformes-resultado">Resultado final</label></th><td><input type="text" class="campo-medio" id="coliformes-resultado" name="resultado_final" /> UFC/g</td></tr>
+                </tbody>
+              </table>
+
+              <h3>Interpretación</h3>
+              <table>
+                <tbody>
+                  <tr><th><label for="coliformes-limite">Límite máximo</label></th><td><input type="text" class="campo-medio" id="coliformes-limite" name="limite_maximo" /> UFC/g o mL</td></tr>
+                  <tr><th>Interpretación resultado</th><td>
+                      <label class="opcion"><input type="radio" name="interpretacion" value="cumple" /> CUMPLE</label>
+                      <label class="opcion"><input type="radio" name="interpretacion" value="no_cumple" /> NO CUMPLE</label>
+                  </td></tr>
+                  <tr><th><label for="coliformes-obs-interp">Observaciones</label></th><td class="celda-observaciones"><textarea id="coliformes-obs-interp" name="observaciones_interpretacion" rows="2"></textarea></td></tr>
+                </tbody>
+              </table>
+
+              <div class="hoja-botones">
+                <button type="submit" class="btn">Guardar hoja</button>
+                <button type="reset" class="btn btn--secundario">Limpiar</button>
+              </div>
+              <p class="hoja-estado" role="status" aria-live="polite"></p>
+
+              </form>
+            </div>
+
+          </div>
+
+          <!-- Navegación vertical: un botón circular por hoja -->
+          <div class="pestanas-nav pestanas-nav--vertical">
+            <button class="pestana-boton pestana-boton--fila pestana-boton--activo" data-pestana="mesofilos">
+              <span class="pestana-icono" aria-hidden="true"></span>
+              <span class="pestana-etiqueta">Mesófilos aerobios</span>
+            </button>
+            <button class="pestana-boton pestana-boton--fila" data-pestana="mohos">
+              <span class="pestana-icono" aria-hidden="true"></span>
+              <span class="pestana-etiqueta">Mohos y levaduras</span>
+            </button>
+            <button class="pestana-boton pestana-boton--fila" data-pestana="coliformes">
+              <span class="pestana-icono" aria-hidden="true"></span>
+              <span class="pestana-etiqueta">Coliformes totales</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <p class="nota-privacidad">
+        Los datos se guardan únicamente en este navegador; no se envían a ningún servidor.
+        Pueden consultarse y descargarse en <a href="mis-registros.html">Mis registros</a>.
+      </p>
+
+      <p class="nota-hojas">
+        Todavía no hay hoja de verificación publicada para diluciones, Salmonella,
+        <em>S. aureus</em> ni NMP: el manual original solo incluye estas tres.
+      </p>
+
+    </main>
+
+  </div>
+
+  <script src="../js/pestanas.js" defer></script>
+  <script src="../js/almacen.js" defer></script>
+  <script src="../js/hojas.js" defer></script>
+  <script src="../js/estructura.js" defer></script>
+</body>
+</html>
