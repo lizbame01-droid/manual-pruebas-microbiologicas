@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Acceso · Manual de pruebas microbiológicas</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css"><script src="js/config.js"></script><script src="js/auth.js" data-acceso="1"></script></head>
+<body class="acceso-body"><main class="acceso">
+<p class="etq">ENCB · IPN</p><h1>Manual de pruebas microbiológicas</h1><p>Escribe tu contraseña.</p>
+<form id="f-local"><label for="clave" class="sr">Contraseña</label><input id="clave" type="password" autocomplete="current-password" placeholder="Contraseña" required>
+<button class="btn" type="submit">Entrar</button><p class="error" role="alert" id="err"></p></form>
+<div class="ms" id="zona-ms" hidden><button class="btn" type="button" id="b-ms">Entrar con la cuenta de Microsoft de la escuela</button></div>
+</main>
+<script>
+(function(){var A=window.MPMAuth,destino=function(){var v=sessionStorage.getItem('mpm.volver');sessionStorage.removeItem('mpm.volver');location.replace(v||'index.html');};
+if(A.sesion())return destino();
+var f=document.getElementById('f-local'),err=document.getElementById('err'),caja=document.querySelector('.acceso');
+if(!A.modoLocal())f.hidden=true;
+var bt=f.querySelector('button');
+f.addEventListener('submit',function(e){e.preventDefault();err.textContent='';bt.disabled=true;bt.textContent='Verificando…';
+A.entrarLocal(document.getElementById('clave').value).then(function(s){bt.disabled=false;bt.textContent='Entrar';if(s)return destino();err.textContent='Contraseña incorrecta.';caja.classList.remove('temblor');void caja.offsetWidth;caja.classList.add('temblor');},
+function(x){bt.disabled=false;bt.textContent='Entrar';err.textContent=x.message||'No se pudo verificar la contraseña.';});});
+if(A.modoMicrosoft()){document.getElementById('zona-ms').hidden=false;
+document.getElementById('b-ms').onclick=function(){A.entrarMicrosoft().then(destino).catch(function(x){err.textContent=x.message||'No se pudo iniciar sesión con Microsoft.';});};}
+})();
+</script></body></html>
