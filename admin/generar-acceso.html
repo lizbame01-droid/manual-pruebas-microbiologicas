@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Generar acceso</title>
+<link rel="stylesheet" href="../css/styles.css"><script src="../js/config.js"></script><script src="../js/auth.js" data-acceso="1"></script></head>
+<body class="acceso-body"><main class="acceso" style="width:min(640px,100%)"><h1>Generar un acceso</h1>
+<p>Esta página no envía nada a internet. Con tu sesión abierta, cifra en tu equipo la llave del manual con la contraseña nueva y te da el renglón para <code>js/config.js</code>.</p>
+<p class="aviso" id="sin-sesion" hidden>Primero entra al manual con una contraseña vigente y después vuelve a abrir esta página.</p>
+<div class="campo"><label for="et">Nombre del acceso</label><input id="et" type="text" value="Acceso temporal"></div>
+<div class="campo" style="margin-top:10px"><label for="cl">Contraseña nueva (mínimo 12 caracteres)</label><input id="cl" type="password" autocomplete="new-password"></div>
+<p style="margin-top:14px"><button class="btn" type="button" id="go">Generar renglón</button></p>
+<pre class="desarrollo" id="out">El renglón aparecerá aquí.</pre>
+<p class="nota">Copia el renglón dentro de <code>accesosLocales: [ … ]</code> en <code>js/config.js</code> y guarda el archivo.</p></main>
+<script>(function(){var s=MPMAuth.sesion(),o=document.getElementById('out');if(!s||!s.k)document.getElementById('sin-sesion').hidden=false;
+document.getElementById('go').onclick=function(){var c=document.getElementById('cl').value,e=document.getElementById('et').value.trim()||'Acceso';if(c.length<12){o.textContent='Usa al menos 12 caracteres.';return;}
+o.textContent='Calculando…';MPMAuth.generarAcceso(e,c).then(function(r){o.textContent=r;},function(x){o.textContent=x.message;});};})();</script></body></html>
